@@ -1,0 +1,25 @@
+# Ignore binaries.
+/bin
+
+# Ignore non-custom parts of Drupal.
+/docroot/core
+/docroot/libraries
+/docroot/modules/contrib
+/docroot/profiles/contrib
+/docroot/themes/contrib
+/docroot/sites/default/files
+
+# Ignore sensitive information.
+/docroot/sites/*/settings.php
+/docroot/sites/*/settings.local.php
+/docroot/sites/default/development.services.yml
+/docroot/sites/default/services.yml
+
+# Ignore Composer-managed dependencies.
+vendor/
+
+# Ignore IDE files.
+.idea
+
+# Ignore macOS system files.
+.DS_Store
