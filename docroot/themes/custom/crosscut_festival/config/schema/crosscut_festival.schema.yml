@@ -1,0 +1,4 @@
+# Schema for the configuration files of the Crosscut Festival theme.
+crosscut_festival.settings:
+  type: theme_settings
+  label: 'Crosscut Festival settings'
