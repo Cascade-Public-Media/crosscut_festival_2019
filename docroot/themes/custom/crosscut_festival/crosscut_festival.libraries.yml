@@ -10,3 +10,11 @@ global-styling:
   dependencies:
     - core/jquery
     - core/drupal
+
+global-fonts:
+  version: 1.x
+  css:
+    theme:
+      //fonts.googleapis.com/css?family=Lora:400,400i,700,700i: { type: external }
+  js:
+    fonts/myfonts/Crosscut_Kit.js: {}
