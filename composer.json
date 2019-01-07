@@ -17,7 +17,8 @@
         "drupal/bootstrap_barrio": "^4.17",
         "drupal/bootstrap_layouts": "^5.1",
         "drupal/ckeditor_codemirror": "^2.1",
-        "w8tcha/ckeditor_codemirror": "^1.17"
+        "w8tcha/ckeditor_codemirror": "^1.17",
+        "drupal/admin_toolbar": "^1.25"
     },
     "repositories": [
         {
