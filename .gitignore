@@ -18,8 +18,11 @@
 # Ignore Composer-managed dependencies.
 vendor/
 
+node_modules
+
 # Ignore IDE files.
 .idea
+/docroot/sites/*.dd
 
 # Ignore macOS system files.
 .DS_Store
