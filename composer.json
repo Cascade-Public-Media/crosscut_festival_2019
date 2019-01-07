@@ -16,23 +16,37 @@
         "acquia/lightning": "~3.2.3",
         "drupal/bootstrap_barrio": "^4.17",
         "drupal/bootstrap_layouts": "^5.1",
-        "drupal/ckeditor_codemirror": "^2.1"
+        "drupal/ckeditor_codemirror": "^2.1",
+        "w8tcha/ckeditor_codemirror": "^1.17",
+        "drupal/admin_toolbar": "^1.25"
     },
-    "repositories": {
-        "drupal": {
+    "repositories": [
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "assets": {
+        {
             "type": "composer",
             "url": "https://asset-packagist.org"
         },
-        "dev": {
+        {
             "type": "github",
             "url": "https://github.com/acquia/lightning-dev",
             "no-api": true
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "w8tcha/ckeditor_codemirror",
+                "type": "drupal-library",
+                "version": "1.17.8",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/untagged-f790a6bee2e01b538b13.zip"
+                }
+            }
         }
-    },
+    ],
     "config": {
         "process-timeout": 0
     },
