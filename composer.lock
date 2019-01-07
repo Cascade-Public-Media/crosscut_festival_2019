@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a624600d7ffd32e5f4256e12587aa08",
+    "content-hash": "711f4ac054f1a42846e70be9f2932d10",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -7665,6 +7665,17 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "forked from dinbror/blazy to be used as drupal-library",
             "time": "2017-07-16T11:19:13+00:00"
+        },
+        {
+            "name": "w8tcha/ckeditor_codemirror",
+            "version": "1.17.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/untagged-f790a6bee2e01b538b13.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "webmozart/assert",
