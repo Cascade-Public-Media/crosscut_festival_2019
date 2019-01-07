@@ -1,5 +1,5 @@
 /* IMPORTS */
-
+@import "custom";
 //@import url(font-awesome.min.css);
 // variables
 @import "variables";
@@ -8,8 +8,24 @@
 //material design bootstrap
 //@import "../node_modules/mdbootstrap/scss/mdb";
 // barrio
-@import "barrio";
+@import "barrio/barrio";
 // typography
 @import "typography";
 // mixins
 @import "mixins";
+
+
+
+@import 'vendor/bootstrap-reboot.scss';
+@import 'vendor/bootstrap-grid.scss';
+@import 'vendor/bootstrap.scss';
+
+@import "barrio/barrio";
+@import "typography";
+@import "mixins";
+
+
+@import 'site/variables';
+@import 'site/general';
+@import 'site/header';
+@import 'site/front-page';
