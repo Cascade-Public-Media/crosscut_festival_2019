@@ -27,24 +27,20 @@
   set classes = [
     'taxonomy-term',
     'vocabulary-' ~ term.bundle|clean_class,
+    'track',
     term.label|clean_class,
   ]
 %}
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
-  {{ title_prefix }}
   {% if not page %}
       {{ content.field_icon }}
-    <h4>{{ name }}</h4>
-    <div class="horizontal-line"></div>
-    <div class="presented-by">
-      <span>Presented by</span>
-    </div>
+      {{ title_prefix }}
 
+      <h4>{{ name }}</h4>
+      <div class="horizontal-line"></div>
+      <div class="presented-by">
+        <span>Presented by</span>
+      </div>
+      {{ title_suffix }}
   {% endif %}
-  {{ title_suffix }}
-  <div class="content">
-    {{ content|without(
-        'field_icon'
-    ) }}
-  </div>
 </div>

@@ -83,7 +83,7 @@ gulp.task('buildStore', gulp.parallel('vendorStore:scss', 'vendorStore:js'));
 // gulp.task('default', ['js', 'serve']);
 
 gulp.task('watch', function() {
-    gulp.watch('scss/*.scss', styles)
+    gulp.watch('scss/**/*.scss', styles)
 });
 
 gulp.task('bs-watch', gulp.parallel('watch', serve));

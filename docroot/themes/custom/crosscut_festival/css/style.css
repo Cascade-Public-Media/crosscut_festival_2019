@@ -13488,17 +13488,20 @@ footer {
   width: 240px;
   margin: 1em auto;
   text-align: center; }
+  .view-id-tracks .row .track .field--name-field-icon {
+    float: none;
+    margin: 0 auto; }
   .view-id-tracks .row .track.keynote .horizontal-line {
     background-color: #F27A4A; }
   .view-id-tracks .row .track.business .horizontal-line {
     background-color: #F2BF42; }
   .view-id-tracks .row .track.politics .horizontal-line {
     background-color: #2989C9; }
-  .view-id-tracks .row .track.justice .horizontal-line {
+  .view-id-tracks .row .track.race--social-justice .horizontal-line {
     background-color: #61C2D7; }
-  .view-id-tracks .row .track.science .horizontal-line {
+  .view-id-tracks .row .track.science--environment .horizontal-line {
     background-color: #C3D93A; }
-  .view-id-tracks .row .track.interactive .horizontal-line {
+  .view-id-tracks .row .track.interactive--social .horizontal-line {
     background-color: #A95CEC; }
   .view-id-tracks .row .track img {
     margin: 0 auto; }

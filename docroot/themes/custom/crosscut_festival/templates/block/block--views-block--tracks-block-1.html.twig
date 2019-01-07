@@ -36,6 +36,13 @@
     'block-' ~ plugin_id|clean_class,
 ]
 %}
+{%
+    set contentClasses = [
+    'content',
+    'container',
+    'section',
+]
+%}
 <div{{ attributes.addClass(classes) }}>
     {{ title_prefix }}
     {% if label %}
@@ -43,7 +50,7 @@
     {% endif %}
     {{ title_suffix }}
     {% block content %}
-        <div{{ content_attributes.addClass('content') }}>
+        <div{{ content_attributes.addClass(contentClasses) }}>
             {{ content }}
         </div>
     {% endblock %}
