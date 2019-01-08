@@ -8,7 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
 const rename = require('gulp-rename');
-// const crass = require('gulp-crass');
+const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
 const render = require('gulp-nunjucks-render');
@@ -25,13 +25,20 @@ function serve(done) {
 }
 
 function styles() {
-    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/style.scss'])
-        .pipe(sass().on('error', sass.logError))
+    return gulp.src(['scss/style.scss'])
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(autoprefixer( 'last 2 versions' ))
         .pipe(gulp.dest("css"))
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(minifyCss())
-        .pipe(browserSync.stream());
+        .pipe(plumber())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(cleanCSS())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('css'))
+        .pipe(server.stream());
 }
 
 // Move minified vendor scripts to js folder
@@ -74,7 +81,8 @@ function owlJS() {
       .pipe(gulp.dest('js'))
       .pipe(rename({suffix:'.min'}))
       .pipe(uglify())
-      .pipe(gulp.dest('js'));
+      .pipe(gulp.dest('js'))
+      .pipe(server.stream());
 }
 
 // Concat and minify custom JS files
@@ -85,7 +93,8 @@ function festivalJS() {
       .pipe(gulp.dest('js'))
       .pipe(rename({suffix: '.min'}))
       .pipe(uglify())
-      .pipe(gulp.dest('js'));
+      .pipe(gulp.dest('js'))
+      .pipe(server.stream());
 }
 
 // Set up vendorStore (SCSS:vendor_components and JS:src/vendor)
