@@ -18,3 +18,11 @@ global-fonts:
       //fonts.googleapis.com/css?family=Lora:400,400i,700,700i: { type: external }
   js:
     fonts/myfonts/Crosscut_Kit.js: {}
+
+owl-carousel:
+  js:
+    js/owl.carousel.min.js: {}
+    js/carousel.js: {}
+
+  dependencies:
+    - core/jquery

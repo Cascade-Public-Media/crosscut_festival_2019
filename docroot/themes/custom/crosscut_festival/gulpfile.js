@@ -67,27 +67,16 @@ gulp.task('vendorStore:owlScss', function() {
       .pipe( gulp.dest( 'vendor_components/scss/owl' ) );
 });
 
-// Copy vendor JS from node_modules to src/vendor
+// Copy vendor JS from node_modules to js
 gulp.task('vendorJS', function() {
-  return gulp.src('node_modules/owl.carousel/dist/owl.carousel.js')
-      .pipe(gulp.dest('src/vendor'));
+  return gulp.src('node_modules/owl.carousel/dist/owl.carousel.min.js')
+      .pipe(gulp.dest('js'));
 });
 
-// Concat and minify owl.carousel library and custom library bootstrapping
-function owlJS() {
-  return gulp.src(['src/vendor/owl.carousel.js', 'src/custom/owl.js'])
-      .pipe(plumber())
-      .pipe(concat('carousel.js'))
-      .pipe(gulp.dest('js'))
-      .pipe(rename({suffix:'.min'}))
-      .pipe(uglify())
-      .pipe(gulp.dest('js'))
-      .pipe(server.stream());
-}
 
 // Concat and minify custom JS files
-function festivalJS() {
-  return gulp.src(['src/custom/global.js'])
+function scripts() {
+  return gulp.src(['src/custom/*.js'])
       .pipe(plumber())
       .pipe(concat('global.js'))
       .pipe(gulp.dest('js'))
@@ -100,13 +89,11 @@ function festivalJS() {
 // Set up vendorStore (SCSS:vendor_components and JS:src/vendor)
 gulp.task('buildStore', gulp.parallel('vendorStore:bootstrapScss', 'vendorStore:owlScss', 'vendorJS'));
 
-gulp.task('scripts', gulp.parallel(owlJS, festivalJS));
-
 gulp.task('watchFiles', function() {
     gulp.watch('scss/**/*.scss', styles);
-    gulp.watch('src/custom/*.js', gulp.parallel(owlJS, festivalJS));
+    gulp.watch('src/custom/*.js', scripts);
 });
 
 gulp.task('bs-watch', gulp.parallel('watchFiles', serve));
 
-gulp.task('watch', gulp.series( 'buildStore', styles, 'scripts', 'bs-watch'));
+gulp.task('watch', gulp.series( 'buildStore', styles, scripts, 'bs-watch'));
