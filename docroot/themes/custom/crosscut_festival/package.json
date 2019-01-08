@@ -9,7 +9,9 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
-        "bootstrap": "^4.1.3"
+        "bootstrap": "^4.1.3",
+        "owl.carousel": "^2.3.4",
+        "popper.js": "^1.14.6"
     },
     "devDependencies": {
         "gulp-minify-css": "~1.2.4",

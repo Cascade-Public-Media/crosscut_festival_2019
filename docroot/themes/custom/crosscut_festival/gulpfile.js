@@ -24,16 +24,6 @@ function serve(done) {
     done();
 }
 
-// Compile sass into CSS & auto-inject into browsers
-// gulp.task('sass', function() {
-//     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/style.scss'])
-//         .pipe(sass().on('error', sass.logError))
-//         .pipe(gulp.dest("css"))
-//         .pipe(sass({ outputStyle: 'compressed' }))
-//         // .pipe(minifyCss())
-//         .pipe(browserSync.stream());
-// });
-
 function styles() {
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/style.scss'])
         .pipe(sass().on('error', sass.logError))
@@ -44,48 +34,70 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
-gulp.task('vendorStore:scss', function() {
+// Move minified vendor scripts to js folder
+gulp.task('vendorScripts', function() {
+  return gulp.src([
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/owl.carousel/dist/owl.carousel.min.js'
+  ])
+      .pipe(gulp.dest('js'));
+});
+
+// Set up Vendor Store (vendor_components)
+// Bootstrap scss
+gulp.task('vendorStore:bootstrapScss', function() {
     return gulp.src([
         'node_modules/bootstrap/scss/**/*'
     ])
         .pipe(gulp.dest('vendor_components/scss/bootstrap'));
 });
 
-gulp.task('vendorStore:js', function() {
+// Owl carousel scss
+gulp.task('vendorStore:owlScss', function() {
   return gulp.src([
-    'node_modules/bootstrap/js/dist/*'
+    'node_modules/owl.carousel/src/scss/*',
   ])
-      .pipe(gulp.dest('vendor_components/js/bootstrap'));
+      .pipe( gulp.dest( 'vendor_components/scss/owl' ) );
 });
 
-
-// Set up vendorStore
-gulp.task('buildStore', gulp.parallel('vendorStore:scss', 'vendorStore:js'));
-
-// // Move the javascript files into our js folder
-// gulp.task('js', function() {
-//     return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
-//         .pipe(gulp.dest("js"))
-//         .pipe(browserSync.stream());
-// });
-//
-// // Static Server + watching scss/html files
-// gulp.task('serve', ['sass'], function() {
-//
-//     browserSync.init({
-//         proxy: "http://127.0.0.1:8888",
-//     });
-//
-//     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/*.scss'], ['sass']);
-//     //    gulp.watch("src/*.html").on('change', browserSync.reload);
-// });
-//
-// gulp.task('default', ['js', 'serve']);
-
-gulp.task('watch', function() {
-    gulp.watch('scss/**/*.scss', styles)
+// Copy vendor JS from node_modules to src/vendor
+gulp.task('vendorJS', function() {
+  return gulp.src('node_modules/owl.carousel/dist/owl.carousel.js')
+      .pipe(gulp.dest('src/vendor'));
 });
 
-gulp.task('bs-watch', gulp.parallel('watch', serve));
+// Concat and minify owl.carousel library and custom library bootstrapping
+function owlJS() {
+  return gulp.src(['src/vendor/owl.carousel.js', 'src/custom/owl.js'])
+      .pipe(plumber())
+      .pipe(concat('carousel.js'))
+      .pipe(gulp.dest('js'))
+      .pipe(rename({suffix:'.min'}))
+      .pipe(uglify())
+      .pipe(gulp.dest('js'));
+}
 
-gulp.task('watchSass', gulp.series( 'buildStore', styles, 'bs-watch'));
+// Concat and minify custom JS files
+function festivalJS() {
+  return gulp.src(['src/custom/global.js'])
+      .pipe(plumber())
+      .pipe(concat('global.js'))
+      .pipe(gulp.dest('js'))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(uglify())
+      .pipe(gulp.dest('js'));
+}
+
+// Set up vendorStore (SCSS:vendor_components and JS:src/vendor)
+gulp.task('buildStore', gulp.parallel('vendorStore:bootstrapScss', 'vendorStore:owlScss', 'vendorJS'));
+
+gulp.task('scripts', gulp.parallel(owlJS, festivalJS));
+
+gulp.task('watchFiles', function() {
+    gulp.watch('scss/**/*.scss', styles);
+    gulp.watch('src/custom/*.js', gulp.parallel(owlJS, festivalJS));
+});
+
+gulp.task('bs-watch', gulp.parallel('watchFiles', serve));
+
+gulp.task('watch', gulp.series( 'buildStore', styles, 'scripts', 'bs-watch'));
