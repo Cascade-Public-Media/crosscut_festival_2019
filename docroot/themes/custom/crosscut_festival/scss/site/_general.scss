@@ -167,13 +167,11 @@ h3.section-header {
 
 /** Layout **/
 .section {
-  //padding-top: 3em;
   padding-top: 3em;
   padding-bottom: 3em;
 }
 
 .subsection {
-  //padding-top: 1.8em;
   padding-top: 1.8em;
   padding-bottom: 1.8em;
 }
@@ -237,13 +235,11 @@ h3.section-header {
 
 @include media-breakpoint-up(md){
   .section {
-    //padding-top: 5em;
     padding-top: 3em;
     padding-bottom: 3em;
   }
 
   .subsection {
-    //padding-top: 3em;
     padding-top: 5em;
     padding-bottom: 5em;
   }
