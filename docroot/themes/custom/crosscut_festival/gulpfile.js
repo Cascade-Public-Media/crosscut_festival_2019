@@ -26,14 +26,9 @@ function serve(done) {
 
 function styles() {
     return gulp.src(['scss/style.scss'])
-        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-        .pipe(sourcemaps.write({includeContent: false}))
-        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(autoprefixer( 'last 2 versions' ))
-        .pipe(gulp.dest("css"))
-        .pipe(plumber())
         .pipe(rename({suffix: '.min'}))
         .pipe(cleanCSS())
         .pipe(sourcemaps.write())
