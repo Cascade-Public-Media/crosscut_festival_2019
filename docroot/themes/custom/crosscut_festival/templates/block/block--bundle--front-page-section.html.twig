@@ -34,9 +34,16 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
+    'container-fluid',
+    'full-bleed',
+  ]
+%}
+
+{%
+    set contentClasses = [
     'container',
     'section',
-  ]
+]
 %}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
@@ -45,7 +52,7 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
+    <div{{ content_attributes.addClass(contentClasses) }}>
       {{ content }}
     </div>
   {% endblock %}
