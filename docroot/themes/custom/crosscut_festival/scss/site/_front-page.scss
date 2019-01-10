@@ -17,8 +17,18 @@
     margin: 14px auto 4px;
   }
 
+  .featured-panelist-organization {
+    height: 80px;
+  }
+
   .org {
     max-width: 300px;
+
+    img {
+      width: 300px;
+      height: 60px;
+      object-fit: contain;
+    }
   }
 
   .owl-dots {
@@ -49,7 +59,7 @@
 
       span {
         background: transparent;
-        border-right: 10px solid #fff;
+        border-right: 10px solid $gray-600;
       }
 
       &.active,
@@ -67,8 +77,7 @@
 
       span {
         background: transparent;
-        border-left: 10px solid #fff;
-
+        border-left: 10px solid $gray-600;
       }
 
       &.active,

@@ -10,9 +10,9 @@
   Drupal.behaviors.sessionsCarousel = {
     attach: function(context, settings) {
 
-      $('.view-name-sessions').once('sessionsCarousel').each(function() {
+      $('.view-id-sessions').once('sessionsCarousel').each(function() {
 
-        $(document).ready(function() {
+
 
           $('#session-carousel').owlCarousel({
             stagePadding:500,
@@ -60,25 +60,34 @@
             }
           });
 
-        });
+      });
+    },
 
-        // $('#panelists-carousel').owlCarousel({
-        //   loop: true,
-        //   dots: true,
-        //   margin: 5,
-        //   responsive: {
-        //     0: {
-        //       items: 2
-        //     },
-        //     576: {
-        //       items: 3
-        //     },
-        //     768: {
-        //       items: 4
-        //     }
-        //   }
-        // });
+    detach: function (context, settings) {}
+  };
 
+  Drupal.behaviors.panelistsCarousel = {
+    attach: function(context, settings) {
+
+      $('.view-id-featured_panelist_organizations').once('panelistsCarousel').each(function() {
+
+
+          $('#panelists-carousel').owlCarousel({
+            loop: true,
+            dots: true,
+            margin: 5,
+            responsive: {
+              0: {
+                items: 2
+              },
+              576: {
+                items: 3
+              },
+              768: {
+                items: 4
+              }
+            }
+          });
 
 
       });

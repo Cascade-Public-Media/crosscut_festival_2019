@@ -37,6 +37,12 @@
     'block-label-' ~ configuration.label|clean_class,
 ]
 %}
+{%
+    set contentClasses = [
+    'content',
+    'no-gutters',
+]
+%}
 <div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
     {{ title_prefix }}
     {% if label %}
@@ -44,7 +50,7 @@
     {% endif %}
     {{ title_suffix }}
     {% block content %}
-        <div{{ content_attributes.addClass('content') }}>
+        <div{{ content_attributes.addClass(contentClasses) }}>
             {{ content }}
         </div>
     {% endblock %}

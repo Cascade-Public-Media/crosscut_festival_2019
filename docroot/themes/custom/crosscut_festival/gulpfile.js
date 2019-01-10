@@ -73,7 +73,6 @@ gulp.task('vendorJS', function() {
 function scripts() {
   return gulp.src(['src/custom/*.js'])
       .pipe(plumber())
-      .pipe(concat('global.js'))
       .pipe(gulp.dest('js'))
       .pipe(rename({suffix: '.min'}))
       .pipe(uglify())

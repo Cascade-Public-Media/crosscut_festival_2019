@@ -271,10 +271,13 @@ h3.section-header {
     padding-bottom: 5em;
   }
 
-  .hero {
-    .hero-text {
-      font-size: 1.38em;
-    }
+  .block-label-hero {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hero .hero-text {
+    font-size: 1.38em;
   }
 }
 
