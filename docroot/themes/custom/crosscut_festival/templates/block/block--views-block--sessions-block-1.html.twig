@@ -34,6 +34,7 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
+    'block-label-' ~ configuration.label|clean_class,
     'container-fluid',
     'full-bleed',
   ]
@@ -46,7 +47,7 @@
     'pt-0',
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
