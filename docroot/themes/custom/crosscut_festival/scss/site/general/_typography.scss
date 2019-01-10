@@ -1,0 +1,115 @@
+/** Typography **/
+* {
+  font-family: $font-family-sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $gray-dark;
+}
+
+p,
+span,
+li {
+  font-weight: $font-weight-normal;
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: $font-weight-bold;
+}
+
+a {
+  color: $link-color;
+}
+
+.standout-copy {
+  font-size: 1.15rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+h1.section-header {
+  font-size: 2em;
+  margin-bottom: 16px;
+}
+
+h2.section-header {
+  font-size: 1.7em;
+  margin-bottom: 12px;
+}
+
+h3.section-header {
+  font-size: 1.3em;
+  margin: 10px 0;
+  font-weight: $font-weight-normal;
+  text-transform: uppercase;
+}
+
+.info-text {
+  text-align: center;
+  font-size: 1em;
+}
+
+.display {
+  font-family: $font-family-serif;
+  font-style: italic;
+  text-align:center;
+  font-size: 1.9em;
+}
+
+.highlight {
+
+  &__center{
+    width: 100%;
+    text-align: center;
+  }
+
+  div {
+    background-color: $highlight-bg;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 .3em;
+    display:inline-block;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  p,
+  span,
+  li {
+    font-size: 1.15em;
+  }
+
+  .standout-copy {
+    font-size: 1.3rem;
+  }
+
+  h1.section-header {
+    font-size: 60px;
+    margin: 30px 0;
+  }
+
+  h2.section-header {
+    font-size: 50px;
+    margin: 26px 0;
+  }
+
+  h3.section-header {
+    font-size: 30px;
+    margin: 22px 0;
+  }
+
+  .info-text {
+    font-size: 1.15em;
+  }
+
+}
