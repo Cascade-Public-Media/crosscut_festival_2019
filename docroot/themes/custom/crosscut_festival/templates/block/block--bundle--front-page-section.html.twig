@@ -39,7 +39,6 @@
     'full-bleed',
   ]
 %}
-
 {%
     set contentClasses = [
     'container',
@@ -47,14 +46,14 @@
 ]
 %}
 <div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes.addClass('section-header') }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    <div{{ content_attributes.addClass(contentClasses) }}>
-      {{ content }}
-    </div>
-  {% endblock %}
+  <div{{ content_attributes.addClass(contentClasses) }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes.addClass('section-header') }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        {{ content }}
+    {% endblock %}
+  </div>
 </div>

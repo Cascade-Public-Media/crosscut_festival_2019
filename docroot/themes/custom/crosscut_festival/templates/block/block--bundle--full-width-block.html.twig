@@ -36,19 +36,23 @@
     'block-' ~ plugin_id|clean_class,
     'block-label-' ~ configuration.label|clean_class,
     'container-fluid',
-    'section',
     'full-bleed',
   ]
 %}
+{%
+    set contentClasses = [
+    'section',
+]
+%}
 <div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes.addClass('section-header') }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
-      {{ content }}
-    </div>
-  {% endblock %}
+  <div{{ content_attributes.addClass('content') }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes.addClass('section-header') }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        {{ content }}
+    {% endblock %}
+  </div>
 </div>

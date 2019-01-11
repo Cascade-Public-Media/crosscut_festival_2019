@@ -10,14 +10,16 @@
   padding-right: 0;
 }
 
-.section {
-  padding-top: 3em;
-  padding-bottom: 3em;
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.subsection {
-  padding-top: 1.8em;
-  padding-bottom: 1.8em;
+.section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .full-bleed {
