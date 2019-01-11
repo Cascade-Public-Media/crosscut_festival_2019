@@ -13,7 +13,10 @@
             var video = $('#heroVideo');
             $(video).on('ended', function() {
                 console.log('ended');
-                $('.hero-overlay').addClass('active');
+                $('.hero-overlay.video').removeClass('active');
+                $('.hero-overlay-image').animate({
+                  opacity: 1
+                }, 600);
             });
 
             $(window).scroll(function() {
