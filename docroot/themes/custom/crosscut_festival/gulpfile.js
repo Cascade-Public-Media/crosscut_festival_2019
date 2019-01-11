@@ -26,12 +26,12 @@ function serve(done) {
 
 function styles() {
     return gulp.src(['scss/style.scss'])
-        .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        // .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer( 'last 2 versions' ))
         .pipe(rename({suffix: '.min'}))
         .pipe(cleanCSS())
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'))
         .pipe(server.stream());
 }

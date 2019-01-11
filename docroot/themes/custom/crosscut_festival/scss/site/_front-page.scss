@@ -426,6 +426,7 @@
 
   &__info__top {
     position: relative;
+    margin-top: 1em;
     margin-bottom: 1em;
     display: flex;
 
@@ -434,14 +435,10 @@
       font-size: .95em;
     }
 
-    div {
-      margin-left: 5px;
+    .vertical-line {
       display:inline-block;
-
-      &.vertical-line {
-        border-left: 2px solid $orange;
-        padding-left: 10px;
-      }
+      border-left: 2px solid $orange;
+      padding-left: 10px;
     }
   }
 
@@ -460,8 +457,23 @@
     opacity: 1;
   }
 
-  @include media-breakpoint-up(sm){
+  @include media-breakpoint-up(sm) {
     max-width: 490px;
+
+    &__info {
+      padding-left: 0;
+    }
+
+    &__info__top {
+      margin-top: 0;
+    }
+  }
+
+  @include media-breakpoint-only(sm) {
+    &__info__top span,
+    &__info__bottom span {
+      font-size: .8em;
+    }
   }
 
   @include media-breakpoint-up(md) {
@@ -471,6 +483,12 @@
 
     &__image {
       margin-bottom: 0;
+    }
+
+    &__info__top {
+      .vertical-line {
+        margin-left: 5px;
+      }
     }
 
     &__info__middle {
@@ -660,8 +678,8 @@ table {
   .location-image {
     height: 400px;
     background-image: url('../images/seattleuniversity_map.png');
-    background-size: cover;
-    background-position: 92% 0;
+    background-size: 300%;
+    background-position: 75% center;
     width: 100%;
     position: relative;
   }
@@ -697,12 +715,25 @@ table {
 
   @include media-breakpoint-up(sm) {
     .location-image {
-      background-position: center right;
+      background-position: right center;
+      background-size: 200%;
     }
 
     .location-info-box {
       left: 70%;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .location-image {
+      background-size: 180%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .location-image {
+      background-size: cover;
     }
   }
 }

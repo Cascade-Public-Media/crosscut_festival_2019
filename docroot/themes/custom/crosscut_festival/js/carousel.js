@@ -7,12 +7,36 @@
 
   'use strict';
 
+  Drupal.behaviors.panelistsCarousel = {
+    attach: function(context, settings) {
+
+      $('.view-id-featured_panelist_organizations').once('panelistsCarousel').each(function() {
+        $('#panelists-carousel').owlCarousel({
+          loop: true,
+          dots: true,
+          margin: 5,
+          responsive: {
+            0: {
+              items: 2
+            },
+            576: {
+              items: 3
+            },
+            768: {
+              items: 4
+            }
+          }
+        });
+      });
+    },
+
+    detach: function (context, settings) {}
+  };
+
   Drupal.behaviors.sessionsCarousel = {
     attach: function(context, settings) {
 
       $('.view-id-sessions').once('sessionsCarousel').each(function() {
-
-
 
           $('#session-carousel').owlCarousel({
             stagePadding:500,
@@ -24,7 +48,7 @@
             responsiveClass: true,
             responsive: {
               0: {
-                stagePadding: 70
+                stagePadding: 60
               },
               450: {
                 stagePadding: 110
@@ -59,39 +83,7 @@
               }
             }
           });
-
       });
-    },
-
-    detach: function (context, settings) {}
-  };
-
-  Drupal.behaviors.panelistsCarousel = {
-    attach: function(context, settings) {
-
-      $('.view-id-featured_panelist_organizations').once('panelistsCarousel').each(function() {
-
-
-          $('#panelists-carousel').owlCarousel({
-            loop: true,
-            dots: true,
-            margin: 5,
-            responsive: {
-              0: {
-                items: 2
-              },
-              576: {
-                items: 3
-              },
-              768: {
-                items: 4
-              }
-            }
-          });
-
-
-      });
-
     },
 
     detach: function (context, settings) {}
