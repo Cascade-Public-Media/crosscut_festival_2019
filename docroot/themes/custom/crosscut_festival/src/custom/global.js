@@ -38,19 +38,16 @@
             }
           });
 
-          $dropdownMenu.on('focusout', function() {
-            if ($dropdownMenu.hasClass('active') && e.target !== $dropdownMenu) {
-              $dropdownMenu.removeClass('active');
-              $toggleButton.attr('aria-pressed', 'true').removeClass('active');
-            }
-          });
 
-          // Close menu if document is clicked
+          // Close menu if anywhere else in document is clicked
           $(document).on('click', function(e) {
-              if ($dropdownMenu.hasClass('active') && e.target !== $dropdownMenu) {
-                  $dropdownMenu.removeClass('active');
-                  $toggleButton.attr('aria-pressed', 'true').removeClass('active');
+            e.stopPropagation();
+            if (e.target.id !== 'toggle') {
+              if ($dropdownMenu.hasClass('active')) {
+                $dropdownMenu.removeClass('active');
+                $toggleButton.attr('aria-expanded', 'false').removeClass('active');
               }
+            }
           });
 
 
