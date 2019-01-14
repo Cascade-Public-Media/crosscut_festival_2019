@@ -20,6 +20,9 @@ vendor/
 
 node_modules
 
+# Ignore css sourcemaps
+docroot/themes/custom/crosscut_festival/css/maps
+
 # Ignore IDE files.
 .idea
 /docroot/sites/*.dd
