@@ -7,7 +7,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
-  //margin-top: $header-height;
+  margin-top: $header-height;
   overflow: hidden;
 
   .hero-video {
@@ -20,7 +20,6 @@
   }
 
   .hero-overlay {
-    //background: linear-gradient(90deg, rgba(23,44,59,0) 0%, #000000 100%);
     background-size: cover;
     background-position: top center;
     height: 80vh;
@@ -69,6 +68,8 @@
 
   .btn-secondary {
     margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
   }
 
   @include media-breakpoint-up(sm){

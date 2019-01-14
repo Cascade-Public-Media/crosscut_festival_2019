@@ -1,4 +1,4 @@
-.main-header {
+.header {
   background-color: $blue;
   position:fixed;
   width:100%;
@@ -13,7 +13,7 @@
   position: relative;
 }
 
-.nav {
+.cf-nav {
   height: $header-height;
   display: flex;
   flex-flow: row nowrap;
@@ -56,7 +56,7 @@
 
   .menu-toggle {
     display: inline-flex;
-    background-image: url('/images/menu_dots_white.png');
+    background-image: url('../images/menu_dots_white.png');
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -71,10 +71,16 @@
   }
 }
 
-.nav-link {
+.cf-nav-link {
   color: $white;
   display:inline-block;
   font-weight: $font-weight-bold;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: underline;
+  }
 
   &.active {
     color: $secondary;
@@ -83,9 +89,11 @@
 
 .nav-dropdown {
   display:none;
+  z-index: $zindex-dropdown;
   background-color: $light-blue;
   position: absolute;
   right: 0;
+  padding: .5em 1em;
 
   &:before {
     content: '';
@@ -105,25 +113,40 @@
   }
 
   ul {
-    //display: block;
     margin: 0;
-    padding: 0 1em;
+    padding: 0;
+
+    &.primary {
+      padding-bottom: 1em;
+      border-bottom: 2px solid $white;
+
+      > li a {
+        font-weight: bold;
+      }
+    }
+
+    &.secondary {
+      > li a {
+        font-weight: normal;
+        font-size: .9em;
+      }
+    }
 
     > li {
       display: block;
       padding-left: 0;
-      border-bottom: 2px solid $white;
+      border-bottom: none;
+
+      a {
+        font-weight: bold;
+        padding: .5em 0 0;
+      }
     }
   }
 
-  .primary {
-    display: none;
-  }
-
-  .nav-link {
+  .cf-nav-link {
     color: $blue-dark;
     font-weight: normal;
-    padding: .5em 0;
     width: 100%;
   }
 }
@@ -132,14 +155,9 @@
   .nav-container {
     max-width: 870px;
   }
-  .nav {
+  .cf-nav {
     justify-content: space-between;
   }
-
-  .nav-dropdown {
-
-  }
-;
 }
 
 @include media-breakpoint-up(lg) {
@@ -147,23 +165,42 @@
     margin: 0 auto;
   }
 
-  .nav {
+  .cf-nav {
     justify-content: center;
 
-    .menu {
-      &__primary {
-        ul {
-          display: inline;
-        }
+    .menu__primary {
+      ul {
+        display: inline;
       }
     }
   }
 
   .nav-dropdown {
-    right: -35px;
+    right: -31px;
 
     &:before {
       left: 24px;
+    }
+
+    .primary {
+      display: none;
+    }
+
+    ul.secondary {
+
+      > li {
+        display: block;
+        padding-left: 0;
+
+        &:not(:last-child) {
+          border-bottom: 2px solid $white;
+        }
+
+        a {
+          font-size: 1em;
+          padding: .3em 0;
+        }
+      }
     }
   }
 }
