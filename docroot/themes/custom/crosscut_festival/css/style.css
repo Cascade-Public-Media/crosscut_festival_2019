@@ -10122,6 +10122,12 @@ caption {
   z-index: 1030;
 }
 
+/* Make sure admin toolbar dropdowns appear above header. */
+#toolbar-bar {
+  z-index: 1031;
+  font-size: 1em;
+}
+
 .nav-container {
   margin: 0 auto;
   max-width: 870px;

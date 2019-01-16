@@ -10,6 +10,12 @@
   z-index: $zindex-fixed;
 }
 
+/* Make sure admin toolbar dropdowns appear above header. */
+#toolbar-bar {
+  z-index: $zindex-fixed + 1;
+  font-size: 1em;
+}
+
 .nav-container {
   margin: 0 auto;
   max-width: 870px;
