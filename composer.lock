@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aaa3fc9a88000bb825542cc03d62df8d",
+    "content-hash": "e147026d9db56bfeb3cb2764e6bf2630",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -3113,6 +3113,55 @@
                 "source": "http://cgit.drupalcode.org/libraries",
                 "issues": "http://drupal.org/project/issues/libraries",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/lightbox_campaigns",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/lightbox_campaigns",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/lightbox_campaigns-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "c72f5e275a7b82f5021866c3b844b99d6d49ad5a"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1539640380",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher C. Wells (wells)",
+                    "homepage": "https://www.drupal.org/u/wells",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Lightbox campaigns manager.",
+            "homepage": "https://drupal.org/project/lightbox_campaigns",
+            "support": {
+                "source": "http://cgit.drupalcode.org/lightbox_campaigns",
+                "issues": "https://www.drupal.org/project/issues/lightbox_campaigns?version=8.x"
             }
         },
         {
@@ -6425,6 +6474,17 @@
                 "html"
             ],
             "time": "2016-07-25T17:07:32+00:00"
+        },
+        {
+            "name": "noelboss/featherlight",
+            "version": "1.7.13",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/noelboss/featherlight/archive/1.7.13.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "oomphinc/composer-installers-extender",
