@@ -18,10 +18,10 @@ sass.compiler = require('node-sass');
 
 const server = browserSync.create();
 function serve(done) {
-    server.init({
-      proxy: "http://crosscut-festival.dd:8083",
-    });
-    done();
+    if (typeof process.env.BS_PROXY != 'undefined') {
+        server.init({proxy: process.env.BS_PROXY});
+        done();
+    }
 }
 
 function styles() {
