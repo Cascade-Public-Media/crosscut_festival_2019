@@ -1,0 +1,48 @@
+/*!
+ * Bootstrap v4.2.1 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "../../vendor_components/scss/bootstrap/functions";
+@import "../../vendor_components/scss/bootstrap/variables";
+
+// Override default bootstrap variables
+@import "../site/variables";
+
+@import "../../vendor_components/scss/bootstrap/mixins";
+@import "../../vendor_components/scss/bootstrap/root";
+@import "../../vendor_components/scss/bootstrap/reboot";
+@import "../../vendor_components/scss/bootstrap/type";
+//@import "../../vendor_components/scss/bootstrap/images";
+//@import "../../vendor_components/scss/bootstrap/code";
+@import "../../vendor_components/scss/bootstrap/grid";
+//@import "../../vendor_components/scss/bootstrap/tables";
+//@import "../../vendor_components/scss/bootstrap/forms";
+@import "../../vendor_components/scss/bootstrap/buttons";
+//@import "../../vendor_components/scss/bootstrap/transitions";
+@import "../../vendor_components/scss/bootstrap/dropdown";
+@import "../../vendor_components/scss/bootstrap/button-group";
+@import "../../vendor_components/scss/bootstrap/input-group";
+@import "../../vendor_components/scss/bootstrap/custom-forms";
+@import "../../vendor_components/scss/bootstrap/nav";
+@import "../../vendor_components/scss/bootstrap/navbar";
+//@import "../../vendor_components/scss/bootstrap/card";
+//@import "../../vendor_components/scss/bootstrap/breadcrumb";
+//@import "../../vendor_components/scss/bootstrap/pagination";
+//@import "../../vendor_components/scss/bootstrap/badge";
+//@import "../../vendor_components/scss/bootstrap/jumbotron";
+//@import "../../vendor_components/scss/bootstrap/alert";
+//@import "../../vendor_components/scss/bootstrap/progress";
+//@import "../../vendor_components/scss/bootstrap/media";
+//@import "../../vendor_components/scss/bootstrap/list-group";
+//@import "../../vendor_components/scss/bootstrap/close";
+//@import "../../vendor_components/scss/bootstrap/toasts";
+//@import "../../vendor_components/scss/bootstrap/modal";
+//@import "../../vendor_components/scss/bootstrap/tooltip";
+//@import "../../vendor_components/scss/bootstrap/popover";
+//@import "../../vendor_components/scss/bootstrap/carousel";
+//@import "../../vendor_components/scss/bootstrap/spinners";
+@import "../../vendor_components/scss/bootstrap/utilities";
+@import "../../vendor_components/scss/bootstrap/print";
