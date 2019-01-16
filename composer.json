@@ -20,7 +20,8 @@
         "w8tcha/ckeditor_codemirror": "^1.17",
         "drupal/admin_toolbar": "^1.25",
         "drupal/webform": "^5.1",
-        "wikimedia/composer-merge-plugin": "^1.4"
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "drupal/google_analytics": "3.x-dev"
     },
     "repositories": [
         {
