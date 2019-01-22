@@ -11036,6 +11036,15 @@ caption {
   padding: 10px;
 }
 
+#page-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#page-title span {
+  font-weight: bold;
+}
+
 /** Buttons **/
 .cta {
   text-transform: uppercase;
