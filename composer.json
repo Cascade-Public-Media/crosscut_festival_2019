@@ -68,8 +68,14 @@
         "process-timeout": 0
     },
     "scripts": {
-        "post-install-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "post-update-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "post-install-cmd": [
+            "find docroot vendor -name '.git' | xargs rm -rf",
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+        ],
+        "post-update-cmd": [
+            "find docroot vendor -name '.git' | xargs rm -rf",
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+        ],
         "nuke": "rm -r -f docroot/modules/contrib docroot/profiles/contrib/lightning vendor composer.lock",
         "quick-start": [
             "composer install",
