@@ -11014,6 +11014,21 @@ h3.section-header {
   }
 }
 
+/** General form elements. **/
+label {
+  font-weight: bold;
+}
+
+label.option {
+  font-weight: normal;
+}
+
+/** Fieldset **/
+fieldset legend span {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 /** General **/
 .visually-hidden {
   position: absolute;

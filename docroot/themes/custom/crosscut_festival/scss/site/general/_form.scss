@@ -1,0 +1,20 @@
+/** General form elements. **/
+label {
+  font-weight: $font-weight-bold;
+
+  &.option {
+    font-weight: $font-weight-base;
+  }
+}
+
+
+/** Fieldset **/
+
+fieldset {
+  legend {
+    span {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-base;
+    }
+  }
+}
