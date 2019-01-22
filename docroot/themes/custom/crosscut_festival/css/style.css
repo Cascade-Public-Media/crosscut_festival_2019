@@ -11522,7 +11522,7 @@ footer .footer-content-main {
      object-fit: contain;
 }
 
-.featured-org-carousel .owl-dots {
+.owl-nav {
   position: absolute;
   height: 100%;
   left: 0;
@@ -11531,66 +11531,59 @@ footer .footer-content-main {
   bottom: 0;
 }
 
-.featured-org-carousel .owl-dot,
-.featured-org-carousel .owl-dot.active {
-  position: absolute;
-}
-
-.featured-org-carousel .owl-dot span,
-.featured-org-carousel .owl-dot.active span {
+.owl-nav .nav-arrow {
   background: transparent !important;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  display: inline-block;
+  display: block;
   width: 0;
   height: 0;
+  color: transparent;
 }
 
-.featured-org-carousel .owl-dot:first-of-type,
-.featured-org-carousel .owl-dot.active:first-of-type {
+.owl-nav .owl-prev {
+  position: absolute;
   left: -1em;
 }
 
-.featured-org-carousel .owl-dot:first-of-type span,
-.featured-org-carousel .owl-dot.active:first-of-type span {
+.owl-nav .owl-prev .nav-arrow {
   background: transparent;
   border-right: 10px solid #6c757d;
 }
 
-.featured-org-carousel .owl-dot:first-of-type.active span, .featured-org-carousel .owl-dot:first-of-type:hover span, .featured-org-carousel .owl-dot:first-of-type:focus span,
-.featured-org-carousel .owl-dot.active:first-of-type.active span,
-.featured-org-carousel .owl-dot.active:first-of-type:hover span,
-.featured-org-carousel .owl-dot.active:first-of-type:focus span {
-  background: transparent;
+.owl-nav .owl-prev.active, .owl-nav .owl-prev:hover, .owl-nav .owl-prev:focus {
+  background: transparent !important;
+}
+
+.owl-nav .owl-prev.active .nav-arrow, .owl-nav .owl-prev:hover .nav-arrow, .owl-nav .owl-prev:focus .nav-arrow {
+  background: transparent !important;
   border-right: 10px solid #6c757d;
 }
 
-.featured-org-carousel .owl-dot:last-of-type,
-.featured-org-carousel .owl-dot.active:last-of-type {
+.owl-nav .owl-next {
+  position: absolute;
   right: -1em;
 }
 
-.featured-org-carousel .owl-dot:last-of-type span,
-.featured-org-carousel .owl-dot.active:last-of-type span {
+.owl-nav .owl-next .nav-arrow {
   background: transparent;
   border-left: 10px solid #6c757d;
 }
 
-.featured-org-carousel .owl-dot:last-of-type.active span, .featured-org-carousel .owl-dot:last-of-type:hover span, .featured-org-carousel .owl-dot:last-of-type:focus span,
-.featured-org-carousel .owl-dot.active:last-of-type.active span,
-.featured-org-carousel .owl-dot.active:last-of-type:hover span,
-.featured-org-carousel .owl-dot.active:last-of-type:focus span {
-  background: transparent;
+.owl-nav .owl-next.active, .owl-nav .owl-next:hover, .owl-nav .owl-next:focus {
+  background: transparent !important;
+}
+
+.owl-nav .owl-next.active .nav-arrow, .owl-nav .owl-next:hover .nav-arrow, .owl-nav .owl-next:focus .nav-arrow {
+  background: transparent !important;
   border-left: 10px solid #6c757d;
 }
 
 @media (min-width: 576px) {
-  .featured-org-carousel .owl-dot:first-of-type,
-  .featured-org-carousel .owl-dot.active:first-of-type {
+  .owl-nav .owl-prev {
     left: -2em;
   }
-  .featured-org-carousel .owl-dot:last-of-type,
-  .featured-org-carousel .owl-dot.active:last-of-type {
+  .owl-nav .owl-next {
     right: -2em;
   }
 }
@@ -11824,6 +11817,44 @@ footer .footer-content-main {
 }
 
 /** Sessions Carousel **/
+#session-carousel .owl-nav {
+  width: 200px;
+  margin: 0 auto;
+  height: auto;
+  top: auto;
+  bottom: -30px;
+}
+
+#session-carousel .owl-nav .nav-arrow {
+  background: transparent !important;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+}
+
+#session-carousel .owl-nav .owl-prev .nav-arrow {
+  border-right: 16px solid #6c757d;
+}
+
+#session-carousel .owl-nav .owl-prev.active .nav-arrow, #session-carousel .owl-nav .owl-prev:hover .nav-arrow, #session-carousel .owl-nav .owl-prev:focus .nav-arrow {
+  border-right: 16px solid #6c757d;
+}
+
+#session-carousel .owl-nav .owl-next .nav-arrow {
+  border-left: 16px solid #6c757d;
+}
+
+#session-carousel .owl-nav .owl-next.active .nav-arrow, #session-carousel .owl-nav .owl-next:hover .nav-arrow, #session-carousel .owl-nav .owl-next:focus .nav-arrow {
+  border-left: 16px solid #6c757d;
+}
+
+#session-carousel .owl-dots {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .session {
   height: auto;
   padding: 1em;

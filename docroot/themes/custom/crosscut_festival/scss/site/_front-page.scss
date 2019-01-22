@@ -140,77 +140,78 @@
       object-fit: contain;
     }
   }
+}
 
-  .owl-dots {
-    position: absolute;
-    height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+// Owl Carousel
+.owl-nav {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  .nav-arrow {
+    background: transparent !important;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    display: block;
+    width: 0;
+    height: 0;
+    color: transparent;
   }
 
-  // Owl Carousel
-  .owl-dot,
-  .owl-dot.active {
+  .owl-prev {
     position: absolute;
+    left: -1em;
 
-    span {
-      background: transparent !important;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      display: inline-block;
-      width: 0;
-      height: 0;
+    .nav-arrow {
+      background: transparent;
+      border-right: 10px solid $gray-600;
     }
 
-    &:first-of-type {
-      left: -1em;
+    &.active,
+    &:hover,
+    &:focus {
+      background: transparent !important;
 
-      span {
-        background: transparent;
+      .nav-arrow {
+        background: transparent !important;
         border-right: 10px solid $gray-600;
       }
+    }
+  }
 
-      &.active,
-      &:hover,
-      &:focus {
-        span {
-          background: transparent;
-          border-right: 10px solid $gray-600;
-        }
-      }
+  .owl-next {
+    position: absolute;
+    right: -1em;
+
+    .nav-arrow {
+      background: transparent;
+      border-left: 10px solid $gray-600;
     }
 
-    &:last-of-type {
-      right: -1em;
+    &.active,
+    &:hover,
+    &:focus {
+      background: transparent !important;
 
-      span {
-        background: transparent;
+      .nav-arrow {
+        background: transparent !important;
         border-left: 10px solid $gray-600;
       }
-
-      &.active,
-      &:hover,
-      &:focus {
-        span {
-          background: transparent;
-          border-left: 10px solid $gray-600;
-        }
-      }
     }
+  }
 
-    @include media-breakpoint-up(sm) {
-      &:first-of-type {
-        left: -2em;
-      }
-      &:last-of-type{
-        right: -2em;
-      }
+  @include media-breakpoint-up(sm) {
+    .owl-prev {
+      left: -2em;
+    }
+    .owl-next {
+      right: -2em;
     }
   }
 }
-
 
 
 
@@ -425,6 +426,59 @@
 
 
 /** Sessions Carousel **/
+
+
+#session-carousel {
+  .owl-nav {
+    width: 200px;
+    margin: 0 auto;
+    height: auto;
+    top: auto;
+    bottom: -30px;
+
+    .nav-arrow {
+      background: transparent !important;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+    }
+
+    .owl-prev {
+      .nav-arrow {
+        border-right: 16px solid $gray-600;
+      }
+
+      &.active,
+      &:hover,
+      &:focus {
+        .nav-arrow {
+          border-right: 16px solid $gray-600;
+        }
+      }
+    }
+
+    .owl-next {
+      .nav-arrow {
+        border-left: 16px solid $gray-600;
+      }
+
+      &.active,
+      &:hover,
+      &:focus {
+        .nav-arrow {
+          border-left: 16px solid $gray-600;
+        }
+      }
+    }
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .session {
   height: auto;
   padding: 1em;
