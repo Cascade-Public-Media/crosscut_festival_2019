@@ -11075,7 +11075,6 @@ caption {
 
 .header {
   background-color: #213342;
-  position: fixed;
   width: 100%;
   max-width: 100%;
   z-index: 1030;
@@ -11347,6 +11346,11 @@ footer .footer-content-main {
   .site-info__sub {
     margin: 0 auto 20px;
   }
+}
+
+/** Header menu **/
+.path-frontpage .header {
+  position: fixed;
 }
 
 /** Hero **/

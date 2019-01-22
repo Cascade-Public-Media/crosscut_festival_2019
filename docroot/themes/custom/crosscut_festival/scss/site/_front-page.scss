@@ -1,3 +1,10 @@
+/** Header menu **/
+.path-frontpage {
+  .header {
+    position: fixed;
+  }
+}
+
 /** Hero **/
 .hero {
   background: linear-gradient(90deg, rgba(23,44,59,0) 20%, #000000 120%), url('../images/ccfest_hero.jpg');
