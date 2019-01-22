@@ -11318,6 +11318,7 @@ caption {
 /** Footer **/
 footer {
   background-color: #4A4A4A;
+  margin-top: 60px;
 }
 
 footer .footer-content-main {
