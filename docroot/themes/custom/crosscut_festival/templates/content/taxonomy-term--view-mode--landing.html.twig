@@ -32,15 +32,19 @@
   ]
 %}
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
-  {% if not page %}
-      {{ content.field_icon }}
-      {{ title_prefix }}
+  {{ content.field_icon }}
 
-      <h4>{{ name }}</h4>
-      <div class="horizontal-line"></div>
-      <div class="presented-by">
-        <span>Presented by</span>
-      </div>
-      {{ title_suffix }}
+  {{ title_prefix }}
+  <h4>{{ name }}</h4>
+  {{ title_suffix }}
+  <div class="horizontal-line"></div>
+
+  {% if content.field_sponsor_logo|render is not empty %}
+    <div class="presented-by">
+      <span>Presented by</span>
+      {{ content.field_sponsor_logo }}
+    </div>
   {% endif %}
+
+  {{ content|without('field_icon', 'field_sponsor_logo') }}
 </div>

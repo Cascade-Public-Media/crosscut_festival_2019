@@ -11677,7 +11677,7 @@ footer .footer-content-main {
 }
 
 .view-id-tracks .row .track {
-  width: 240px;
+  max-width: 240px;
   margin: 1em auto;
   text-align: center;
 }
@@ -11725,23 +11725,41 @@ footer .footer-content-main {
 .view-id-tracks .row .track .horizontal-line {
   width: 100%;
   height: 2px;
+  margin-bottom: 2em;
 }
 
 .view-id-tracks .row .track .presented-by span {
   font-size: 12px;
   line-height: 15px;
   display: block;
-  margin: 2em auto;
 }
 
-.view-id-tracks .row .track .presented-by div {
-  max-width: 80%;
-  margin: 0 auto;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100px;
-  border: 1px solid #979797;
+.view-id-tracks .row .track .presented-by > div {
+  margin: 2em auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.view-id-tracks .row .track .presented-by > div .field__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.view-id-tracks .row .track .presented-by img {
+  max-width: 180px;
 }
 
 /** Festival News Section **/
