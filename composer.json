@@ -23,7 +23,8 @@
         "wikimedia/composer-merge-plugin": "^1.4",
         "drupal/google_analytics": "3.x-dev",
         "drupal/lightbox_campaigns": "^1.2",
-        "noelboss/featherlight": "^1.7"
+        "noelboss/featherlight": "^1.7",
+        "drupal/salesforce": "^3.1"
     },
     "repositories": [
         {
