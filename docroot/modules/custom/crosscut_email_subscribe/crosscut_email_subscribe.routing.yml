@@ -1,0 +1,7 @@
+crosscut_email_subscribe.settings:
+  path: /admin/config/system/crosscut-email-subscribe
+  defaults:
+    _form: \Drupal\crosscut_email_subscribe\Form\CesSettingsForm
+    _title: Crosscut Email Subscribe Settings
+  requirements:
+    _permission: administer site configuration

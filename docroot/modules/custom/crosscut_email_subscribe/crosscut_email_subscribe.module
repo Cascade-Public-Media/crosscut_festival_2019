@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Crosscut Email Subscribe module file.
+ */
+
+// SalesForce Object Types.
+const CES_SALESFORCE_OBJECT_ACCOUNT = 'Account';
+const CES_SALESFORCE_OBJECT_CONTACT = 'Contact';
+
+// Shared fields.
+const CES_SALESFORCE_ACTIVE = 'rC_Bios__Active__c';
+
+// Account fields.
+const CES_SALESFORCE_CROSSCUT_CONSTITUENT = 'Crosscut_Constituent__c';
+const CES_SALESFORCE_ACCOUNT_DATE = 'rC_Bios__Acquired_Date__c';
+const CES_SALESFORCE_ACCOUNT_NAME = 'Name';
+const CES_SALESFORCE_ACCOUNT_SOURCE = 'rC_Bios__Acquired_Source__c';
+const CES_SALESFORCE_ACCOUNT_STATION = 'Station__c';
+
+// Contact fields.
+const CES_SALESFORCE_CONTACT_ACCOUNT_ID = 'AccountId';
+const CES_SALESFORCE_CONTACT_EMAIL = 'Email';
+const CES_SALESFORCE_CONTACT_EMAIL_HOME = 'rC_Bios__Home_Email__c';
+const CES_SALESFORCE_CONTACT_EMAIL_MVAULT = 'mvcms__PBS_Profile_Email__c';
+const CES_SALESFORCE_CONTACT_EMAIL_OTHER = 'rC_Bios__Other_Email__c';
+const CES_SALESFORCE_CONTACT_EMAIL_WORK = 'rC_Bios__Work_Email__c';
+const CES_SALESFORCE_CONTACT_FIRSTNAME = 'FirstName';
+const CES_SALESFORCE_CONTACT_ID = 'Id';
+const CES_SALESFORCE_CONTACT_LASTNAME = 'LastName';
+const CES_SALESFORCE_CONTACT_MIDDLENAME = 'rC_Bios__Middle_Name__c';
+const CES_SALESFORCE_CONTACT_PREFERRED = 'rC_Bios__Preferred_Contact__c';
+const CES_SALESFORCE_CONTACT_PREFERRED_EMAIL = 'rC_Bios__Preferred_Email__c';
+
+// Mailing lists.
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_ARTS = 'ET_Opt_In_Crosscut_Arts_and_Culture__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_DAILY = 'ET_OptIn_CrosscutDailyEnews__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_DAILY_TROLL = 'ET_Opt_In_Crosscut_Daily_Troll_Enews__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_DONORS = 'ET_OptIN_DonorCommCrosscut__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_ELECTIONS = 'ET_Opt_In_Crosscut_Elections__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_EVENTS = 'ET_Opt_In_Crosscut_Events__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_FESTIVAL = 'ET_Opt_In_Crosscut_Festival__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_INVITATIONS = 'ET_Opt_In_InvitationsCrosscut__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_MEGALIST = 'ET_Opt_In_Crosscut_Megalist__c';
+const CES_SALESFORCE_NEWSLETTER_CROSSCUT_WEEKLY = 'ET_Opt_In_Crosscut_Weekly_Enews__c';
+
+/**
+ * Provides an array of human-readable mailing list names.
+ *
+ * @return array
+ */
+function crosscut_email_subscribe_lists() {
+  return array(
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_ARTS => 'Arts & Culture Email',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_DAILY => 'Daily Email',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_DAILY_TROLL => 'Daily Troll',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_DONORS => 'Donors News',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_ELECTIONS => 'Elections News',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_EVENTS => 'Events News',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_FESTIVAL => 'Festival',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_INVITATIONS => 'Invitations',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_MEGALIST => 'MEGA LIST',
+    CES_SALESFORCE_NEWSLETTER_CROSSCUT_WEEKLY => 'Weekly Email',
+  );
+}

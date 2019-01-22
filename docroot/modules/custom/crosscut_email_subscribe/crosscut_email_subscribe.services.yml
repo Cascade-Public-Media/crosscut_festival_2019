@@ -1,0 +1,8 @@
+services:
+
+  # Logger.
+
+  logger.channel.crosscut_email_subscribe:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['crosscut_email_subscribe']

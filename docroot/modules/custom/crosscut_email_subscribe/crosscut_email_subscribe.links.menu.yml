@@ -1,0 +1,5 @@
+crosscut_email_subscribe.settings:
+  title: Crosscut Email Subscribe settings
+  parent: system.admin_config_system
+  description: Global settings options for the Crosscut Email Subscribe module.
+  route_name: crosscut_email_subscribe.settings

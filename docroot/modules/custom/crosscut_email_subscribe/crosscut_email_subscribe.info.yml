@@ -1,0 +1,11 @@
+name: 'Crosscut Email Subscribe'
+description: 'Support for Crosscut email subscription paths through Salesforce.'
+package: Crosscut
+
+type: module
+core: 8.x
+
+dependencies:
+  - block
+  - salesforce
+version: null
