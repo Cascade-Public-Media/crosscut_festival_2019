@@ -1,0 +1,21 @@
+{# extends @bootstrap_barrio/layout/block.html.twig
+/**
+ * @file
+ * Theme override for tabs.
+ */
+#}
+
+{%
+  set classes = [
+  'container',
+  'tabs',
+]
+%}
+
+{% block content %}
+  {% if content %}
+    <nav {{ attributes.addClass(classes) }} role="navigation" aria-label="{{ 'Tabs'|t }}">
+      {{ content }}
+    </nav>
+  {% endif %}
+{% endblock %}
