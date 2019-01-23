@@ -28,6 +28,17 @@ class QuickSubscribeBlock extends BlockBase implements BlockPluginInterface {
     $config = $this->getConfiguration();
     $lists = crosscut_email_subscribe_lists();
 
+    $form['prefix'] = [
+      '#type' => 'text_format',
+      '#format' => 'basic_html',
+      '#title' => $this->t('Form prefix'),
+      '#description' => $this->t('This content will appear above the form.'),
+    ];
+    if (isset($config['prefix'])) {
+      $form['prefix']['#default_value'] = $config['prefix']['value'];
+      $form['prefix']['#format'] = $config['prefix']['format'];
+    }
+
     $form['list_options'] = [
       '#type' => 'checkboxes',
       '#multiple' => TRUE,
@@ -69,6 +80,17 @@ class QuickSubscribeBlock extends BlockBase implements BlockPluginInterface {
       $form['form_redirect']['#default_value'] = $node;
     }
 
+    $form['suffix'] = [
+      '#type' => 'text_format',
+      '#format' => 'basic_html',
+      '#title' => $this->t('Form suffix'),
+      '#description' => $this->t('This content will appear below the form.'),
+    ];
+    if (isset($config['suffix'])) {
+      $form['suffix']['#default_value'] = $config['suffix']['value'];
+      $form['suffix']['#format'] = $config['suffix']['format'];
+    }
+
     return $form;
   }
 
@@ -80,6 +102,8 @@ class QuickSubscribeBlock extends BlockBase implements BlockPluginInterface {
     $values = $form_state->getValues();
     $this->configuration['auto_enroll'] = $values['auto_enroll'];
     $this->configuration['form_redirect'] = $values['form_redirect'];
+    $this->configuration['prefix'] = $values['prefix'];
+    $this->configuration['suffix'] = $values['suffix'];
 
     // Remove unselected values from the saved configuration array.
     $list_options = array();
@@ -102,7 +126,27 @@ class QuickSubscribeBlock extends BlockBase implements BlockPluginInterface {
       $config
     );
     $form['#title'] = $this->label();
+
+    if (isset($config['prefix']) && !empty($config['prefix']['value'])) {
+      $build['prefix'] = [
+        '#type' => 'html_tag',
+        '#tag' => 'div',
+        '#value' => $config['prefix']['value'],
+        '#attributes' => ['class' => ['quick-subscribe-form-prefix']]
+      ];
+    }
+
     $build['form'] = $form;
+
+    if (isset($config['suffix']) && !empty($config['suffix']['value'])) {
+      $build['suffix'] = [
+        '#type' => 'html_tag',
+        '#tag' => 'div',
+        '#value' => $config['suffix']['value'],
+        '#attributes' => ['class' => ['quick-subscribe-form-prefix']]
+      ];
+    }
+
     return $build;
   }
 }
