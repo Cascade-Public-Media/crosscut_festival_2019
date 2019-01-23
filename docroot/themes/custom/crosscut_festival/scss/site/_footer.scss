@@ -22,10 +22,15 @@ footer {
     color: $white;
     margin-bottom: 0;
     white-space: nowrap;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 
   &__sub {
-    color: $white;
+    color: $gray-medium-text;
     font-size: .8em;
     line-height: 1.3;
   }

@@ -71,6 +71,13 @@
     <div id="page">
         <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
             {% block head %}
+                {% if page.top_header %}
+                    <div class="announcement-banner">
+                        <div class="container">
+                            {{ page.top_header }}
+                        </div>
+                    </div>
+                {% endif %}
                 <div class="nav-container">
                     {{ page.primary_menu }}
                     {{ page.mobile_menu }}

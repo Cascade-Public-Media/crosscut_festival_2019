@@ -1,12 +1,14 @@
 /* VARIABLES */
 
+@import 'site/variables';
+
 // colors
 $primary-shade: #A8CF45;
 $primary-light: lighten($primary-shade, 37%);
 $primary-dark: darken($primary-shade, 12%);
-$accent-shade: #0079C0;
+$accent-shade: $teal;
 $accent-light: lighten($accent-shade, 37%);
-$accent-dark: darken($accent-shade, 12%);
+$accent-dark: $teal-darker;
 // Reassign color vars to semantic color scheme
 $red: #dc3545;
 $yellow: #ffc107;
@@ -14,8 +16,10 @@ $green: #28a745;
 $cyan: #17a2b8;
 $gray-100: #f8f9fa !default;
 $gray-800: #343a40 !default;
-$theme-colors: ( primary: $accent-shade, secondary: $primary-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
-$brand-primary: $accent-shade;
+
+
+$brand-primary: $teal;
+$theme-colors: ( primary: $teal, secondary: $yellow, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
 //$brand-success: $green;
 //$brand-info: $teal;
 //$brand-warning: $orange;
@@ -31,9 +35,9 @@ $inverse-bg: $primary-shade;
 // Links
 //
 // Style anchor elements.
-$link-color: $accent-shade;
+//$link-color: $accent-shade;
 $link-decoration: none;
-$link-hover-color: $accent-dark;
+//$link-hover-color: $accent-dark;
 $link-hover-decoration: underline;
 // Comments
 $comment-spacer-x: 1.25em;
