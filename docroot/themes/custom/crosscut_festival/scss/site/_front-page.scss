@@ -116,6 +116,8 @@
 
   .owl-carousel {
     height: 80px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .feature-text {
@@ -129,6 +131,8 @@
 
   .featured-panelist-organization {
     height: 80px;
+    margin: 0 auto;
+    max-width: 260px;
   }
 
   .org {
@@ -163,7 +167,7 @@
 
   .owl-prev {
     position: absolute;
-    left: -1em;
+    left: -.8em;
 
     .nav-arrow {
       background: transparent;
@@ -184,7 +188,7 @@
 
   .owl-next {
     position: absolute;
-    right: -1em;
+    right: -.8em;
 
     .nav-arrow {
       background: transparent;
@@ -203,7 +207,7 @@
     }
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     .owl-prev {
       left: -2em;
     }

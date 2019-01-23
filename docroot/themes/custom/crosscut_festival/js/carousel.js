@@ -13,10 +13,10 @@
       $('.view-id-featured_panelist_organizations').once('panelistsCarousel').each(function() {
         $('#panelists-carousel').owlCarousel({
           loop: true,
+          autoplay: true,
           dots: false,
           nav: true,
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
-          margin: 5,
           responsive: {
             0: {
               items: 2

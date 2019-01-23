@@ -11496,6 +11496,8 @@ footer .footer-content-main {
 
 .featured-org-carousel .owl-carousel {
   height: 80px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .featured-org-carousel .feature-text {
@@ -11509,6 +11511,8 @@ footer .footer-content-main {
 
 .featured-org-carousel .featured-panelist-organization {
   height: 80px;
+  margin: 0 auto;
+  max-width: 260px;
 }
 
 .featured-org-carousel .org {
@@ -11543,7 +11547,7 @@ footer .footer-content-main {
 
 .owl-nav .owl-prev {
   position: absolute;
-  left: -1em;
+  left: -.8em;
 }
 
 .owl-nav .owl-prev .nav-arrow {
@@ -11562,7 +11566,7 @@ footer .footer-content-main {
 
 .owl-nav .owl-next {
   position: absolute;
-  right: -1em;
+  right: -.8em;
 }
 
 .owl-nav .owl-next .nav-arrow {
@@ -11579,7 +11583,7 @@ footer .footer-content-main {
   border-left: 10px solid #6c757d;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .owl-nav .owl-prev {
     left: -2em;
   }
