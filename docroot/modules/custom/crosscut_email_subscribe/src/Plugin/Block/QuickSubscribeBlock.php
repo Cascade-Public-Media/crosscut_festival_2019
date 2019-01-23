@@ -127,23 +127,21 @@ class QuickSubscribeBlock extends BlockBase implements BlockPluginInterface {
     );
     $form['#title'] = $this->label();
 
+    $build['contents'] = ['#theme_wrappers' => ['ces_quick_subscribe_form']];
+
     if (isset($config['prefix']) && !empty($config['prefix']['value'])) {
-      $build['prefix'] = [
-        '#type' => 'html_tag',
-        '#tag' => 'div',
-        '#value' => $config['prefix']['value'],
-        '#attributes' => ['class' => ['quick-subscribe-form-prefix']]
+      $build['contents']['prefix'] = [
+        '#type' => 'markup',
+        '#markup' => $config['prefix']['value'],
       ];
     }
 
-    $build['form'] = $form;
+    $build['contents']['form'] = $form;
 
     if (isset($config['suffix']) && !empty($config['suffix']['value'])) {
-      $build['suffix'] = [
-        '#type' => 'html_tag',
-        '#tag' => 'div',
-        '#value' => $config['suffix']['value'],
-        '#attributes' => ['class' => ['quick-subscribe-form-prefix']]
+      $build['contents']['suffix'] = [
+        '#type' => 'markup',
+        '#markup' => $config['suffix']['value'],
       ];
     }
 

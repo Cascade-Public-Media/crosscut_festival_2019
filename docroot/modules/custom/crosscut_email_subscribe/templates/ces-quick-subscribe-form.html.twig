@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation for render_example_add_div.
+ *
+ * Wraps a div around the already-rendered #children.
+ *
+ * Available variables:
+ * - element: Element that will be rendered.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="ces-quick-subscribe-form">
+  {% if element.prefix is not empty %}
+    <div class="quick-subscribe-form-prefix">
+      {{ element.prefix }}
+    </div>
+  {% endif %}
+
+  {{ element.form }}
+
+  {% if element.suffix is not empty %}
+    <div class="quick-subscribe-form-suffix">
+      {{ element.suffix }}
+    </div>
+  {% endif %}
+</div>

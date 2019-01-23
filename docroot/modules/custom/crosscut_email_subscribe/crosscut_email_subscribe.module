@@ -51,7 +51,7 @@ const CES_SALESFORCE_NEWSLETTER_CROSSCUT_WEEKLY = 'ET_Opt_In_Crosscut_Weekly_Ene
  * @return array
  */
 function crosscut_email_subscribe_lists() {
-  return array(
+  return [
     CES_SALESFORCE_NEWSLETTER_CROSSCUT_ARTS => 'Arts & Culture Email',
     CES_SALESFORCE_NEWSLETTER_CROSSCUT_DAILY => 'Daily Email',
     CES_SALESFORCE_NEWSLETTER_CROSSCUT_DAILY_TROLL => 'Daily Troll',
@@ -62,5 +62,16 @@ function crosscut_email_subscribe_lists() {
     CES_SALESFORCE_NEWSLETTER_CROSSCUT_INVITATIONS => 'Invitations',
     CES_SALESFORCE_NEWSLETTER_CROSSCUT_MEGALIST => 'MEGA LIST',
     CES_SALESFORCE_NEWSLETTER_CROSSCUT_WEEKLY => 'Weekly Email',
-  );
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function crosscut_email_subscribe_theme() {
+  return [
+    'ces_quick_subscribe_form' => [
+      'render element' => 'element'
+    ],
+  ];
 }
