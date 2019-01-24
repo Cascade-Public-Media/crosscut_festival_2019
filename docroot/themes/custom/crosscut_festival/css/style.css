@@ -11126,6 +11126,11 @@ caption {
   border-left: 1px solid #979797;
 }
 
+/** Entities **/
+.field--type-file {
+  margin-bottom: 1rem;
+}
+
 #page {
   position: relative;
 }
