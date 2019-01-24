@@ -95,13 +95,13 @@
 
           var $article = $('#crosscut-article');
 
-          var domain = 'https://crosscut.com';
+          var domain = 'https://crosscut.dev.dd:8443';
           // News section: get data from festival news REST export view on crosscut.com
           function renderNews(data) {
             var image_path = domain + data['image'];
             var date = data['created'].slice(0, -8); // remove time from long format date
 
-            var html = '<div class="col-sm-6 col-md-3"><div class="img-container"><img class="newsImage" alt="Crosscut Festival News Article" src="' + image_path + '"/></div></div><div class="col-sm-6 col-md-9 article-teaser"><h4>' + data['title'] + '</h4><p>' + data['excerpt'] + '</p><span class="byline">by ' + data['author'] + ' / ' + date + '</span></div>';
+            var html = '<div class="row no-gutters"><div class="col-sm-6 col-md-3"><div class="img-container"><img class="newsImage" alt="Crosscut Festival News Article" src="' + image_path + '"/></div></div><div class="col-sm-6 col-md-9 article-teaser"><h4>' + data['title'] + '</h4><p>' + data['excerpt'] + '</p><span class="byline">by ' + data['author'] + ' / ' + date + '</span></div></div>';
             $article.append(html);
           }
 
