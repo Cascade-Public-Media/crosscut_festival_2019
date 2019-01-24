@@ -43,7 +43,24 @@
     'no-gutters',
 ]
 %}
-<div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
+
+{#
+/**
+ * A Drupal core bug currently prevents configuration.label from filling in this
+ * context.
+ *
+ * @url https://www.drupal.org/project/drupal/issues/2720101
+ */
+#}
+{% if configuration.label is not empty %}
+    {% set htmlId = configuration.label|clean_id %}
+{% elseif label|render is not empty %}
+    {% set htmlId = label|render|clean_id %}
+{% elseif content['#view_id'] is not empty %}
+    {% set htmlId = content['#view_id']|clean_id %}
+{% endif %}
+
+<div{% if htmlId is defined %} id="{{ htmlId }}"{% endif %} {{ attributes.addClass(classes) }}>
     {{ title_prefix }}
     {% if label %}
         <h2 class="section-header">{{ label }}</h2>

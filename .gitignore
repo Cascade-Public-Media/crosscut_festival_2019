@@ -11,7 +11,7 @@
 
 # Ignore sensitive information.
 /docroot/sites/*/settings.php
-/docroot/sites/*/settings.local.php
+/docroot/sites/*/settings.local*
 /docroot/sites/default/development.services.yml
 /docroot/sites/default/services.yml
 
