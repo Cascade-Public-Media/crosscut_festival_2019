@@ -11859,41 +11859,33 @@ footer .footer-content-main {
   background-color: #172C3B;
 }
 
-#stay-connected .ces-quick-subscribe-form .quick-subscribe-form-prefix {
+#stay-connected .quick-subscribe-form-prefix {
   padding: 0 1em;
 }
 
-#stay-connected .ces-quick-subscribe-form #crosscut-email-subscribe-quick-subscribe-form {
+#stay-connected #crosscut-email-subscribe-quick-subscribe-form {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
-#stay-connected .ces-quick-subscribe-form #crosscut-email-subscribe-quick-subscribe-form .form-item-email-address {
+#stay-connected #crosscut-email-subscribe-quick-subscribe-form .form-item-email-address {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-#stay-connected .ces-quick-subscribe-form p {
+#stay-connected p {
   color: #fff;
   font-weight: 600;
-  font-size: 22px;
-  line-height: 26px;
 }
 
-#stay-connected .ces-quick-subscribe-form h2 {
+#stay-connected h2 {
   color: #fff;
   text-transform: uppercase;
   font-weight: normal;
@@ -11903,6 +11895,22 @@ footer .footer-content-main {
 @media (min-width: 576px) {
   #stay-connected .content {
     padding: 30px 0;
+  }
+  #stay-connected #crosscut-email-subscribe-quick-subscribe-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #stay-connected p {
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 

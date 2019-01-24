@@ -400,42 +400,48 @@
     background-position: center;
     background-size: cover;
     background-color: $blue-dark;
+  }
 
-    .quick-subscribe-form-prefix {
-      padding: 0 1em;
+  .quick-subscribe-form-prefix {
+    padding: 0 1em;
+  }
+
+  #crosscut-email-subscribe-quick-subscribe-form {
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+
+    .form-item-email-address {
+      flex: 1;
     }
+  }
 
-    #crosscut-email-subscribe-quick-subscribe-form {
-      padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      justify-content: space-between;
+  p {
+    color: $white;
+    font-weight: 600;
+  }
 
-      .form-item-email-address {
-        flex: 1;
-      }
-    }
-
-    p {
-      color: $white;
-      font-weight: 600;
-      font-size: 22px;
-      line-height: 26px;
-    }
-
-    h2 {
-      color: $white;
-      text-transform: uppercase;
-      font-weight: normal;
-      margin: 12px 0;
-    }
-
+  h2 {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 12px 0;
   }
 
   @include media-breakpoint-up(sm) {
     .content {
       padding: 30px 0;
+    }
+
+    #crosscut-email-subscribe-quick-subscribe-form {
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 26px;
     }
   }
 
