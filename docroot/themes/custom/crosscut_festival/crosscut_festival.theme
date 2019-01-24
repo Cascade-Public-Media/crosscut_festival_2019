@@ -6,38 +6,6 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
-
-/**
- * Implements hook_preprocess_HOOK().
- *
- * @param $variables
- */
-function crosscut_festival_preprocess_menu(&$variables) {
-  $variables['is_front'] = FALSE;
-  try {
-    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
-  }
-  catch (Exception $e) {
-    $variables['db_is_active'] = FALSE;
-  }
-
-  // The main site menu uses anchors. When on other pages, those anchors must
-  // be tied explicitly to the <front> route.
-  if (isset($variables['menu_name']) && $variables['menu_name'] == 'main' &&
-    !$variables['is_front']) {
-    foreach ($variables['items'] as &$item) {
-      /** @var \Drupal\Core\Url $url */
-      $url = $item['url'];
-      $new_url = Url::fromRoute(
-        '<front>',
-        $url->getRouteParameters(),
-        $url->getOptions()
-      );
-      $item['url'] = $new_url;
-    }
-  }
-}
 
 /**
  * Implements hook_form_system_theme_settings_alter() for settings form.
