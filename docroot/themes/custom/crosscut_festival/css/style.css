@@ -11934,12 +11934,6 @@ footer .footer-content-main {
   border-left: 5px solid #2D68AE;
 }
 
-.news .news-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .news .byline {
   font-size: .9em;
 }
@@ -11952,9 +11946,6 @@ footer .footer-content-main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .news .img-container {

@@ -466,10 +466,6 @@
     }
   }
 
-  .news-row {
-    display: flex;
-  }
-
   .byline {
     font-size: .9em;
   }
@@ -477,7 +473,6 @@
   .article-teaser {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .img-container {
