@@ -24,7 +24,8 @@ function crosscut_festival_preprocess_menu(&$variables) {
 
   // The main site menu uses anchors. When on other pages, those anchors must
   // be tied explicitly to the <front> route.
-  if (!$variables['is_front'] && $variables['menu_name'] == 'main') {
+  if (isset($variables['menu_name']) && $variables['menu_name'] == 'main' &&
+    !$variables['is_front']) {
     foreach ($variables['items'] as &$item) {
       /** @var \Drupal\Core\Url $url */
       $url = $item['url'];
