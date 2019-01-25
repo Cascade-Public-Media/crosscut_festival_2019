@@ -118,6 +118,11 @@
     height: 80px;
     padding-left: 0;
     padding-right: 0;
+
+    .owl-stage {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .feature-text {
@@ -126,21 +131,20 @@
     font-weight: $font-weight-bold;
     text-transform: uppercase;
     display:inline-block;
-    margin: 14px auto 4px;
+    margin: 14px auto 10px;
   }
 
   .featured-panelist-organization {
-    height: 80px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 260px;
   }
 
   .org {
-    max-width: 300px;
-
     img {
-      width: 300px;
-      height: 60px;
+      max-height: 60px;
+      height: auto;
+      width: auto;
       object-fit: contain;
     }
   }
