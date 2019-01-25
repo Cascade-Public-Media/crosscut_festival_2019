@@ -61,6 +61,8 @@ function crosscut_festival_preprocess_views_view(&$variables) {
   /** @var \Drupal\views\ViewExecutable $view */
   $view = $variables['view'];
 
-  // Render title for Views.
-  $variables['title'] = $view->getTitle();
+  // Render title for Views using a page display.
+  if ($view->getDisplay()->getPluginId() == 'page') {
+    $variables['title'] = $view->getTitle();
+  }
 }
