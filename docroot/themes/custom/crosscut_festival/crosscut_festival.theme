@@ -53,3 +53,14 @@ function crosscut_festival_theme_suggestions_taxonomy_term_alter(array &$suggest
     $suggestions[] = 'taxonomy_term__view_mode__' . $variables['elements']['#view_mode'];
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function crosscut_festival_preprocess_views_view(&$variables) {
+  /** @var \Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+
+  // Render title for Views.
+  $variables['title'] = $view->getTitle();
+}

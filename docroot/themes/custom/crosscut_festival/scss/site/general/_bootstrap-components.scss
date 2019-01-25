@@ -1,0 +1,10 @@
+/** Accordion **/
+.accordion {
+  width: 100%;
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
