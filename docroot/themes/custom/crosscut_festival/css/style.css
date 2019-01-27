@@ -12156,6 +12156,11 @@ footer .footer-content-main {
   padding: 1em 2em;
 }
 
+.news .section-header {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .news .view-all .inline-arrow-right {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
@@ -12174,6 +12179,11 @@ footer .footer-content-main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #4A4A4A;
+}
+
+.news .article-teaser a {
+  color: inherit;
 }
 
 .news .img-container {

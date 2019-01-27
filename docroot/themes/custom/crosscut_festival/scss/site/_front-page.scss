@@ -462,6 +462,11 @@
   background-color: $light;
   padding: 1em 2em;
 
+  .section-header {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .view-all {
     .inline-arrow-right {
       border-top:5px solid transparent;
@@ -477,6 +482,11 @@
   .article-teaser {
     display: flex;
     flex-direction: column;
+    color: $gray-dark;
+
+    a {
+      color: inherit;
+    }
   }
 
   .img-container {
