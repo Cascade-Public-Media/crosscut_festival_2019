@@ -417,6 +417,10 @@
 
     .form-item-email-address {
       flex: 1;
+
+      .form-control {
+        width: 100%;
+      }
     }
   }
 

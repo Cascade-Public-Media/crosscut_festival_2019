@@ -11247,6 +11247,29 @@ fieldset legend span {
   font-size: 1rem;
 }
 
+.form-group {
+  margin-top: 1rem;
+}
+
+.form-control {
+  width: auto;
+  max-width: 100%;
+  border-color: #979797;
+}
+
+.webform-flex--container .form-group {
+  padding-left: 0;
+}
+
+.btn-form {
+  background-color: #185878;
+  border-color: #185878;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 /** General **/
 .visually-hidden {
   position: absolute;
@@ -11271,7 +11294,6 @@ caption {
 
 #page-title {
   margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 #page-title span {
@@ -12106,6 +12128,10 @@ footer .footer-content-main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+#stay-connected #crosscut-email-subscribe-quick-subscribe-form .form-item-email-address .form-control {
+  width: 100%;
 }
 
 #stay-connected p {
