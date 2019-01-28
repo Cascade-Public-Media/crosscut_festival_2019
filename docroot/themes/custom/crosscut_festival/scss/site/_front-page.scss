@@ -417,10 +417,18 @@
 
     .form-item-email-address {
       flex: 1;
+      padding-left: 15px;
+      padding-right: 15px;
 
       .form-control {
         width: 100%;
+        margin-top: 0;
       }
+    }
+
+    .form-actions {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 

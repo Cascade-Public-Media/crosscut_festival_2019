@@ -21,18 +21,23 @@ fieldset {
 
 .form-group {
   margin-top: 1rem;
+
+  &.webform-flexbox {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .form-control {
   width: auto;
   max-width: 100%;
   border-color: $border-color;
+  margin-top: .25rem;
 }
 
-.webform-flex--container {
-  .form-group {
-    padding-left: 0;
-  }
+.form-group {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .btn-form {

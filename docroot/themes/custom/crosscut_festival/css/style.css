@@ -11251,14 +11251,21 @@ fieldset legend span {
   margin-top: 1rem;
 }
 
+.form-group.webform-flexbox {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .form-control {
   width: auto;
   max-width: 100%;
   border-color: #979797;
+  margin-top: .25rem;
 }
 
-.webform-flex--container .form-group {
+.form-group {
   padding-left: 0;
+  padding-right: 0;
 }
 
 .btn-form {
@@ -12134,10 +12141,18 @@ footer .footer-content-main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #stay-connected #crosscut-email-subscribe-quick-subscribe-form .form-item-email-address .form-control {
   width: 100%;
+  margin-top: 0;
+}
+
+#stay-connected #crosscut-email-subscribe-quick-subscribe-form .form-actions {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #stay-connected p {
