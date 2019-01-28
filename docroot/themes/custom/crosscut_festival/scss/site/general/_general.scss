@@ -77,7 +77,8 @@ caption {
   border: none;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background-color: $yellow-darker;
     color: $blue-dark;
     border: none;

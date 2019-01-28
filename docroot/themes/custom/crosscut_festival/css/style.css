@@ -11270,6 +11270,12 @@ fieldset legend span {
   padding-right: 1.5rem;
 }
 
+.btn-form:hover, .btn-form:active {
+  background-color: #144863;
+  border-color: #144863;
+  color: #fff;
+}
+
 /** General **/
 .visually-hidden {
   position: absolute;
@@ -11344,7 +11350,7 @@ caption {
   border: none;
 }
 
-.btn-secondary:hover, .btn-secondary:focus {
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
   background-color: #E5B02E;
   color: #172C3B;
   border: none;
