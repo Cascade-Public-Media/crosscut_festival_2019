@@ -11320,9 +11320,7 @@ caption {
 
 .announcement-banner span {
   color: #172C3B;
-  display: inline-block;
   position: relative;
-  padding: .5em;
   margin: 0 0 0 1em;
 }
 
@@ -11330,7 +11328,7 @@ caption {
   content: '!';
   display: inline-block;
   position: absolute;
-  left: -20px;
+  left: -30px;
   color: #fff;
   background-color: #172C3B;
   width: 26px;
@@ -11381,6 +11379,50 @@ caption {
 /** Entities **/
 .field--type-file {
   margin-bottom: 1rem;
+}
+
+/** FAQ Page **/
+.view-faq .question {
+  padding: 1em 0;
+  border-bottom: 2px solid #979797;
+  position: relative;
+}
+
+.view-faq .question .btn-link {
+  color: #4A4A4A;
+  padding-left: 40px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.view-faq .question .btn-link:before {
+  content: '-';
+  font-size: 36px;
+  line-height: .6;
+  position: absolute;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  border: 1px solid #979797;
+  border-radius: 50%;
+  color: #4A4A4A;
+  font-weight: normal;
+}
+
+.view-faq .question .btn-link.show:before {
+  content: '-';
+  font-size: 36px;
+  line-height: .6;
+}
+
+.view-faq .question .btn-link.collapsed:before {
+  content: '+';
+  font-size: 28px;
+  line-height: .9;
+}
+
+.view-faq .question .card-body {
+  padding: 1rem;
 }
 
 #page {

@@ -32,9 +32,9 @@
  */
 #}
 
-<div class="card-header" id="heading-{{ row.index }}">
+<div class="question" id="heading-{{ row.index }}">
   <h2 class="mb-0">
-    <button class="btn btn-link"
+    <button class="btn btn-link{{ row.index == '0' ? ' show' : ' collapsed' }}"
             type="button"
             data-toggle="collapse"
             data-target="#collapse-{{ row.index }}"
@@ -43,13 +43,14 @@
       {{ fields.title.content }}
     </button>
   </h2>
-</div>
 
-<div id="collapse-{{ row.index }}"
-     class="collapse{{ row.index == '0' ? ' show' : '' }}"
-     aria-labelledby="heading-{{ row.index }}"
-     data-parent="#faq-accordion">
-  <div class="card-body">
-    {{ fields.body.content }}
+  <div id="collapse-{{ row.index }}"
+       class="collapse{{ row.index == '0' ? ' show' : '' }}"
+       aria-labelledby="heading-{{ row.index }}"
+       data-parent="#faq-accordion">
+    <div class="card-body">
+      {{ fields.body.content }}
+    </div>
   </div>
 </div>
+

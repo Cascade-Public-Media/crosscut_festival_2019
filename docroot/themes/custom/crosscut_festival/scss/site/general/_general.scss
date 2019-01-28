@@ -36,16 +36,14 @@ caption {
 
   span {
     color: $blue-dark;
-    display: inline-block;
     position: relative;
-    padding: .5em;
     margin: 0 0 0 1em;
 
     &:before {
       content: '!';
       display: inline-block;
       position: absolute;
-      left: -20px;
+      left: -30px;
       color: $white;
       background-color: $blue-dark;
       width: 26px;
@@ -105,4 +103,56 @@ caption {
 /** Entities **/
 .field--type-file {
   margin-bottom: $paragraph-margin-bottom;
+}
+
+
+/** FAQ Page **/
+.view-faq {
+  .question {
+    padding: 1em 0;
+    border-bottom: 2px solid $border-color;
+    position: relative;
+
+    .btn-link {
+      color: $gray-dark;
+      padding-left: 40px;
+      font-weight: bold;
+      font-size: 1.1rem;
+
+      &:before {
+        content: '-';
+        font-size: 36px;
+        line-height: .6;
+        position: absolute;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        border: 1px solid $border-color;
+        border-radius: 50%;
+        color: $gray-dark;
+        font-weight: normal;
+      }
+
+      &.show {
+        &:before {
+          content: '-';
+          font-size: 36px;
+          line-height: .6;
+        }
+      }
+
+      &.collapsed {
+        &:before {
+          content: '+';
+          font-size: 28px;
+          line-height: .9;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+  }
 }
