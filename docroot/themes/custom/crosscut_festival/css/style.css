@@ -11699,7 +11699,7 @@ footer .footer-content-main {
   background: linear-gradient(90deg, rgba(23, 44, 59, 0) 20%, #000000 120%), url("../images/ccfest_hero.jpg");
   background-size: cover;
   background-position: top center;
-  height: 80vh;
+  height: 82vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
@@ -11709,20 +11709,20 @@ footer .footer-content-main {
 
 .hero .hero-video {
   min-width: 100%;
-  min-height: 80vh;
+  min-height: 82vh;
   position: absolute;
   left: 50%;
   top: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: transparent url("../images/ccfest_hero.jpg") no-repeat 0 0;
+  background: transparent url("../images/ccfest_hero.jpg") no-repeat center;
   background-size: cover;
 }
 
 .hero .hero-overlay {
   background-size: cover;
   background-position: top center;
-  height: 80vh;
+  height: 82vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: 100%;
@@ -11841,6 +11841,18 @@ footer .footer-content-main {
   }
   .hero .hero-text.bottom {
     font-size: 1.2em;
+  }
+  .hero .hero-contents .logo {
+    max-width: 320px;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  .hero .hero-contents .logo {
+    max-width: 240px;
+  }
+  .hero .title-sponsor .title-sponsor-logo {
+    height: 40px;
   }
 }
 
@@ -12072,7 +12084,7 @@ footer .footer-content-main {
 
 .view-id-tracks .row .track {
   max-width: 240px;
-  margin: 1em auto;
+  margin: 1em auto 3em;
   text-align: center;
 }
 
@@ -12119,7 +12131,7 @@ footer .footer-content-main {
 .view-id-tracks .row .track .horizontal-line {
   width: 100%;
   height: 2px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .view-id-tracks .row .track .presented-by span {
@@ -12129,7 +12141,7 @@ footer .footer-content-main {
 }
 
 .view-id-tracks .row .track .presented-by > div {
-  margin: 2em auto;
+  margin: .5em auto 3em;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12153,7 +12165,8 @@ footer .footer-content-main {
 }
 
 .view-id-tracks .row .track .presented-by img {
-  max-width: 180px;
+  max-width: 160px;
+  width: 70%;
 }
 
 /** Subscribe Form **/
