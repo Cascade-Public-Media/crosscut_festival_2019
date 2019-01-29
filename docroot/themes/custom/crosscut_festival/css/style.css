@@ -12016,19 +12016,19 @@ footer .footer-content-main {
 }
 
 .about-icons .icon.speakers {
-  background-image: url("../images/75Speakers.svg");
+  background-image: url("../images/75Speakers.png");
 }
 
 .about-icons .icon.sessions {
-  background-image: url("../images/50Sessions.svg");
+  background-image: url("../images/50Sessions.png");
 }
 
 .about-icons .icon.attendees {
-  background-image: url("../images/1800Attendees.svg");
+  background-image: url("../images/1800Attendees.png");
 }
 
 .about-icons .icon.ideas {
-  background-image: url("../images/EndlessIdeas.svg");
+  background-image: url("../images/EndlessIdeas.png");
 }
 
 @media (min-width: 576px) {
