@@ -11306,6 +11306,7 @@ caption {
 
 #page-title {
   margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 #page-title span {
@@ -11391,12 +11392,14 @@ caption {
 }
 
 .view-faq .question .btn-link {
-  padding-left: 24px;
-  background: url("../images/schedule-min.png") no-repeat 0 center;
+  padding-left: 40px;
+  font-weight: bold;
+  color: #4A4A4A;
+  background: url("../images/AccordionMenu_Minus.png") no-repeat 0 center;
 }
 
 .view-faq .question .btn-link.collapsed {
-  background: url("../images/schedule-max.png") no-repeat 0 center;
+  background: url("../images/AccordionMenu_Plus.png") no-repeat 0 center;
 }
 
 .view-faq .question .card-body {
@@ -11661,6 +11664,7 @@ footer .footer-content-main {
   color: #c4c4c4;
   font-size: .8em;
   line-height: 1.3;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -11699,7 +11703,7 @@ footer .footer-content-main {
   background: linear-gradient(90deg, rgba(23, 44, 59, 0) 20%, #000000 120%), url("../images/ccfest_hero.jpg");
   background-size: cover;
   background-position: top center;
-  height: 80vh;
+  height: 82vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
@@ -11708,18 +11712,20 @@ footer .footer-content-main {
 
 .hero .hero-video {
   min-width: 100%;
-  min-height: 80vh;
+  min-height: 82vh;
   position: absolute;
   left: 50%;
   top: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background: transparent url("../images/ccfest_hero.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .hero .hero-overlay {
   background-size: cover;
   background-position: top center;
-  height: 80vh;
+  height: 82vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: 100%;
@@ -11731,17 +11737,18 @@ footer .footer-content-main {
   transition: background 2s ease-in;
 }
 
-.hero .hero-overlay.video.active {
-  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(23, 44, 59, 0.2)), color-stop(80%, #000000));
-  background: linear-gradient(90deg, rgba(23, 44, 59, 0.2) 0, #000000 80%);
-}
-
 .hero .hero-overlay-image {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(23, 44, 59, 0.2)), to(#000000)), url("../images/ccfest_hero.jpg") no-repeat center/cover;
-  background: linear-gradient(90deg, rgba(23, 44, 59, 0.2) 0%, #000000 100%), url("../images/ccfest_hero.jpg") no-repeat center/cover;
+  background-image: url("../images/ccfest_hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-transition: background 2s ease-in;
   transition: background 2s ease-in;
   opacity: 0;
+}
+
+.hero .hero-overlay.darken {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(23, 44, 59, 0.2)), color-stop(80%, #000000));
+  background: linear-gradient(90deg, rgba(23, 44, 59, 0.2) 0, #000000 80%);
 }
 
 .hero .hero-contents {
@@ -11785,6 +11792,24 @@ footer .footer-content-main {
           align-items: center;
 }
 
+.hero .btn-secondary span {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.hero .btn-secondary span:after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #172C3B;
+  margin-left: 6px;
+  line-height: 0;
+}
+
 .hero .title-sponsor span {
   color: #fff;
   display: inline-block;
@@ -11805,7 +11830,7 @@ footer .footer-content-main {
 @media (min-width: 576px) {
   .hero .hero-contents {
     position: absolute;
-    left: initial;
+    left: auto;
     right: 10%;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -11819,6 +11844,27 @@ footer .footer-content-main {
   }
   .hero .hero-text.bottom {
     font-size: 1.2em;
+  }
+  .hero .hero-contents .logo {
+    max-width: 320px;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  .hero .hero-contents .logo {
+    max-width: 240px;
+  }
+  .hero .title-sponsor .title-sponsor-logo {
+    height: 40px;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  .hero .hero-contents .logo {
+    max-width: 160px;
+  }
+  .hero .title-sponsor .title-sponsor-logo {
+    height: 40px;
   }
 }
 
@@ -11873,6 +11919,7 @@ footer .footer-content-main {
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  margin: 0 auto;
 }
 
 .owl-nav {
@@ -11984,19 +12031,19 @@ footer .footer-content-main {
 }
 
 .about-icons .icon.speakers {
-  background-image: url("../images/75Speakers.svg");
+  background-image: url("../images/75Speakers.png");
 }
 
 .about-icons .icon.sessions {
-  background-image: url("../images/50Sessions.svg");
+  background-image: url("../images/50Sessions.png");
 }
 
 .about-icons .icon.attendees {
-  background-image: url("../images/1800Attendees.svg");
+  background-image: url("../images/1800Attendees.png");
 }
 
 .about-icons .icon.ideas {
-  background-image: url("../images/EndlessIdeas.svg");
+  background-image: url("../images/EndlessIdeas.png");
 }
 
 @media (min-width: 576px) {
@@ -12040,7 +12087,7 @@ footer .footer-content-main {
 
 .view-id-tracks .row .track {
   max-width: 240px;
-  margin: 1em auto;
+  margin: 1em auto 3em;
   text-align: center;
 }
 
@@ -12087,7 +12134,7 @@ footer .footer-content-main {
 .view-id-tracks .row .track .horizontal-line {
   width: 100%;
   height: 2px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .view-id-tracks .row .track .presented-by span {
@@ -12097,7 +12144,7 @@ footer .footer-content-main {
 }
 
 .view-id-tracks .row .track .presented-by > div {
-  margin: 2em auto;
+  margin: .5em auto 3em;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12121,7 +12168,8 @@ footer .footer-content-main {
 }
 
 .view-id-tracks .row .track .presented-by img {
-  max-width: 180px;
+  max-width: 160px;
+  width: 70%;
 }
 
 /** Subscribe Form **/

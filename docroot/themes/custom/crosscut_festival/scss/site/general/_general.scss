@@ -28,7 +28,7 @@ caption {
 
 #page-title {
   margin-top: 50px;
-  //margin-bottom: 50px;
+  margin-bottom: 30px;
 
   span {
     font-weight: bold;
@@ -125,11 +125,13 @@ caption {
     border-bottom: 2px solid $border-color;
 
     .btn-link {
-      padding-left: 24px;
-      background: url('../images/schedule-min.png') no-repeat 0 center;
+      padding-left: 40px;
+      font-weight: bold;
+      color: $gray-dark;
+      background: url('../images/AccordionMenu_Minus.png') no-repeat 0 center;
 
       &.collapsed {
-        background: url('../images/schedule-max.png') no-repeat 0 center;
+        background: url('../images/AccordionMenu_Plus.png') no-repeat 0 center;
       }
     }
 
