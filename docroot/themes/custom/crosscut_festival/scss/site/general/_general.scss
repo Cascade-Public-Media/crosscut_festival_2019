@@ -121,10 +121,10 @@ caption {
       padding-left: 40px;
       font-weight: bold;
       color: $gray-dark;
-      background: url('../images/schedule-min.png') no-repeat 0 center;
+      background: url('../images/AccordionMenu_Minus.png') no-repeat 0 center;
 
       &.collapsed {
-        background: url('../images/schedule-max.png') no-repeat 0 center;
+        background: url('../images/AccordionMenu_Plus.png') no-repeat 0 center;
       }
     }
 
