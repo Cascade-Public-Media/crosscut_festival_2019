@@ -104,11 +104,13 @@
             $('#content').css('margin-top', $headerHeight);
           });
           observer.observe($(this)[0], {
-            childList: true,
             attributes: true,
+            attributeFilter: ['data-mutate'],
+            childList: true,
             subtree: true
           });
-          $('#header').addClass('observe');
+          // Trigger an initial mutation.
+          $(this).attr('data-mutate', 1);
         }
       });
     }
@@ -125,7 +127,7 @@
         if (!sessionStorage.getItem('announcementClosed')) {
           $(this).removeClass('d-none');
           $(this).children('.close').on('click', function() {
-            $(this).parent().hide();
+            $(this).parent().remove();
             sessionStorage.setItem('announcementClosed', '1');
           });
         }
