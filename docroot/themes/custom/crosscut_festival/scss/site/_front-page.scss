@@ -109,7 +109,7 @@
   @include media-breakpoint-up(sm){
     .hero-contents {
       position: absolute;
-      left: initial;
+      left: auto;
       right: 10%;
       top: 50%;
       transform: translateY(-50%);
@@ -125,6 +125,17 @@
       &.bottom {
         font-size: 1.2em;
       }
+    }
+  }
+
+  @media screen and (max-height: 580px) {
+    .hero-contents {
+      .logo {
+        max-width: 160px;
+      }
+    }
+    .title-sponsor .title-sponsor-logo {
+      height: 40px;
     }
   }
 }
@@ -179,6 +190,7 @@
       height: auto;
       width: auto;
       object-fit: contain;
+      margin: 0 auto;
     }
   }
 }
