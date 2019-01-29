@@ -52,6 +52,30 @@
 
 
       if (settings.path.isFront) {
+
+        /**
+         * Adjust the window position _after_ the Sched iframe loads if a hash
+         * is present. The Sched JS sets its iframe height using the style
+         * attribute so that is all the observer pays attention to.
+         *
+         * @type {MutationObserver}
+         */
+        var $schedIframe = $("#sched-iframe iframe");
+        if ($schedIframe.length > 0) {
+          var observer = new MutationObserver(function(mutations, observer) {
+            if (window.location.hash) {
+              var $hashTop = $(window.location.hash).offset().top;
+              var $headerHeight = $('#header').outerHeight();
+              $('html, body').scrollTop($hashTop - $headerHeight);
+            }
+            observer.disconnect();
+          });
+          observer.observe($schedIframe[0], {
+            attributes: true,
+            attributeFilter: ['style'],
+          });
+        }
+
         // Add active class to menu link for current hash on page load.
         if (window.location.hash) {
           $('a[href^="/' + window.location.hash + '"]').addClass('active');
@@ -61,16 +85,22 @@
         $('a[href^="/#"]').on('click', function(e) {
           e.preventDefault();
 
-          var hash = this.hash;
+          var $hash = this.hash;
+          var $headerHeight = $('#header').outerHeight();
 
           $('html, body').animate({
-            scrollTop: $(hash).offset().top
+            scrollTop: $($hash).offset().top - $headerHeight
           }, 1000, function() {
             // add hash to URL
-            window.location.hash = hash;
+            if (history.pushState) {
+              history.pushState({}, '', $hash);
+            }
+            else {
+              window.location.hash = $hash;
+            }
           });
 
-          $('a.cf-nav-link[href^="/#"]').removeClass('active');
+          $('a.cf-nav-link[href^="/#"]').removeClass('active').blur();
           $(this).addClass('active');
         });
 
