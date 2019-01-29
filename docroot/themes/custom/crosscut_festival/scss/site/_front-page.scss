@@ -41,7 +41,7 @@
 
     &.video {
       &.active {
-        background: linear-gradient(90deg, rgba(23,44,59,0) 0%, #000000 100%);
+        background: linear-gradient(90deg, rgba(23,44,59,.2) 0, #000000 80%);
       }
     }
 
@@ -61,22 +61,49 @@
     transform: translate(-50%,-50%);
 
     .logo {
-      max-width: 300px;
+      max-width: 250px;
       margin: 0 auto;
     }
   }
 
   .hero-text {
-    color: #fff;
+    color: $white;
     font-weight: $font-weight-bold;
     font-size: 1.15em;
     white-space: nowrap;
+    display: block;
+
+    &.top {
+      font-size: 1.4em;
+    }
+    &.bottom {
+      font-size: 1.1em;
+    }
   }
 
   .btn-secondary {
     margin-top: 20px;
     display: inline-flex;
     align-items: center;
+  }
+
+  .title-sponsor {
+    span {
+      color: $white;
+      display: inline-block;
+      padding: 1em 0 .5em;
+      font-size: .9em;
+    }
+
+    .title-sponsor-logo {
+      background-image: url('../images/comcast_nbcuniversal_ko.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 135px;
+      margin: 0 auto;
+    }
   }
 
   @include media-breakpoint-up(sm){
@@ -91,7 +118,13 @@
 
   @include media-breakpoint-up(md){
     .hero-text {
-      font-size: 1.38em;
+      &.top {
+        font-size: 1.8em;
+      }
+
+      &.bottom {
+        font-size: 1.2em;
+      }
     }
   }
 }

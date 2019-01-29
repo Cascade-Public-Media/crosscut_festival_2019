@@ -7,6 +7,11 @@
 
 /** General **/
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .visually-hidden {
   @include sr-only;
 }
@@ -111,42 +116,13 @@ caption {
   .question {
     padding: 1em 0;
     border-bottom: 2px solid $border-color;
-    position: relative;
 
     .btn-link {
-      color: $gray-dark;
-      padding-left: 40px;
-      font-weight: bold;
-      font-size: 1.1rem;
-
-      &:before {
-        content: '-';
-        font-size: 36px;
-        line-height: .6;
-        position: absolute;
-        left: 0;
-        height: 24px;
-        width: 24px;
-        border: 1px solid $border-color;
-        border-radius: 50%;
-        color: $gray-dark;
-        font-weight: normal;
-      }
-
-      &.show {
-        &:before {
-          content: '-';
-          font-size: 36px;
-          line-height: .6;
-        }
-      }
+      padding-left: 24px;
+      background: url('../images/schedule-min.png') no-repeat 0 center;
 
       &.collapsed {
-        &:before {
-          content: '+';
-          font-size: 28px;
-          line-height: .9;
-        }
+        background: url('../images/schedule-max.png') no-repeat 0 center;
       }
     }
 
