@@ -11317,13 +11317,17 @@ caption {
   text-align: center;
 }
 
-.announcement-banner span {
+.announcement-banner .close {
+  padding: 8px;
+}
+
+.announcement-banner .container span {
   color: #172C3B;
   position: relative;
   margin: 0 0 0 1em;
 }
 
-.announcement-banner span:before {
+.announcement-banner .container span:before {
   content: '!';
   display: inline-block;
   position: absolute;
@@ -11337,7 +11341,7 @@ caption {
   font-size: 20px;
 }
 
-.announcement-banner a {
+.announcement-banner .container a {
   color: inherit;
   text-decoration: underline;
 }

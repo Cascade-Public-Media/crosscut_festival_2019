@@ -97,10 +97,37 @@
    */
   Drupal.behaviors.crosscutFestivalMenu = {
     attach: function(context, settings) {
-      $('#content').once('crosscutFestivalMenu').each(function() {
+      $('#header').once('crosscutFestivalMenu').each(function() {
         if (settings.path.isFront) {
-          var $headerHeight = $('#header').outerHeight();
-          $(this).css('margin-top', $headerHeight);
+          var observer = new MutationObserver(function() {
+            var $headerHeight = $('#header').outerHeight();
+            $('#content').css('margin-top', $headerHeight);
+          });
+          observer.observe($(this)[0], {
+            childList: true,
+            attributes: true,
+            subtree: true
+          });
+          $('#header').addClass('observe');
+        }
+      });
+    }
+  };
+
+  /**
+   * Handle Announcement banner display/hiding.
+   *
+   * @type {{attach: Drupal.behaviors.crosscutFestivalAnnouncement.attach}}
+   */
+  Drupal.behaviors.crosscutFestivalAnnouncement = {
+    attach: function(context, settings) {
+      $('.announcement-banner').once('crosscutFestivalAnnouncement').each(function() {
+        if (!sessionStorage.getItem('announcementClosed')) {
+          $(this).removeClass('d-none');
+          $(this).children('.close').on('click', function() {
+            $(this).parent().hide();
+            sessionStorage.setItem('announcementClosed', '1');
+          });
         }
       });
     }

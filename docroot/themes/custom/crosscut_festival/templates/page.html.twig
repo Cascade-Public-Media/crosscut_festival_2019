@@ -72,10 +72,13 @@
         <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
             {% block head %}
                 {% if page.top_header %}
-                    <div class="announcement-banner">
-                        <div class="container">
-                            {{ page.top_header }}
-                        </div>
+                    <div role="alert" class="announcement-banner d-none">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <div class="container">
+                        {{ page.top_header }}
+                      </div>
                     </div>
                 {% endif %}
                 <div class="nav-container">
