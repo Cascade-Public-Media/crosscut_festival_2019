@@ -90,6 +90,22 @@
     }
   };
 
+  /**
+   * Adjust main content margin for (sticky) header on front page.
+   *
+   * @type {{attach: Drupal.behaviors.crosscutFestivalMenu.attach}}
+   */
+  Drupal.behaviors.crosscutFestivalMenu = {
+    attach: function(context, settings) {
+      $('#content').once('crosscutFestivalMenu').each(function() {
+        if (settings.path.isFront) {
+          var $headerHeight = $('#header').outerHeight();
+          $(this).css('margin-top', $headerHeight);
+        }
+      });
+    }
+  };
+
   Drupal.behaviors.crosscutNews = {
     attach: function(context, settings) {
 
