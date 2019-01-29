@@ -52,6 +52,11 @@
 
 
       if (settings.path.isFront) {
+        // Add active class to menu link for current hash on page load.
+        if (window.location.hash) {
+          $('a[href^="/' + window.location.hash + '"]').addClass('active');
+        }
+
         // Smooth Scroll
         $('a[href^="/#"]').on('click', function(e) {
           e.preventDefault();
