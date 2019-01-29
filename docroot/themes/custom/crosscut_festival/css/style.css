@@ -11732,17 +11732,18 @@ footer .footer-content-main {
   transition: background 2s ease-in;
 }
 
-.hero .hero-overlay.video.active {
-  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(23, 44, 59, 0.2)), color-stop(80%, #000000));
-  background: linear-gradient(90deg, rgba(23, 44, 59, 0.2) 0, #000000 80%);
-}
-
 .hero .hero-overlay-image {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(23, 44, 59, 0.2)), to(#000000)), url("../images/ccfest_hero.jpg") no-repeat center/cover;
-  background: linear-gradient(90deg, rgba(23, 44, 59, 0.2) 0%, #000000 100%), url("../images/ccfest_hero.jpg") no-repeat center/cover;
+  background-image: url("../images/ccfest_hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-transition: background 2s ease-in;
   transition: background 2s ease-in;
   opacity: 0;
+}
+
+.hero .hero-overlay.darken {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(23, 44, 59, 0.2)), color-stop(80%, #000000));
+  background: linear-gradient(90deg, rgba(23, 44, 59, 0.2) 0, #000000 80%);
 }
 
 .hero .hero-contents {

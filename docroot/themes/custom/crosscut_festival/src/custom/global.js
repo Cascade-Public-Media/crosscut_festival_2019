@@ -68,6 +68,15 @@
           $('a.cf-nav-link[href^="/#"]').removeClass('active');
           $(this).addClass('active');
         });
+
+        // Video
+        var video = $('#heroVideo');
+        $(video).on('ended', function() {
+          $('.hero-overlay.video').removeClass('active');
+          $('.hero-overlay-image').animate({
+            opacity: 1
+          }, 600);
+        });
       }
 
       $(window).scroll(function() {
@@ -78,41 +87,6 @@
           }
       });
 
-    }
-  };
-
-  Drupal.behaviors.heroVideo = {
-    attach: function(context, settings) {
-
-      $('#hero').once('heroVideo').each(function() {
-
-        function videoTransition() {
-          $('.hero-overlay.video').removeClass('active');
-          $('.hero-overlay-image').animate({
-            opacity: 1
-          }, 600);
-        }
-
-        function checkVideoPlay() {
-          try {
-            var canPlayVideos = document.getElementsByTagName('video')[0].canPlayType("video/mp4");
-            if (canPlayVideos === 'no' || canPlayVideos === '') {
-              videoTransition();
-            }
-          } catch (err) {
-            videoTransition();
-          }
-        }
-
-        checkVideoPlay();
-
-        // Video
-        var $video = $('#heroVideo');
-        $video.on('ended', function() {
-          videoTransition();
-        });
-
-      });
     }
   };
 

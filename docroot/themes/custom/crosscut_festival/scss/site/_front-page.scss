@@ -39,16 +39,16 @@
     right: 0;
     transition: background 2s ease-in;
 
-    &.video {
-      &.active {
-        background: linear-gradient(90deg, rgba(23,44,59,.2) 0, #000000 80%);
-      }
-    }
-
     &-image {
-      background: linear-gradient(90deg, rgba(23,44,59,.2) 0%, #000000 100%), url('../images/ccfest_hero.jpg') no-repeat center/cover;
+      background-image: url('../images/ccfest_hero.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
       transition: background 2s ease-in;
       opacity: 0;
+    }
+
+    &.darken {
+      background: linear-gradient(90deg, rgba(23,44,59,.2) 0, #000000 80%)
     }
   }
 
