@@ -24,6 +24,8 @@
     left: 50%;
     top: 0;
     transform: translateX(-50%);
+    background: transparent url('../images/ccfest_hero.jpg') no-repeat 0 0;
+    background-size: cover;
   }
 
   .hero-overlay {
