@@ -11392,6 +11392,7 @@ caption {
 }
 
 .view-faq .question .btn-link {
+  text-align: left;
   padding-left: 40px;
   font-weight: bold;
   color: #4A4A4A;
@@ -12504,7 +12505,7 @@ table {
 }
 
 .ticket-table__mobile .ticket-option {
-  padding: 20px;
+  padding: 1em;
 }
 
 .ticket-table__mobile .ticket-option:nth-child(odd) {
