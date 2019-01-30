@@ -11752,8 +11752,8 @@ footer .footer-content-main {
 }
 
 .hero .hero-overlay.darken {
-  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(23, 44, 59, 0.1)), color-stop(90%, #000));
-  background: linear-gradient(90deg, rgba(23, 44, 59, 0.1) 0, #000 90%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(23, 44, 59, 0.1)), color-stop(90%, #000000));
+  background: linear-gradient(90deg, rgba(23, 44, 59, 0.1) 0, #000000 90%);
 }
 
 .hero .hero-contents {
