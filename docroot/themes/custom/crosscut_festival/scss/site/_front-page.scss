@@ -1,7 +1,11 @@
-/** Header menu **/
+/** Layout elements **/
 .path-frontpage {
   .header {
     position: fixed;
+  }
+
+  .site-footer {
+    margin-top: 0;
   }
 }
 
@@ -924,9 +928,9 @@ table {
 /** Location Section **/
 .block-label-location {
   margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 0;
   padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 0;
 
   .location-image {
     height: 400px;
