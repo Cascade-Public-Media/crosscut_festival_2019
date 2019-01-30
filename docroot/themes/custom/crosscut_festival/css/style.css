@@ -12750,3 +12750,8 @@ table {
 .extras .app-info .app-badge img {
   margin: 0 auto;
 }
+
+/** In the News Section **/
+#festival-news {
+  padding-bottom: 32px;
+}
