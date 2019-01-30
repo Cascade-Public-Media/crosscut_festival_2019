@@ -221,6 +221,9 @@ class QuickSubscribeForm extends FormBase {
    *  A simple element confirming successful submission.
    */
   public function promptCallback(array &$form, FormStateInterface $form_state) {
+    if (!empty($form_state->getErrors())) {
+      return $form;
+    }
     $element = $form['container'];
     $element['form'] = [
       '#type' => 'html_tag',
