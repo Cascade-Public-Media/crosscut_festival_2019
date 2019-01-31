@@ -44,7 +44,14 @@
     'section',
 ]
 %}
-<div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
+{% if configuration.label is not empty %}
+    {% set htmlId = configuration.label|clean_id %}
+{% elseif label|render is not empty %}
+    {% set htmlId = label|render|clean_id %}
+{% elseif content['#view_id'] is not empty %}
+    {% set htmlId = content['#view_id']|clean_id %}
+{% endif %}
+<div{% if htmlId is defined %} id="{{ htmlId }}"{% endif %} {{ attributes.addClass(classes) }}>
     {% block content %}
         <div{{ content_attributes.addClass(contentClasses) }}>
             {{ title_prefix }}
