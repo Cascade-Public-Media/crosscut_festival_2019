@@ -18,6 +18,7 @@
 # Ignore Composer-managed dependencies.
 vendor/
 
+# Ignore Node dependencies.
 node_modules
 
 # Ignore css sourcemaps
@@ -29,3 +30,6 @@ docroot/themes/custom/crosscut_festival/css/maps
 
 # Ignore macOS system files.
 .DS_Store
+
+# Ignore private file system folder.
+/files-private/
