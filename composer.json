@@ -7,8 +7,7 @@
     "prefer-stable": true,
     "require-dev": {
         "drush/drush": "^9.0",
-        "drupal/media_entity_generic": "^1.0",
-        "acquia/lightning_dev": "dev-8.x-1.x"
+        "drupal/media_entity_generic": "^1.0"
     },
     "require": {
         "drupal-composer/drupal-scaffold": "^2.0.0",
@@ -25,7 +24,8 @@
         "drupal/lightbox_campaigns": "^1.2",
         "noelboss/featherlight": "^1.7",
         "drupal/salesforce": "^3.1",
-        "drupal/smtp": "^1.0"
+        "drupal/smtp": "^1.0",
+        "drupal/devel": "^2.0"
     },
     "repositories": [
         {
