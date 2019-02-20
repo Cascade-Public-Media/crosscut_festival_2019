@@ -1,9 +1,10 @@
-global-styling:
+global:
   version: VERSION
   js: 
     js/popper.min.js: {}
     js/bootstrap.min.js: {}
     js/global.js: {}
+    js/quantcast.js: {}
   css:
     component:
       css/style.min.css: {}

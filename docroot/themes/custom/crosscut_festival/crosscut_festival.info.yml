@@ -5,7 +5,7 @@ description: Theme for the Crosscut Festival website.
 base theme: bootstrap_barrio
 
 libraries:
-  - crosscut_festival/global-styling
+  - crosscut_festival/global
 
 libraries-override:
   bootstrap_barrio/global-styling: false
