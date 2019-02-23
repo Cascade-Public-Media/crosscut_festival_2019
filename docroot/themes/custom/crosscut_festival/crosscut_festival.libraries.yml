@@ -1,13 +1,13 @@
 global:
   version: VERSION
   js: 
-    js/popper.min.js: {}
-    js/bootstrap.min.js: {}
-    js/global.js: {}
-    js/quantcast.js: {}
+    js/popper.min.js: { minified: true }
+    js/bootstrap.min.js: { minified: true }
+    js/global.min.js: { minified: true }
+    js/quantcast.min.js: { minified: true }
   css:
     component:
-      css/style.min.css: {}
+      css/style.min.css: { minified: true }
   dependencies:
     - core/jquery
     - core/drupal
@@ -23,8 +23,8 @@ global-fonts:
 
 owl-carousel:
   js:
-    js/owl.carousel.min.js: {}
-    js/carousel.js: {}
+    js/owl.carousel.min.js: { minified: true }
+    js/carousel.min.js: { minified: true }
 
   dependencies:
     - core/jquery

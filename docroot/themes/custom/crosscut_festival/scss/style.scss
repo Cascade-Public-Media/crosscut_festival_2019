@@ -3,10 +3,10 @@ Theme Name: Crosscut Festival
 */
 
 // Vendor SCSS
-//@import 'scss_vendor/bootstrap-reboot.scss';
-//@import 'scss_vendor/bootstrap-grid.scss';
-@import 'scss_vendor/bootstrap.scss';
-@import 'scss_vendor/owl.scss';
+@import '../vendor_components/scss/bootstrap/bootstrap';
+@import "../vendor_components/scss/owl/owl.carousel";
+@import "../vendor_components/scss/owl/owl.theme.default";
+@import "../vendor_components/scss/owl/owl.theme.green";
 
 // Barrio Sub Theme SCSS
 @import "variables";
