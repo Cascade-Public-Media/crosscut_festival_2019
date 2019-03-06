@@ -13469,7 +13469,7 @@ footer .footer-content-main {
 }
 
 .hero .hero-contents .logo {
-  max-width: 250px;
+  max-width: 270px;
   margin: 0 auto;
 }
 
@@ -13595,7 +13595,10 @@ footer .footer-content-main {
 
 @media screen and (max-height: 580px) {
   .hero .hero-contents .logo {
-    max-width: 160px;
+    max-width: 220px;
+  }
+  .hero .hero-contents .hero-text-top {
+    font-size: .9rem;
   }
   .hero .title-sponsor .title-sponsor-logo {
     height: 40px;
