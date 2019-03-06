@@ -6,27 +6,42 @@ $yellow: #F2BF42;
 $yellow-darker: #E5B02E;
 $orange: #F27A4A;
 $teal: #61C2D7;
+$teal-medium: #60c9d6;
 $teal-darker: #54B9CE;
 $gray-light: #EBEBEB;
 $gray-medium-text: #c4c4c4;
 $gray-medium: #979797;
 $gray-dark: #4A4A4A;
 $blue-medium: #185878;
+$blue-bright: #2989C9;
+$green: #C3D93A;
+$purple: #A95CEC;
 
 $light: #F9FEFF;
 $highlight-bg: #FFEAB8;
 $table-bg: #E9F6FD;
 $light-blue: #c7f5ff;
 
-$color-keynote: #F27A4A;
-$color-business: #F2BF42;
-$color-politics: #2989C9;
-$color-race-justice: #61C2D7;
-$color-science: #C3D93A;
-$color-interactive: #A95CEC;
+$color-keynote: $orange;
+$color-business: $yellow;
+$color-politics: $blue-bright;
+$color-race-justice: $teal;
+$color-science: $green;
+$color-interactive: $purple;
 
 $primary: $teal;
 $secondary: $yellow;
+
+$theme-colors: (
+        primary: $teal,
+        secondary: $yellow,
+        success: $green,
+        info: $blue-bright,
+        warning: $purple,
+        danger: $orange,
+        light: $gray-light,
+        dark: $gray-dark
+);
 
 $enable-rounded: false;
 
