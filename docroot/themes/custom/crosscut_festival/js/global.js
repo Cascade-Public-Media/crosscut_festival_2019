@@ -194,7 +194,7 @@
           $article.append(html);
         }
 
-        var url = domain + '/json/festival-news?_format=json';
+        var url = domain + '/json/festival-news';
 
         $.ajax({
           url: url,
