@@ -1016,6 +1016,18 @@ table {
 
 
 /** Extras Section **/
+.block-views-blockextras-block-1 {
+  .col-auto {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.view-id-extras {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .extras {
   .extra {
     margin-bottom: 20px;
