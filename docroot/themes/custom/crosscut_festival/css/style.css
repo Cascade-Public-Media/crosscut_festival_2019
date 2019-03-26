@@ -13908,11 +13908,20 @@ footer .footer-content-main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .view-id-tracks .row .track .presented-by img {
   max-width: 160px;
-  width: 70%;
+  width: auto;
+  max-height: 100px;
+  height: auto;
 }
 
 /** Subscribe Form **/
