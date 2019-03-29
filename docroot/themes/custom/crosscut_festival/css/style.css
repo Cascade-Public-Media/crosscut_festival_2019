@@ -14238,6 +14238,8 @@ footer .footer-content-main {
   position: relative;
   margin-top: 1em;
   margin-bottom: 1em;
+  width: 100%;
+  max-width: 100%;
 }
 
 .session__info__top .vertical-line {
