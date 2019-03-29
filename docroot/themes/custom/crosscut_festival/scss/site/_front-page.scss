@@ -759,6 +759,19 @@
     }
   }
 
+  .field--speaker {
+    font-size: 1.1em;
+
+    .list-group-item {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  .field--bio {
+    font-size: .9em;
+  }
+
   &__link {
     display: flex;
     flex-flow: row wrap;

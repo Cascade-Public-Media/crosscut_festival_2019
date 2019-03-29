@@ -14265,6 +14265,19 @@ footer .footer-content-main {
   line-height: 1.3;
 }
 
+.session .field--speaker {
+  font-size: 1.1em;
+}
+
+.session .field--speaker .list-group-item {
+  padding: 0;
+  border: none;
+}
+
+.session .field--bio {
+  font-size: .9em;
+}
+
 .session__link {
   display: -webkit-box;
   display: -ms-flexbox;
