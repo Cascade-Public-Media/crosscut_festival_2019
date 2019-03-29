@@ -79,11 +79,11 @@
                 stagePadding: 100,
                 margin: 40
               },
-              1700: {
-                items:3,
-                stagePadding: 20,
-                margin:40
-              }
+              // 1700: {
+              //   items:3,
+              //   stagePadding: 20,
+              //   margin:40
+              // }
             }
           });
       });

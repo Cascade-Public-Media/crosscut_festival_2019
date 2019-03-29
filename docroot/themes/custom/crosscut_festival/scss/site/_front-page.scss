@@ -632,6 +632,20 @@
 
 /** Sessions Carousel **/
 
+#sessions-view {
+  padding-top: 3em;
+  margin-bottom: 8em;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 2em;
+  }
+}
+
+#featured-sessions {
+  h3 {
+    text-align: center;
+  }
+}
 
 #session-carousel {
   .owl-nav {
@@ -682,10 +696,16 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .owl-stage {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+  }
 }
 
 .session {
-  height: auto;
+  height: 100%;
   padding: 1em;
   border: 4px solid $orange;
   margin: 0 auto;
@@ -695,40 +715,61 @@
     height: 100%;
   }
 
-  &__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
   &__image {
     height: 100%;
     width: 100%;
     margin-bottom: 10px;
   }
 
+  &__info {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
   &__info__top {
     position: relative;
     margin-top: 1em;
     margin-bottom: 1em;
-    display: flex;
-
-    span {
-      text-transform: uppercase;
-      font-size: .95em;
-    }
 
     .vertical-line {
       display:inline-block;
       border-left: 2px solid $orange;
       padding-left: 10px;
+      margin-bottom: 1em;
+
+      .top-details {
+        display: block;
+        line-height: 1.3;
+        text-transform: uppercase;
+        font-size: 1em;
+        margin-bottom: .2em;
+      }
+    }
+
+    .title-prefix {
+      font-size: .95em;
+      color: $gray-medium;
+    }
+
+    h4 {
+      font-size: 1.4em;
+      line-height: 1.3;
     }
   }
 
-  &__info__middle {
-    h4 {
-      font-size: 1.15em;
-      line-height: 1.3;
+  &__link {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+
+    a {
+      display: inline-block;
+      margin-bottom: 1em;
+      font-weight: $font-weight-bold;
+      @extend .btn;
+      @extend .btn-primary;
     }
   }
 
@@ -753,8 +794,7 @@
   }
 
   @include media-breakpoint-only(sm) {
-    &__info__top span,
-    &__info__bottom span {
+    &__info__top .top-details {
       font-size: .8em;
     }
   }
@@ -772,11 +812,9 @@
       .vertical-line {
         margin-left: 5px;
       }
-    }
 
-    &__info__middle {
       h4 {
-        font-size: 1.38em;
+        font-size: 1.6em;
       }
     }
   }
@@ -784,6 +822,11 @@
   @include media-breakpoint-up(lg){
     max-width: 600px;
   }
+}
+
+#sessions-coming-soon .container {
+  padding-top: 0;
+  margin-bottom: 5em;
 }
 
 // complete lineup

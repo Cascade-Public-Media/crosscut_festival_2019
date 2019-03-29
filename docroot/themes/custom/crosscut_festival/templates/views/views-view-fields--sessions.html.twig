@@ -41,17 +41,22 @@
     <div class="col-sm-6 session__info">
         <div class="session__info__top">
             <div class="vertical-line">
-                <span>{{ fields.field_date_time.content }}</span><br/>
-                <span>{{ fields.field_track.content }}</span><br/>
-                <span>{{ fields.field_venue.content }}</span><br/>
+                <span class="top-details">{{ fields.field_date_time.content }}</span>
+                <span class="top-details">{{ fields.field_venue.content }}</span>
+                <span class="top-details">{{ fields.field_track.content }}</span>
             </div>
+            <div>
+                <span class="title-prefix">{{ fields.field_title_prefix.content }}</span>
+                <h4>{{ fields.title.content }}</h4>
+                <div>
+                    <span class="field--speaker font-weight-bold d-block">{{ fields.field_speaker.content }}</span>
+                    <span class="field--bio d-block">{{ fields.field_bio.content }}</span>
+                </div>
+            </div>
+
         </div>
-        <div class="session__info__middle">
-            <h4>{{ fields.title.content }}</h4>
-        </div>
-        <div class="session__info___bottom">
-            <span class="font-weight-bold">{{ fields.field_speaker.content }}</span><br/>
-            <span>{{ fields.field_bio.content }}</span>
+        <div class="session__link">
+            {{ fields.field_link.content }}
         </div>
     </div>
 </div>
