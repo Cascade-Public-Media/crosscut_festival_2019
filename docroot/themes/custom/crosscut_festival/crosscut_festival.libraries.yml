@@ -5,6 +5,7 @@ global:
     js/bootstrap.min.js: { minified: true }
     js/global.min.js: { minified: true }
     js/quantcast.min.js: { minified: true }
+    js/ga-eventbrite.min.js: { minified: true }
   css:
     component:
       css/style.min.css: { minified: true }
