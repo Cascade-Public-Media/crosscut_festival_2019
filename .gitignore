@@ -33,3 +33,6 @@ docroot/themes/custom/crosscut_festival/css/maps
 
 # Ignore private file system folder.
 /files-private/
+
+# Ignore drush sites -- these are configured with secrets.
+/drush/
