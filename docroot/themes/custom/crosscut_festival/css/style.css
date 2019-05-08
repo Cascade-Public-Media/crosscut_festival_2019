@@ -13018,6 +13018,23 @@ fieldset legend span {
   color: #fff;
 }
 
+/* Extra - reusable components */
+.lightbox--thank-you {
+  background-color: #61C2D7;
+  max-width: 450px;
+  text-align: center;
+  padding: 2em;
+}
+
+.lightbox--thank-you h1, .lightbox--thank-you h2, .lightbox--thank-you h3, .lightbox--thank-you h4, .lightbox--thank-you p {
+  color: #213342;
+}
+
+.lightbox--thank-you p {
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
 /** General **/
 html,
 body {
