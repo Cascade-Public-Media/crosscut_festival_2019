@@ -7,6 +7,10 @@
   width: 100%;
   max-width: 100%;
   z-index: $zindex-fixed;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
 }
 
 /* Make sure admin toolbar dropdowns appear above header. */
@@ -184,7 +188,7 @@
   }
 
   .nav-dropdown {
-    right: -31px;
+    right: -85px;
 
     &:before {
       left: 24px;

@@ -13159,6 +13159,14 @@ caption {
   z-index: 1030;
 }
 
+@media (min-width: 992px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 /* Make sure admin toolbar dropdowns appear above header. */
 #toolbar-bar {
   z-index: 1031;
@@ -13349,7 +13357,7 @@ caption {
     display: inline;
   }
   .nav-dropdown {
-    right: -31px;
+    right: -85px;
   }
   .nav-dropdown:before {
     left: 24px;
