@@ -9,7 +9,15 @@
 
 html,
 body {
-  overflow-x: hidden;
+  //overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.dialog-off-canvas-main-canvas {
+  min-height: 100%;
+  position: relative;
 }
 
 .visually-hidden {

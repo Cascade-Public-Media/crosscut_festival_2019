@@ -13035,10 +13035,136 @@ fieldset legend span {
   margin-top: 1em;
 }
 
+/** Subscribe Form **/
+.block-crosscut-email-subscribe {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+
+@media (min-width: 576px) {
+  .block-crosscut-email-subscribe {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .block-crosscut-email-subscribe {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .block-crosscut-email-subscribe {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .block-crosscut-email-subscribe {
+    max-width: 1140px;
+  }
+}
+
+.block-crosscut-email-subscribe .content {
+  padding: 30px;
+}
+
+.block-crosscut-email-subscribe .ces-quick-subscribe-form {
+  padding: 1em;
+  background-image: url("../images/DiamondHalftone.png");
+  background-position: center;
+  background-size: cover;
+  background-color: #172C3B;
+}
+
+.block-crosscut-email-subscribe .quick-subscribe-form-prefix {
+  padding: 1em 1em 0;
+}
+
+.block-crosscut-email-subscribe #crosscut-email-subscribe-quick-subscribe-form {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.block-crosscut-email-subscribe #crosscut-email-subscribe-quick-subscribe-form .form-item-email-address {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.block-crosscut-email-subscribe #crosscut-email-subscribe-quick-subscribe-form .form-item-email-address .form-control {
+  width: 100%;
+  margin-top: 0;
+}
+
+.block-crosscut-email-subscribe #crosscut-email-subscribe-quick-subscribe-form .form-actions {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.block-crosscut-email-subscribe p {
+  color: #fff;
+  font-weight: 600;
+}
+
+.block-crosscut-email-subscribe h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+@media (min-width: 576px) {
+  .block-crosscut-email-subscribe .content {
+    padding: 30px 0;
+  }
+  .block-crosscut-email-subscribe #crosscut-email-subscribe-quick-subscribe-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .block-crosscut-email-subscribe p {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 992px) {
+  .block-crosscut-email-subscribe {
+    max-width: 870px;
+    margin: 0 auto;
+  }
+}
+
 /** General **/
 html,
 body {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.dialog-off-canvas-main-canvas {
+  min-height: 100%;
+  position: relative;
 }
 
 .visually-hidden {
@@ -13166,7 +13292,7 @@ caption {
 }
 
 #page {
-  position: relative;
+  padding-bottom: 178px;
 }
 
 .header {
@@ -13397,6 +13523,11 @@ caption {
 
 /** Footer **/
 footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #4A4A4A;
   margin-top: 60px;
 }
@@ -13986,126 +14117,6 @@ footer .footer-content-main {
   width: auto;
   max-height: 100px;
   height: auto;
-}
-
-/** Subscribe Form **/
-#stay-connected {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0;
-}
-
-@media (min-width: 576px) {
-  #stay-connected {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  #stay-connected {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  #stay-connected {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #stay-connected {
-    max-width: 1140px;
-  }
-}
-
-#stay-connected .content {
-  padding: 30px;
-}
-
-#stay-connected .ces-quick-subscribe-form {
-  padding: 1em;
-  background-image: url("../images/DiamondHalftone.png");
-  background-position: center;
-  background-size: cover;
-  background-color: #172C3B;
-}
-
-#stay-connected .quick-subscribe-form-prefix {
-  padding: 0 1em;
-}
-
-#stay-connected #crosscut-email-subscribe-quick-subscribe-form {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-}
-
-#stay-connected #crosscut-email-subscribe-quick-subscribe-form .form-item-email-address {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#stay-connected #crosscut-email-subscribe-quick-subscribe-form .form-item-email-address .form-control {
-  width: 100%;
-  margin-top: 0;
-}
-
-#stay-connected #crosscut-email-subscribe-quick-subscribe-form .form-actions {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#stay-connected p {
-  color: #fff;
-  font-weight: 600;
-}
-
-#stay-connected h2 {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: normal;
-  margin: 12px 0;
-}
-
-@media (min-width: 576px) {
-  #stay-connected .content {
-    padding: 30px 0;
-  }
-  #stay-connected #crosscut-email-subscribe-quick-subscribe-form {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  #stay-connected p {
-    font-size: 22px;
-    line-height: 26px;
-  }
-}
-
-@media (min-width: 992px) {
-  #stay-connected {
-    max-width: 870px;
-    margin: 0 auto;
-  }
 }
 
 /** Festival News Section **/

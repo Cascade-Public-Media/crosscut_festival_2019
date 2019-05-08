@@ -1,5 +1,10 @@
 /** Footer **/
 footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: $gray-dark;
   margin-top: 60px;
 
