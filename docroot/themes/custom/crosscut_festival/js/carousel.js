@@ -35,6 +35,42 @@
     detach: function (context, settings) {}
   };
 
+  Drupal.behaviors.imageCarousel = {
+    attach: function(context, settings) {
+
+      $('.view-id-image_carousel').once('imageCarousel').each(function() {
+        var owl = $('#carousel-image-carousel');
+
+        owl.owlCarousel({
+          loop: true,
+          autoplay: true,
+          autoplayHoverPause: true,
+          autoplayTimeout:3000,
+          dots: true,
+          nav: true,
+          center: true,
+          navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
+          items: 1
+        });
+
+        $('.carousel-control--button').on('click', function() {
+          if ($(this).hasClass('playing') ) {
+            owl.trigger('stop.owl.autoplay');
+            $(this).removeClass('playing').addClass('paused');
+            $(this).attr('title', 'Play slideshow').find('span.visually-hidden').text('Play slideshow');
+          } else {
+            owl.trigger('play.owl.autoplay',[3000]);
+            $(this).removeClass('paused').addClass('playing');
+            $(this).attr('title', 'Pause slideshow').find('span.visually-hidden').text('Pause slideshow');
+          }
+        });
+      });
+
+    },
+
+    detach: function (context, settings) {}
+  };
+
   Drupal.behaviors.sessionsCarousel = {
     attach: function(context, settings) {
 
