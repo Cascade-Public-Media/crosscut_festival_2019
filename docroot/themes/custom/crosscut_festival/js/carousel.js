@@ -45,7 +45,7 @@
           loop: true,
           autoplay: true,
           autoplayHoverPause: true,
-          autoplayTimeout:3000,
+          autoplayTimeout:4000,
           dots: true,
           nav: true,
           center: true,
@@ -59,7 +59,7 @@
             $(this).removeClass('playing').addClass('paused');
             $(this).attr('title', 'Play slideshow').find('span.visually-hidden').text('Play slideshow');
           } else {
-            owl.trigger('play.owl.autoplay',[3000]);
+            owl.trigger('play.owl.autoplay',[4000]);
             $(this).removeClass('paused').addClass('playing');
             $(this).attr('title', 'Pause slideshow').find('span.visually-hidden').text('Pause slideshow');
           }
