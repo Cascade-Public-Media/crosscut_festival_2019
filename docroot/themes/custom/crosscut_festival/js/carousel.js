@@ -47,7 +47,7 @@
           autoplay: true,
           autoplayHoverPause: true,
           autoplayTimeout: transitionSpeed,
-          dots: true,
+          dots: false,
           nav: true,
           center: true,
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
