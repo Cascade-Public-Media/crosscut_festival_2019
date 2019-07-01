@@ -252,6 +252,83 @@
   }
 }
 
+/** Featured Panelist Organizations Carousel **/
+#carousel-image-carousel,
+.carousel-control--container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.image-carousel {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .carousel-image-item {
+    margin-left: auto;
+    margin-right: auto;
+
+    &--inner {
+      width: 100%;
+
+      img {
+        max-height: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .owl-nav {
+    position: static;
+
+    .owl-prev,
+    .owl-next {
+      top: 50%;
+    }
+  }
+
+  .owl-dots {
+    margin-top: 1rem;
+  }
+}
+
+.carousel-control {
+  margin: 0 1rem 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.carousel-control--button {
+  border: 0;
+  background: transparent;
+  width: 0;
+  height: 20px;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: 100ms all ease;
+
+  &.paused {
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent $blue;
+    border-style: solid;
+  }
+
+  &.playing {
+    border-style: double;
+    border-width: 0 0 0 20px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: transparent transparent transparent $blue-dark;
+  }
+}
+
 // Owl Carousel
 .owl-nav {
   position: absolute;
