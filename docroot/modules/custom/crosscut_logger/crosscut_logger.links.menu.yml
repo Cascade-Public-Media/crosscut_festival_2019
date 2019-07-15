@@ -1,0 +1,5 @@
+crosscut_logger.settings:
+  title: Crosscut Logger settings
+  parent: system.admin_config_development
+  description: Settings for the custom Crosscut logger service.
+  route_name: crosscut_logger.settings

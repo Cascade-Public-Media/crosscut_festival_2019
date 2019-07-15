@@ -1,0 +1,6 @@
+name: 'Crosscut Logger'
+description: 'Custom logger for email alerts based on log severity.'
+package: Crosscut
+type: module
+core: 8.x
+version: null

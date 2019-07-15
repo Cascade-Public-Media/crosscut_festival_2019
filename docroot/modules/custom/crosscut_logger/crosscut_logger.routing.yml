@@ -1,0 +1,7 @@
+crosscut_logger.settings:
+  path: /admin/config/development/crosscut-logger
+  defaults:
+    _form: \Drupal\crosscut_logger\Form\CrosscutLoggerSettingsForm
+    _title: Crosscut Logger Settings
+  requirements:
+    _permission: administer site configuration
