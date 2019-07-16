@@ -101,7 +101,7 @@ class CrosscutLoggerSettingsForm extends ConfigFormBase {
         <code>cron</code>, etc.). One per line. If no types are specified, all
         types will trigger an email alert.'),
       '#rows' => 5,
-      '#default_value' => implode(PHP_EOL, $config->get('type')),
+      '#default_value' => implode("\r\n", $config->get('type')),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -132,12 +132,20 @@ class CrosscutLoggerSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->configFactory->getEditable('crosscut_logger.settings')
-      ->set('enable', (bool) $form_state->getValue('enable'))
-      ->set('mail', $form_state->getValue('mail'))
-      ->set('level', $form_state->getValue('level'))
-      ->set('type', explode(PHP_EOL, $form_state->getValue('type')))
-      ->save();
+    $config =  $this->configFactory->getEditable('crosscut_logger.settings');
+    $config->set('enable', (bool) $form_state->getValue('enable'));
+    $config->set('mail', $form_state->getValue('mail'));
+    $config->set('level', $form_state->getValue('level'));
+
+    $type = trim($form_state->getValue('type'));
+    if (empty($type)) {
+      $config->set('type', []);
+    }
+    else {
+      $config->set('type', explode("\r\n", $type));
+    }
+
+    $config->save();
 
     parent::submitForm($form, $form_state);
   }
