@@ -4,3 +4,5 @@ package: Crosscut
 type: module
 core: 8.x
 version: null
+
+configure: crosscut_logger.settings
