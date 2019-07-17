@@ -1,4 +1,4 @@
 enable: false
-mail: ""
-filter: []
+mailto: ""
+level: [0, 1, 2, 3]
 type: []
