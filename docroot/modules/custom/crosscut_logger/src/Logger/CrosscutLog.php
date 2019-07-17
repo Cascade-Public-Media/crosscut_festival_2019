@@ -4,8 +4,10 @@ namespace Drupal\crosscut_logger\Logger;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
+use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Logger\LogMessageParserInterface;
 use Drupal\Core\Logger\RfcLoggerTrait;
+use Drupal\Core\Mail\MailManagerInterface;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -32,6 +34,20 @@ class CrosscutLog implements LoggerInterface {
   protected $parser;
 
   /**
+   * The mail manager.
+   *
+   * @var \Drupal\Core\Mail\MailManagerInterface
+   */
+  protected $mailManager;
+
+  /**
+   * The language manager.
+   *
+   * @var \Drupal\Core\Language\LanguageManagerInterface
+   */
+  protected $languageManager;
+
+  /**
    * Constructs a CrosscutLog object.
    *
    * @param \Drupal\Core\Logger\LogMessageParserInterface $parser
@@ -40,9 +56,13 @@ class CrosscutLog implements LoggerInterface {
    *   The config factory for getting module config.
    */
   public function __construct(LogMessageParserInterface $parser,
-                              ConfigFactoryInterface $config_factory) {
+                              ConfigFactoryInterface $config_factory,
+                              MailManagerInterface $mail_manager,
+                              LanguageManagerInterface $language_manager) {
     $this->parser = $parser;
     $this->config = $config_factory->get('crosscut_logger.settings');
+    $this->mailManager = $mail_manager;
+    $this->languageManager = $language_manager;
   }
 
   /**
@@ -69,10 +89,21 @@ class CrosscutLog implements LoggerInterface {
     // Convert PSR3-style messages to \Drupal\Component\Render\FormattableMarkup
     // style, so they can be translated too in runtime.
     $message_placeholders = $this->parser->parseMessagePlaceholders($message, $context);
+    if (!empty($message_placeholders)) {
+      $message = strtr($message, $message_placeholders);
+    }
 
-    $mailto = $this->config->get('mail');
+    $mailto = $this->config->get('mailto');
 
-    // TODO: Send emails!
+    if (!empty($mailto)) {
+      $this->mailManager->mail(
+        'crosscut_logger',
+        'log_notification',
+        $mailto,
+        $this->languageManager->getDefaultLanguage()->getId(),
+        ['message' => $message, 'context' => $context]
+      );
+    }
   }
 
 }

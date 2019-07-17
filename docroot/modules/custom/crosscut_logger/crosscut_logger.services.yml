@@ -1,6 +1,9 @@
 services:
   logger.crosscut_logger:
     class: Drupal\crosscut_logger\Logger\CrosscutLog
-    arguments: ['@logger.log_message_parser', '@config.factory']
+    arguments: ['@logger.log_message_parser',
+                '@config.factory',
+                '@plugin.manager.mail',
+                '@language_manager']
     tags:
       - { name: logger }

@@ -63,13 +63,13 @@ class CrosscutLoggerSettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('enable'),
     ];
 
-    $form['mail'] = [
+    $form['mailto'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Email address(es)'),
       '#description' => $this->t('Comma separated list of email addresses
         to send alerts to.'),
       '#rows' => 3,
-      '#default_value' => $config->get('mail'),
+      '#default_value' => $config->get('mailto'),
       '#states' => [
         'required' => ['input[name="enable"]' => ['checked' => TRUE]],
       ],
@@ -114,11 +114,11 @@ class CrosscutLoggerSettingsForm extends ConfigFormBase {
     parent::validateForm($form, $form_state);
 
     // Validate all provided email addresses.
-    $mails = explode(',', $form_state->getValue('mail'));
+    $mails = explode(',', $form_state->getValue('mailto'));
     foreach ($mails as $mail) {
       if (!$this->emailValidator->isValid(trim($mail))) {
         $form_state->setError(
-          $form['mail'],
+          $form['mailto'],
           new TranslatableMarkup(
             'Invalid email address: <strong>@address</strong>',
             ['@address' => $mail]
@@ -132,9 +132,9 @@ class CrosscutLoggerSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $config =  $this->configFactory->getEditable('crosscut_logger.settings');
+    $config = $this->configFactory->getEditable('crosscut_logger.settings');
     $config->set('enable', (bool) $form_state->getValue('enable'));
-    $config->set('mail', $form_state->getValue('mail'));
+    $config->set('mailto', $form_state->getValue('mailto'));
     $config->set('level', $form_state->getValue('level'));
 
     $type = trim($form_state->getValue('type'));
