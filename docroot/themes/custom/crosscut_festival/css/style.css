@@ -13600,6 +13600,15 @@ footer .footer-content-main {
 }
 
 /** Hero **/
+/** Position diamond arrow decorative bg image **/
+@media (min-width: 992px) {
+  #hero + div {
+    background-image: url("../images/DiamondArrowRt.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 .hero {
   background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(23, 44, 59, 0)), color-stop(120%, #000000)), url("../images/ccfest_hero.jpg");
   background: linear-gradient(90deg, rgba(23, 44, 59, 0) 20%, #000000 120%), url("../images/ccfest_hero.jpg");
@@ -14006,13 +14015,6 @@ footer .footer-content-main {
 }
 
 /** About Section **/
-@media (min-width: 992px) {
-  .block-label-about-the-crosscut-festival {
-    background-image: url("../images/DiamondArrowRt.png");
-    background-repeat: no-repeat;
-  }
-}
-
 .about-icons {
   display: -webkit-box;
   display: -ms-flexbox;

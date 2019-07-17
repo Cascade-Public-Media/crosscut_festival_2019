@@ -10,8 +10,18 @@
 }
 
 /** Hero **/
+
+/** Position diamond arrow decorative bg image **/
+#hero + div {
+  @include media-breakpoint-up(lg) {
+    background-image: url('../images/DiamondArrowRt.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 .hero {
-  background: linear-gradient(90deg, rgba(23,44,59,0) 20%, #000000 120%), url('../images/ccfest_hero.jpg');
+  background: linear-gradient(90deg, rgba(23, 44, 59, 0) 20%, #000000 120%), url('../images/ccfest_hero.jpg');
   background-size: cover;
   background-position: top center;
   height: $hero-height;
@@ -53,7 +63,7 @@
     }
 
     &.darken {
-      background: linear-gradient(90deg,rgba(23,44,59,.1) 0,#000000 90%)
+      background: linear-gradient(90deg, rgba(23, 44, 59, .1) 0, #000000 90%)
     }
   }
 
@@ -63,7 +73,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     .logo {
       max-width: 270px;
@@ -87,6 +97,7 @@
         font-weight: 700;
         padding-right: .3em;
       }
+
       &.and {
         background-color: $teal-medium;
         width: 1.25em;
@@ -97,6 +108,7 @@
         color: $blue;
         font-weight: 600;
       }
+
       &.bold-ideas {
         color: $white;
         font-weight: bold;
@@ -123,14 +135,14 @@
 
       &:after {
         content: '';
-        display:inline-block;
-        width:0;
-        height:0;
-        border-top:6px solid transparent;
-        border-bottom:6px solid transparent;
-        border-left:6px solid $blue-dark;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid $blue-dark;
         margin-left: 6px;
-        line-height:0;
+        line-height: 0;
       }
     }
   }
@@ -154,7 +166,7 @@
     }
   }
 
-  @include media-breakpoint-up(sm){
+  @include media-breakpoint-up(sm) {
     .hero-contents {
       position: absolute;
       left: auto;
@@ -164,7 +176,7 @@
     }
   }
 
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     .hero-contents .logo {
       max-width: 320px;
     }
@@ -198,14 +210,12 @@
 }
 
 
-@include media-breakpoint-up(md){
+@include media-breakpoint-up(md) {
   .block-label-hero {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
-
-
 
 
 /** Featured Panelist Organizations Carousel **/
@@ -231,7 +241,7 @@
     color: $blue-dark;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
-    display:inline-block;
+    display: inline-block;
     margin: 14px auto 10px;
   }
 
@@ -400,17 +410,7 @@
   }
 }
 
-
-
 /** About Section **/
-.block-label-about-the-crosscut-festival {
-
-  @include media-breakpoint-up(lg) {
-    background-image: url('../images/DiamondArrowRt.png');
-    background-repeat: no-repeat;
-  }
-}
-
 .about-icons {
   display: flex;
   flex-flow: column wrap;
@@ -589,9 +589,9 @@
 
   .view-all {
     .inline-arrow-right {
-      border-top:5px solid transparent;
-      border-bottom:5px solid transparent;
-      border-left:5px solid $link-color;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid $link-color;
     }
   }
 
@@ -625,7 +625,6 @@
     }
   }
 }
-
 
 
 /** Sessions Carousel **/
@@ -734,7 +733,7 @@
     max-width: 100%;
 
     .vertical-line {
-      display:inline-block;
+      display: inline-block;
       border-left: 2px solid $orange;
       padding-left: 10px;
       margin-bottom: 1em;
@@ -832,7 +831,7 @@
     }
   }
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     max-width: 600px;
   }
 }
@@ -848,8 +847,6 @@
     width: 100%;
   }
 }
-
-
 
 
 /** Pricing Table **/
@@ -876,7 +873,7 @@ table {
     display: none;
 
     .ticket-option {
-      height:130px;
+      height: 130px;
       padding: 10px;
     }
   }
@@ -1005,8 +1002,6 @@ table {
 }
 
 
-
-
 /** Location Section **/
 .block-label-location {
   margin-top: 2em;
@@ -1122,9 +1117,11 @@ table {
       &.google {
         background-image: url('../images/google-play-badge.svg');
       }
+
       &.disabled {
         opacity: .3;
       }
+
       img {
         margin: 0 auto;
       }
