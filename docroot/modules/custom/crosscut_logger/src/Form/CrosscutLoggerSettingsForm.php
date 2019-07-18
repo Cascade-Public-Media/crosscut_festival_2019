@@ -83,6 +83,14 @@ class CrosscutLoggerSettingsForm extends ConfigFormBase {
       '#open' => FALSE,
     ];
 
+    $form['filters']['domain'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Domain'),
+      '#description' => $this->t('Only send notifications for the 
+        specified domain (e.g. "example.com").'),
+      '#default_value' => $config->get('domain'),
+    ];
+
     $form['filters']['level'] = [
       '#type' => 'select',
       '#title' => $this->t('Log level'),
@@ -135,6 +143,7 @@ class CrosscutLoggerSettingsForm extends ConfigFormBase {
     $config = $this->configFactory->getEditable('crosscut_logger.settings');
     $config->set('enable', (bool) $form_state->getValue('enable'));
     $config->set('mailto', $form_state->getValue('mailto'));
+    $config->set('domain', $form_state->getValue('domain'));
     $config->set('level', $form_state->getValue('level'));
 
     $type = trim($form_state->getValue('type'));

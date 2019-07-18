@@ -12,7 +12,7 @@ function crosscut_logger_mail($key, &$message, $params) {
   switch ($key) {
     case 'log_notification':
       $message['subject'] = t('Log notification: @site', [
-        '@site' => \Drupal::request()->getHost(),
+        '@site' => Drupal::request()->getHost(),
       ]);
 
       $message['body'][] = $params['message'];

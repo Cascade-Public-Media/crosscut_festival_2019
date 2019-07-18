@@ -1,4 +1,5 @@
 enable: false
 mailto: ""
+domain: ""
 level: [0, 1, 2, 3]
 type: []

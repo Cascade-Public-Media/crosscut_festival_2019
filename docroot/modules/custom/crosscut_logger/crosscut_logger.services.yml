@@ -4,6 +4,7 @@ services:
     arguments: ['@logger.log_message_parser',
                 '@config.factory',
                 '@plugin.manager.mail',
-                '@language_manager']
+                '@language_manager',
+                '@request_stack']
     tags:
       - { name: logger }

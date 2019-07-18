@@ -9,6 +9,7 @@ use Drupal\Core\Logger\LogMessageParserInterface;
 use Drupal\Core\Logger\RfcLoggerTrait;
 use Drupal\Core\Mail\MailManagerInterface;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class CrosscutLog
@@ -48,6 +49,11 @@ class CrosscutLog implements LoggerInterface {
   protected $languageManager;
 
   /**
+   * @var \Symfony\Component\HttpFoundation\RequestStack
+   */
+  protected $request;
+
+  /**
    * Constructs a CrosscutLog object.
    *
    * @param \Drupal\Core\Logger\LogMessageParserInterface $parser
@@ -58,11 +64,13 @@ class CrosscutLog implements LoggerInterface {
   public function __construct(LogMessageParserInterface $parser,
                               ConfigFactoryInterface $config_factory,
                               MailManagerInterface $mail_manager,
-                              LanguageManagerInterface $language_manager) {
+                              LanguageManagerInterface $language_manager,
+                              RequestStack $request) {
     $this->parser = $parser;
     $this->config = $config_factory->get('crosscut_logger.settings');
     $this->mailManager = $mail_manager;
     $this->languageManager = $language_manager;
+    $this->request = $request;
   }
 
   /**
@@ -70,6 +78,12 @@ class CrosscutLog implements LoggerInterface {
    */
   public function log($level, $message, array $context = []) {
     if (!$this->config->get('enable')) {
+      return;
+    }
+
+    $host = $this->request->getCurrentRequest()->getHost();
+    $filter_host = $this->config->get('domain');
+    if (!empty($filter_host) && $filter_host != $host) {
       return;
     }
 
