@@ -29,43 +29,6 @@
   position: relative;
   overflow: hidden;
 
-  .hero-video {
-    min-width: 100%;
-    min-height: $hero-height;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    background: transparent url('../images/ccfest_hero.jpg') no-repeat center;
-    background-size: cover;
-  }
-
-  .hero-overlay {
-    background-size: cover;
-    background-position: top center;
-    height: $hero-height;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: background 2s ease-in;
-
-    &-image {
-      background-image: url('../images/ccfest_hero.jpg');
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: background 2s ease-in;
-      opacity: 0;
-    }
-
-    &.darken {
-      background: linear-gradient(90deg, rgba(23, 44, 59, .1) 0, #000000 90%)
-    }
-  }
-
   .hero-contents {
     max-width: 340px;
     width: 100%;
@@ -80,58 +43,47 @@
       margin: 0 auto;
     }
 
-    span {
-      font-size: 1.6em;
+    .hero-text {
       color: $white;
       display: block;
       font-weight: $font-weight-bold;
-      line-height: 1.4;
+      line-height: 1.2;
 
       &:first-of-type {
-        font-size: 2.6em;
-        line-height: 1;
-        margin-bottom: .2em;
+        font-size: 2.4em;
+      }
+
+      &:last-of-type {
+        font-size: 1.8em;
       }
     }
   }
 
-  .btn-secondary {
-    margin-top: 20px;
-    display: inline-flex;
-    align-items: center;
+  @include media-breakpoint-up(md) {
+    .hero-contents {
+      .hero-text {
+        &:first-of-type {
+          font-size: 3em;
+        }
 
-    span {
-      color: inherit;
-      font-weight: inherit;
-      font-size: inherit;
-
-      &:after {
-        content: '';
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-top: 6px solid transparent;
-        border-bottom: 6px solid transparent;
-        border-left: 6px solid $blue-dark;
-        margin-left: 6px;
-        line-height: 0;
+        &:last-of-type {
+          font-size: 2.5em;
+        }
       }
     }
   }
 
-  @include media-breakpoint-up(sm){
+  @include media-breakpoint-up(lg){
     .hero-contents {
       position: absolute;
       left: auto;
       right: 10%;
       top: 50%;
       transform: translateY(-50%);
-    }
-  }
 
-  @include media-breakpoint-up(md) {
-    .hero-contents .logo {
-      max-width: 320px;
+      .logo {
+        max-width: 320px;
+      }
     }
   }
 
@@ -140,9 +92,6 @@
       .logo {
         max-width: 240px;
       }
-    }
-    .title-sponsor .title-sponsor-logo {
-      height: 40px;
     }
   }
 
@@ -159,12 +108,9 @@
         max-width: 220px;
       }
 
-      span {
+      .hero-text {
         font-size: 1rem;
       }
-    }
-    .title-sponsor .title-sponsor-logo {
-      height: 40px;
     }
   }
 }
