@@ -13610,10 +13610,10 @@ footer .footer-content-main {
 }
 
 .hero {
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(23, 44, 59, 0)), color-stop(120%, #000000)), url("../images/Festival-2020-teaser.jpg");
-  background: linear-gradient(90deg, rgba(23, 44, 59, 0) 20%, #000000 120%), url("../images/Festival-2020-teaser.jpg");
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0.5)), color-stop(75%, rgba(23, 44, 59, 0))), url("../images/saturday_206.jpg");
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 50%, rgba(23, 44, 59, 0) 75%), url("../images/saturday_206.jpg");
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   height: 82vh;
   background-repeat: no-repeat;
   position: relative;
@@ -13661,11 +13661,17 @@ footer .footer-content-main {
 }
 
 @media (min-width: 992px) {
+  .hero {
+    background: -webkit-gradient(linear, left top, right top, color-stop(5%, #000), color-stop(30%, rgba(23, 44, 59, 0))), url("../images/saturday_206.jpg");
+    background: linear-gradient(90deg, #000 5%, rgba(23, 44, 59, 0) 30%), url("../images/saturday_206.jpg");
+    background-size: cover;
+    background-position: center;
+  }
   .hero .hero-contents {
     position: absolute;
-    left: auto;
-    right: 10%;
-    top: 50%;
+    left: 10%;
+    right: auto;
+    top: 40%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
