@@ -14041,19 +14041,19 @@ footer .footer-content-main {
 }
 
 .about-icons .icon.speakers {
-  background-image: url("../images/100Speakers.png");
+  background-image: url("../images/100_speakers.png");
 }
 
 .about-icons .icon.sessions {
-  background-image: url("../images/40Events.png");
+  background-image: url("../images/40_events.png");
 }
 
 .about-icons .icon.attendees {
-  background-image: url("../images/2000Attendees.png");
+  background-image: url("../images/2000_attendees.png");
 }
 
 .about-icons .icon.ideas {
-  background-image: url("../images/EndlessIdeas.png");
+  background-image: url("../images/endless_ideas.png");
 }
 
 @media (min-width: 576px) {
