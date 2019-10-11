@@ -105,13 +105,13 @@
         });
 
         // Video
-        // var video = $('#heroVideo');
-        // $(video).on('ended', function() {
-        //   $('.hero-overlay.video').removeClass('active');
-        //   $('.hero-overlay-image').animate({
-        //     opacity: 1
-        //   }, 600);
-        // });
+        var video = $('#heroVideo');
+        $(video).on('ended', function() {
+          $('.hero-overlay.video').removeClass('active');
+          $('.hero-overlay-image').animate({
+            opacity: 1
+          }, 600);
+        });
       }
 
       $(window).scroll(function() {

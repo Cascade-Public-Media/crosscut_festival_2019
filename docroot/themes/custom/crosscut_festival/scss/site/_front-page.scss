@@ -21,13 +21,50 @@
 }
 
 .hero {
-  background: linear-gradient(90deg, rgba(0,0,0,.5) 50%, rgba(23,44,59,0) 75%), url('../images/saturday_206.jpg');
+  background: linear-gradient(90deg, rgba(23, 44, 59, .1) 0, #000000 90%), url('../images/saturday_206.jpg');
   background-size: cover;
   background-position: center;
   height: $hero-height;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+
+  .hero-video {
+    min-width: 100%;
+    min-height: $hero-height;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: transparent url('../images/saturday_206.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  .hero-overlay {
+    background-size: cover;
+    background-position: top center;
+    height: $hero-height;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background 2s ease-in;
+
+    &-image {
+      background-image: url('../images/saturday_206.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background 2s ease-in;
+      opacity: 0;
+    }
+
+    &.darken {
+      background: linear-gradient(90deg, rgba(23, 44, 59, .1) 0, #000000 90%)
+    }
+  }
 
   .hero-contents {
     max-width: 340px;
@@ -48,6 +85,7 @@
       display: block;
       font-weight: $font-weight-bold;
       line-height: 1.2;
+      margin-top: .5rem;
 
       &:first-of-type {
         font-size: 2.4em;
@@ -59,8 +97,56 @@
     }
   }
 
-  @include media-breakpoint-up(md) {
+  .hero-text-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    span {
+      font-size: 1.2em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      display: inline-block;
+
+      &.big-issues {
+        color: $yellow;
+        font-weight: 700;
+        padding-right: .3em;
+      }
+      &.and {
+        background-color: $teal-medium;
+        width: 1.25em;
+        height: 1.25em;
+        font-size: 1.1em;
+        line-height: 1.35;
+        border-radius: 50%;
+        color: $blue;
+        font-weight: 600;
+      }
+      &.bold-ideas {
+        color: $white;
+        font-weight: bold;
+        padding-left: .3em;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm){
     .hero-contents {
+      position: absolute;
+      left: auto;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include media-breakpoint-up(md){
+    .hero-contents {
+      .logo {
+        max-width: 320px;
+      }
+
       .hero-text {
         &:first-of-type {
           font-size: 3em;
@@ -80,8 +166,8 @@
 
     .hero-contents {
       position: absolute;
-      left: 10%;
-      right: auto;
+      right: 10%;
+      left: auto;
       top: 40%;
       transform: translateY(-50%);
 
@@ -331,12 +417,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 2em auto;
     width: 100%;
 
     &.sm {
-      height: 180px;
-      max-width: 180px;
+      height: 250px;
+      max-width: 100%;
     }
 
     &.lg {
@@ -345,7 +430,7 @@
     }
 
     &.speakers {
-      background-image: url('../images/60Speakers.png');
+      background-image: url('../images/100Speakers.png');
     }
 
     &.sessions {
@@ -353,7 +438,7 @@
     }
 
     &.attendees {
-      background-image: url('../images/1800Attendees.png');
+      background-image: url('../images/2000Attendees.png');
     }
 
     &.ideas {
@@ -365,11 +450,11 @@
     flex-flow: row wrap;
 
     .icon {
-      margin: 1em auto;
+      margin: 1em 0;
 
       &.sm {
-        max-width: 170px;
-        height: 150px;
+        max-width: 180px;
+        height: 180px;
       }
 
       &.lg {
@@ -386,8 +471,8 @@
       margin: 0;
 
       &.sm {
-        height: 140px;
-        max-width: 100px;
+        height: 170px;
+        max-width: 170px;
       }
 
       &.lg {
