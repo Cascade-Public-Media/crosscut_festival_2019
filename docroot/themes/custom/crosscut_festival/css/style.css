@@ -13561,15 +13561,15 @@ footer .footer-content-main {
   }
 }
 
-.block-front-page-section.block-label-speaker--sessions, .block-front-page-section.block-label-what-to-expect, .block-front-page-section.block-label-volunteer-2020, .block-front-page-section.block-label-location-description {
+.block-front-page-section.block-label-speakers--sessions, .block-front-page-section.block-label-what-to-expect, .block-front-page-section.block-label-volunteer, .block-front-page-section.block-label-location-description {
   background-color: #172C3B;
   color: #fff;
 }
 
-.block-front-page-section.block-label-speaker--sessions p,
-.block-front-page-section.block-label-speaker--sessions .section-header, .block-front-page-section.block-label-what-to-expect p,
-.block-front-page-section.block-label-what-to-expect .section-header, .block-front-page-section.block-label-volunteer-2020 p,
-.block-front-page-section.block-label-volunteer-2020 .section-header, .block-front-page-section.block-label-location-description p,
+.block-front-page-section.block-label-speakers--sessions p,
+.block-front-page-section.block-label-speakers--sessions .section-header, .block-front-page-section.block-label-what-to-expect p,
+.block-front-page-section.block-label-what-to-expect .section-header, .block-front-page-section.block-label-volunteer p,
+.block-front-page-section.block-label-volunteer .section-header, .block-front-page-section.block-label-location-description p,
 .block-front-page-section.block-label-location-description .section-header {
   color: #fff;
 }

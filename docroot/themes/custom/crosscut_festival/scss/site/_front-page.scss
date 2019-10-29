@@ -46,9 +46,9 @@
     }
   }
 
-  &.block-label-speaker--sessions,
+  &.block-label-speakers--sessions,
   &.block-label-what-to-expect,
-  &.block-label-volunteer-2020,
+  &.block-label-volunteer,
   &.block-label-location-description {
     @include front-page-section-variant($blue-dark, true);
   }
