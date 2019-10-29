@@ -36,14 +36,12 @@ $theme-colors: (
         primary: $teal,
         secondary: $yellow,
         success: $green,
-        info: $blue-bright,
+        info: $blue-medium,
         warning: $purple,
         danger: $orange,
         light: $gray-light,
         dark: $gray-dark
 );
-
-$enable-rounded: false;
 
 $font-family-sans-serif: 'Proxima Nova', sans-serif;
 $font-family-serif: 'Lora', serif;
@@ -56,3 +54,7 @@ $box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
 $header-height: 78px;
 $hero-height: 82vh;
 $footer-height: 178px;
+
+// Bootstrap overrides.
+$enable-rounded: false;
+$btn-font-weight: $font-weight-bold;

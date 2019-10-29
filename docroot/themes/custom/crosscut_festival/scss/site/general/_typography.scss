@@ -35,23 +35,10 @@ a {
   margin-right: auto;
 }
 
-
-h1.section-header {
-  font-size: 2em;
-  margin: 30px 0;
-}
-
-h2.section-header {
-  font-size: 2em;
-  line-height: 1.2;
-  margin: 30px 0;
-}
-
-h3.section-header {
+.section-header--small {
   font-size: 1.5em;
-  line-height: 1.2;
   margin: 30px 0;
-  font-weight: $font-weight-normal;
+  font-weight: normal;
   text-transform: uppercase;
 }
 
@@ -98,17 +85,7 @@ h3.section-header {
     font-size: 1.3rem;
   }
 
-  h1.section-header {
-    font-size: 60px;
-    margin: 30px 0;
-  }
-
-  h2.section-header {
-    font-size: 50px;
-    margin: 26px 0;
-  }
-
-  h3.section-header {
+  .section-header--small {
     font-size: 30px;
     margin: 22px 0;
   }

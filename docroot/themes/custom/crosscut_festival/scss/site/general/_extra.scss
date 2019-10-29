@@ -18,24 +18,28 @@
 
 /** Subscribe Form **/
 .block-crosscut-email-subscribe {
-  @include make-container();
-  @include make-container-max-widths();
-  padding: 0;
+  padding: 75px 0;
+  background-color: #D8D8D8;
+
+  @include media-breakpoint-up(md) {
+    padding: 150px 0;
+  }
 
   .content {
-    padding: 30px;
-  }
+    padding-left: 30px;
+    padding-right: 30px;
 
-  .ces-quick-subscribe-form {
-    padding: 1em;
-    background-image: url('../images/DiamondHalftone.png');
-    background-position: center;
-    background-size: cover;
-    background-color: $blue-dark;
-  }
+    @include media-breakpoint-up(sm) {
+      @include make-container();
+      @include make-container-max-widths();
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-  .quick-subscribe-form-prefix {
-    padding: 1em 1em 0;
+    @include media-breakpoint-up(lg) {
+      max-width: 870px;
+      margin: 0 auto;
+    }
   }
 
   #crosscut-email-subscribe-quick-subscribe-form {
@@ -43,53 +47,29 @@
     display: flex;
     flex-flow: column wrap;
 
+    .form-group {
+      margin-bottom: 0;
+    }
+
     .form-item-email-address {
       flex: 1;
-      padding-left: 15px;
-      padding-right: 15px;
 
       .form-control {
         width: 100%;
         margin-top: 0;
       }
     }
-
-    .form-actions {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  }
-
-  p {
-    color: $white;
-    font-weight: 600;
-  }
-
-  h2 {
-    color: $white;
-    text-transform: uppercase;
-    font-weight: normal;
   }
 
   @include media-breakpoint-up(sm) {
-    .content {
-      padding: 30px 0;
-    }
-
     #crosscut-email-subscribe-quick-subscribe-form {
       flex-flow: row wrap;
       align-items: center;
       justify-content: space-between;
-    }
 
-    p {
-      font-size: 22px;
-      line-height: 26px;
+      .form-item-email-address {
+        padding-right: 1em;
+      }
     }
-  }
-
-  @include media-breakpoint-up(lg) {
-    max-width: 870px;
-    margin: 0 auto;
   }
 }

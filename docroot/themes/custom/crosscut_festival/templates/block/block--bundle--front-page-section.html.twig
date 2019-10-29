@@ -29,31 +29,30 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-    'block-label-' ~ configuration.label|clean_class,
-    'container-fluid',
-    'full-bleed',
-  ]
-%}
-{%
-    set contentClasses = [
-    'container',
-    'section',
-]
-%}
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'block-label-' ~ configuration.label|clean_class,
+  'block-front-page-section',
+  'container-fluid',
+  'full-bleed',
+  content.field_vertical_padding['#items'][0].value == '1' ? 'vertical-padding' : ''
+] %}
+
+{% set padding = content.field_vertical_padding['#items'][0].value == '1' %}
+{% set contentClasses = [
+  'container',
+  'section',
+] %}
+{{ devel_breakpoint() }}
 <div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass(contentClasses) }}>
-    {{ title_prefix }}
-    {% if label %}
-      <h2{{ title_attributes.addClass('section-header') }}>{{ label }}</h2>
+    {% if content.field_section_label is not empty %}
+      <h2 class="section-header">{{ content.field_section_label[0]['#context'].value }}</h2>
     {% endif %}
-    {{ title_suffix }}
     {% block content %}
-        {{ content }}
+      {{ content.body }}
     {% endblock %}
   </div>
 </div>

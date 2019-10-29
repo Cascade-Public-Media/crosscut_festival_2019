@@ -77,30 +77,13 @@ caption {
       text-decoration: underline;
     }
   }
-
 }
-
 
 
 /** Buttons **/
 
 .cta {
   text-transform: uppercase;
-}
-
-.btn-secondary {
-  font-weight: $font-weight-bold;
-  background-color: $yellow;
-  color: $blue-dark;
-  border: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: $yellow-darker;
-    color: $blue-dark;
-    border: none;
-  }
 }
 
 .inline-arrow-right {
@@ -118,13 +101,10 @@ caption {
   border-left: 1px solid $gray-medium;
 }
 
-
-
 /** Entities **/
 .field--type-file {
   margin-bottom: $paragraph-margin-bottom;
 }
-
 
 /** FAQ Page **/
 .view-faq {
@@ -147,6 +127,5 @@ caption {
     .card-body {
       padding: 1rem;
     }
-
   }
 }
