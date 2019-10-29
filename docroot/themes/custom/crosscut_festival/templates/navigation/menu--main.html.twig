@@ -30,34 +30,31 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-<ul id="menu-primary" class="primary" aria-label="Home Page Links">
+      <ul id="menu-primary" class="primary" aria-label="Home Page Links">
     {% else %}
-    <ul class="dropdown-menu">
-        {% endif %}
-        {% for item in items %}
-            {%
-                set classes = [
-                menu_level ? 'dropdown-item' : 'nav-item',
-                item.is_expanded ? 'menu-item--expanded',
-                item.is_collapsed ? 'menu-item--collapsed',
-                item.below ? 'dropdown',
-            ]
-            %}
-            <li{{ item.attributes }}>
-                {%
-                    set link_classes = [
-                    not menu_level ? 'cf-nav-link',
-                    item.below ? 'dropdown-toggle',
-                ]
-                %}
-                {% if item.below %}
-                    {{ link(item.title, item.url, {'class': link_classes, 'data-toggle': 'dropdown', 'aria-expanded': 'false', 'aria-haspopup': 'true' }) }}
-                    {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-                {% else %}
-                    {{ link(item.title, item.url, {'class': link_classes}) }}
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
+      <ul class="dropdown-menu">
     {% endif %}
-    {% endmacro %}
+    {% for item in items %}
+      {% set classes = [
+        menu_level ? 'dropdown-item' : 'nav-item',
+        item.is_expanded ? 'menu-item--expanded',
+        item.is_collapsed ? 'menu-item--collapsed',
+        item.below ? 'dropdown',
+      ] %}
+      <li{{ item.attributes.addClass(classes) }}>
+        {% set link_classes = [
+          not menu_level ? 'cf-nav-link',
+          item.below ? 'dropdown-toggle',
+          item.url.getOption('attributes').class ? item.url.getOption('attributes').class,
+        ] %}
+        {% if item.below %}
+          {{ link(item.title, item.url, {'class': link_classes, 'data-toggle': 'dropdown', 'aria-expanded': 'false', 'aria-haspopup': 'true' }) }}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% else %}
+          {{ link(item.title, item.url, attributes.addClass(link_classes)) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

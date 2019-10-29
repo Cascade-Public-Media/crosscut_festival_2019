@@ -53,8 +53,16 @@
         }
       }
 
-      .cta {
-        margin-left: 1em;
+      .btn {
+        padding-left: .75rem;
+        padding-right: .75rem;
+        color: initial;
+        color: $blue-dark; // fallback
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
       }
     }
   }
@@ -152,6 +160,16 @@
       a {
         font-weight: bold;
         padding: .5em 0 0;
+
+        &.btn {
+          padding: $btn-padding-y .75rem;
+          margin-top: .5em;
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+        }
       }
     }
   }
