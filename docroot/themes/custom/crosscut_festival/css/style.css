@@ -13580,7 +13580,7 @@ footer .footer-content-main {
   }
 }
 
-.block-front-page-section.block-label-speakers--sessions, .block-front-page-section.block-label-what-to-expect, .block-front-page-section.block-label-volunteer, .block-front-page-section.block-label-location-description {
+.block-front-page-section.block-label-speakers--sessions, .block-front-page-section.block-label-what-to-expect, .block-front-page-section.block-label-volunteer, .block-front-page-section.block-label-location {
   background-color: #172C3B;
   color: #fff;
 }
@@ -13588,8 +13588,8 @@ footer .footer-content-main {
 .block-front-page-section.block-label-speakers--sessions p,
 .block-front-page-section.block-label-speakers--sessions .section-header, .block-front-page-section.block-label-what-to-expect p,
 .block-front-page-section.block-label-what-to-expect .section-header, .block-front-page-section.block-label-volunteer p,
-.block-front-page-section.block-label-volunteer .section-header, .block-front-page-section.block-label-location-description p,
-.block-front-page-section.block-label-location-description .section-header {
+.block-front-page-section.block-label-volunteer .section-header, .block-front-page-section.block-label-location p,
+.block-front-page-section.block-label-location .section-header {
   color: #fff;
 }
 
@@ -14222,21 +14222,21 @@ table {
 }
 
 /** Location Section **/
-.block-label-location {
+.block-label-location-map {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-.block-label-location .location-image {
+.block-label-location-map .location-image {
   height: 400px;
-  background-image: url("../images/seattleuniversity_map.png");
-  background-size: 300%;
-  background-position: 75% center;
+  background-image: url("../images/seattle-u-map.png");
+  background-size: 215%;
+  background-position: 68% center;
   width: 100%;
   position: relative;
 }
 
-.block-label-location .location-info-box {
+.block-label-location-map .location-info-box {
   background-color: #fff;
   padding: 1em;
   position: absolute;
@@ -14248,17 +14248,17 @@ table {
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-.block-label-location .location-info-box img {
+.block-label-location-map .location-info-box img {
   margin: 0 0 .5em;
 }
 
-.block-label-location .location-info-box .directions {
+.block-label-location-map .location-info-box .directions {
   display: block;
   font-size: 1em;
   padding-left: 1em;
 }
 
-.block-label-location .location-info-box .directions:before {
+.block-label-location-map .location-info-box .directions:before {
   content: url("../images/icons/map_marker_icon.png");
   height: 16px;
   width: 16px;
@@ -14267,25 +14267,20 @@ table {
 }
 
 @media (min-width: 576px) {
-  .block-label-location .location-image {
-    background-position: right center;
-    background-size: 200%;
+  .block-label-location-map .location-image {
+    background-position: 70% center;
+    background-size: 180%;
   }
-  .block-label-location .location-info-box {
+  .block-label-location-map .location-info-box {
     left: 70%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
 }
 
-@media (min-width: 768px) {
-  .block-label-location .location-image {
-    background-size: 180%;
-  }
-}
-
 @media (min-width: 992px) {
-  .block-label-location .location-image {
+  .block-label-location-map .location-image {
+    height: 600px;
     background-size: cover;
   }
 }

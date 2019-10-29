@@ -39,7 +39,7 @@
   &.block-label-speakers--sessions,
   &.block-label-what-to-expect,
   &.block-label-volunteer,
-  &.block-label-location-description {
+  &.block-label-location {
     @include front-page-section-variant($blue-dark, true);
   }
 
@@ -652,15 +652,15 @@ table {
 
 
 /** Location Section **/
-.block-label-location {
+.block-label-location-map {
   margin-bottom: 0;
   padding-bottom: 0;
 
   .location-image {
     height: 400px;
-    background-image: url('../images/seattleuniversity_map.png');
-    background-size: 300%;
-    background-position: 75% center;
+    background-image: url('../images/seattle-u-map.png');
+    background-size: 215%;
+    background-position: 68% center;
     width: 100%;
     position: relative;
   }
@@ -696,8 +696,8 @@ table {
 
   @include media-breakpoint-up(sm) {
     .location-image {
-      background-position: right center;
-      background-size: 200%;
+      background-position: 70% center;
+      background-size: 180%;
     }
 
     .location-info-box {
@@ -706,14 +706,9 @@ table {
     }
   }
 
-  @include media-breakpoint-up(md) {
-    .location-image {
-      background-size: 180%;
-    }
-  }
-
   @include media-breakpoint-up(lg) {
     .location-image {
+      height: 600px;
       background-size: cover;
     }
   }
