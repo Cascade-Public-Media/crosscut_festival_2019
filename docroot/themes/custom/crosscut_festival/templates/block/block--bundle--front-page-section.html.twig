@@ -45,7 +45,7 @@
   'container',
   'section',
 ] %}
-{{ devel_breakpoint() }}
+
 <div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass(contentClasses) }}>
     {% if content.field_section_label is not empty %}
