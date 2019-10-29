@@ -27,16 +27,6 @@
   }
 }
 
-.section-header {
-  font-size: 2em;
-  text-transform: uppercase;
-  margin-bottom: 1em;
-
-  @include media-breakpoint-up(md) {
-    font-size: 3em;
-  }
-}
-
 .block-front-page-section {
   &.vertical-padding {
     padding: 75px 0;
@@ -51,6 +41,12 @@
   &.block-label-volunteer,
   &.block-label-location-description {
     @include front-page-section-variant($blue-dark, true);
+  }
+
+  &.block-label-call-for-entries,
+  &.block-label-tickets,
+  &.block-label-about-the-crosscut-festival {
+    @include front-page-section-variant($white, false);
   }
 }
 

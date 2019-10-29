@@ -12871,9 +12871,21 @@ a {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  text-transform: uppercase;
 }
 
-.section-header--small {
+h1.section-header {
+  font-size: 2.5em;
+  margin: 30px 0;
+}
+
+h2.section-header {
+  font-size: 2em;
+  line-height: 1.2;
+  margin: 0 0 1em;
+}
+
+h3.section-header {
   font-size: 1.5em;
   margin: 30px 0;
   font-weight: normal;
@@ -12916,6 +12928,17 @@ a {
   }
   .standout-copy {
     font-size: 1.3rem;
+  }
+  h1.section-header {
+    font-size: 60px;
+    margin: 30px 0;
+  }
+  h2.section-header {
+    font-size: 3em;
+  }
+  h3.section-header {
+    font-size: 30px;
+    margin: 22px 0;
   }
   .section-header--small {
     font-size: 30px;
@@ -13013,6 +13036,14 @@ fieldset legend span {
   .block-crosscut-email-subscribe {
     padding: 150px 0;
   }
+}
+
+.block-crosscut-email-subscribe .section-header {
+  color: #172C3B;
+}
+
+.block-crosscut-email-subscribe p {
+  color: #000;
 }
 
 .block-crosscut-email-subscribe .content {
@@ -13539,18 +13570,6 @@ footer .footer-content-main {
   margin-top: 0;
 }
 
-.section-header {
-  font-size: 2em;
-  text-transform: uppercase;
-  margin-bottom: 1em;
-}
-
-@media (min-width: 768px) {
-  .section-header {
-    font-size: 3em;
-  }
-}
-
 .block-front-page-section.vertical-padding {
   padding: 75px 0;
 }
@@ -13572,6 +13591,14 @@ footer .footer-content-main {
 .block-front-page-section.block-label-volunteer .section-header, .block-front-page-section.block-label-location-description p,
 .block-front-page-section.block-label-location-description .section-header {
   color: #fff;
+}
+
+.block-front-page-section.block-label-call-for-entries, .block-front-page-section.block-label-tickets, .block-front-page-section.block-label-about-the-crosscut-festival {
+  background-color: #fff;
+}
+
+.block-front-page-section.block-label-call-for-entries .section-header, .block-front-page-section.block-label-tickets .section-header, .block-front-page-section.block-label-about-the-crosscut-festival .section-header {
+  color: #172C3B;
 }
 
 /** Hero **/
