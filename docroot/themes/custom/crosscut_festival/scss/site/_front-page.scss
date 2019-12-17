@@ -714,6 +714,28 @@ table {
   }
 }
 
+/** Tickets 2020 Section **/
+.ticket-row {
+  padding: 3rem 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-medium-light;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-lefT: 0;
+
+    li {
+      font-family: $font-family-serif;
+      font-size: 1rem;
+    }
+  }
+}
 
 /** Extras Section **/
 .block-views-blockextras-block-1 {

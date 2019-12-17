@@ -14302,6 +14302,29 @@ table {
   }
 }
 
+/** Tickets 2020 Section **/
+.ticket-row {
+  padding: 3rem 0;
+}
+
+.ticket-row:not(:last-child) {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.ticket-row h4 {
+  font-size: 2rem;
+}
+
+.ticket-row ul {
+  list-style: none;
+  padding-lefT: 0;
+}
+
+.ticket-row ul li {
+  font-family: "Lora", serif;
+  font-size: 1rem;
+}
+
 /** Extras Section **/
 .block-views-blockextras-block-1 .col-auto {
   padding-left: 0;
