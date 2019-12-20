@@ -718,7 +718,7 @@ table {
 .ticket-row {
   padding: 3rem 0;
 
-  &:not(:last-child) {
+  &:not(:last-of-type) {
     border-bottom: 1px solid $gray-medium-light;
   }
 

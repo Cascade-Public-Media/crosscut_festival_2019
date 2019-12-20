@@ -70,19 +70,33 @@ h3.section-header {
 }
 
 .highlight {
+  background-color: $highlight-bg;
+  width: 100%;
+  padding: 1rem;
 
-  &__center{
-    width: 100%;
-    text-align: center;
+  &--info {
+    div {
+      position: relative;
+      padding-left: 2rem;
+      font-size: 1.1rem;
+      color: $text-gray-dark;
+
+      &::before {
+        content: '';
+        background: url('../images/icons/info-icon.png') center no-repeat;
+        background-size: contain;
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        left: 7px;
+        top: 3px;
+      }
+    }
   }
 
   div {
-    background-color: $highlight-bg;
-    font-weight: $font-weight-bold;
-    text-align: center;
     line-height: 1.5;
-    padding: 0 .3em;
-    display:inline-block;
+    display: inline-block;
   }
 }
 

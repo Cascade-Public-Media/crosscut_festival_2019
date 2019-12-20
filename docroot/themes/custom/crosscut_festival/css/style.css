@@ -12907,17 +12907,32 @@ h3.section-header {
   font-size: 1.9em;
 }
 
-.highlight__center {
+.highlight {
+  background-color: rgba(97, 194, 215, 0.2);
   width: 100%;
-  text-align: center;
+  padding: 1rem;
+}
+
+.highlight--info div {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  color: #212121;
+}
+
+.highlight--info div::before {
+  content: '';
+  background: url("../images/icons/info-icon.png") center no-repeat;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  left: 7px;
+  top: 3px;
 }
 
 .highlight div {
-  background-color: #FFEAB8;
-  font-weight: bold;
-  text-align: center;
   line-height: 1.5;
-  padding: 0 .3em;
   display: inline-block;
 }
 
@@ -14307,7 +14322,7 @@ table {
   padding: 3rem 0;
 }
 
-.ticket-row:not(:last-child) {
+.ticket-row:not(:last-of-type) {
   border-bottom: 1px solid #d8d8d8;
 }
 
