@@ -24,6 +24,11 @@ a {
   color: $link-color;
 }
 
+em,
+strong {
+  color: inherit;
+}
+
 .standout-copy {
   font-size: 1.15rem;
   margin-bottom: 2em;

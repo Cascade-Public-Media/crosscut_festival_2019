@@ -12862,6 +12862,11 @@ a {
   color: #2D68AE;
 }
 
+em,
+strong {
+  color: inherit;
+}
+
 .standout-copy {
   font-size: 1.15rem;
   margin-bottom: 2em;
@@ -14034,6 +14039,60 @@ footer .footer-content-main {
   padding-bottom: 150px;
 }
 
+/** Headliners Gala Section **/
+.block-label-headliners-gala {
+  background-image: url("../images/SectionBkg_HeadlinersGala.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.block-label-headliners-gala::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.block-label-headliners-gala p,
+.block-label-headliners-gala span,
+.block-label-headliners-gala h5,
+.block-label-headliners-gala h4,
+.block-label-headliners-gala h3,
+.block-label-headliners-gala h2,
+.block-label-headliners-gala li {
+  color: #fff;
+}
+
+.block-label-headliners-gala .headliners-gala__header {
+  max-width: 630px;
+  margin: 0 auto 4rem;
+}
+
+.block-label-headliners-gala .headliners-gala__speaker {
+  margin-top: 1rem;
+}
+
+.block-label-headliners-gala .headliners-gala__speaker p {
+  margin-bottom: 0;
+}
+
+.block-label-headliners-gala .headliners-gala__headshot {
+  max-width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2rem auto;
+}
+
+@media (min-width: 576px) {
+  .block-label-headliners-gala .headliners-gala__headshot {
+    margin: 0 auto;
+  }
+}
+
 /** Festival News Section **/
 .news {
   border: 1px solid #61C2D7;
@@ -14338,6 +14397,17 @@ table {
 .ticket-row ul li {
   font-family: "Lora", serif;
   font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .ticket-row .row > div:last-of-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 /** Extras Section **/

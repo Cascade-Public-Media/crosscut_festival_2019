@@ -417,6 +417,64 @@
   padding-bottom: 150px;
 }
 
+/** Headliners Gala Section **/
+.block-label-headliners-gala {
+  background-image: url('../images/SectionBkg_HeadlinersGala.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  p,
+  span,
+  h5,
+  h4,
+  h3,
+  h2,
+  li {
+    color: $white;
+  }
+
+  .headliners-gala {
+    &__header {
+      max-width: 630px;
+      margin: 0 auto 4rem;
+    }
+
+    &__speaker {
+      margin-top: 1rem;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &__headshot {
+      max-width: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 2rem auto;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .headliners-gala {
+      &__headshot {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 /** Festival News Section **/
 .news {
   border: 1px solid $teal;
@@ -733,6 +791,13 @@ table {
     li {
       font-family: $font-family-serif;
       font-size: 1rem;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .row > div:last-of-type {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
