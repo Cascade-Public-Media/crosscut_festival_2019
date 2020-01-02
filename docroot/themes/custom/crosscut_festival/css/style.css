@@ -14047,16 +14047,6 @@ footer .footer-content-main {
   background-repeat: no-repeat;
 }
 
-.block-label-headliners-gala::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .block-label-headliners-gala p,
 .block-label-headliners-gala span,
 .block-label-headliners-gala h5,
