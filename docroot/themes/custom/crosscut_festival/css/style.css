@@ -13642,9 +13642,10 @@ footer .footer-content-main {
 /** Position diamond arrow decorative bg image **/
 @media (min-width: 992px) {
   #hero + div {
-    background-image: url("../images/DiamondArrowRt.png");
+    background-image: url("../images/VerticalLinesBkg.jpg");
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: left top;
+    background-size: contain;
   }
 }
 
@@ -13841,91 +13842,34 @@ footer .footer-content-main {
 }
 
 /** About Section **/
-.about-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .about-icons .icon {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
-}
-
-.about-icons .icon.sm {
-  height: 250px;
-  max-width: 100%;
-}
-
-.about-icons .icon.lg {
-  height: 180px;
-  max-width: 300px;
+  margin: 1em 0;
+  height: 130px;
 }
 
 .about-icons .icon.speakers {
-  background-image: url("../images/100_speakers.png");
+  background-image: url("../images/100Speakers.png");
 }
 
 .about-icons .icon.sessions {
-  background-image: url("../images/40_events.png");
+  background-image: url("../images/50Sessions.png");
 }
 
 .about-icons .icon.attendees {
-  background-image: url("../images/2000_attendees.png");
+  background-image: url("../images/2000Attendees.png");
 }
 
 .about-icons .icon.ideas {
-  background-image: url("../images/endless_ideas.png");
+  background-image: url("../images/EndlessIdeas.png");
 }
 
 @media (min-width: 576px) {
-  .about-icons {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-  }
   .about-icons .icon {
-    margin: 1em 0;
-  }
-  .about-icons .icon.sm {
-    max-width: 180px;
-    height: 180px;
-  }
-  .about-icons .icon.lg {
-    max-width: 370px;
-    height: 200px;
-  }
-}
-
-@media (min-width: 992px) {
-  .about-icons {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .about-icons .icon {
-    margin: 0;
-  }
-  .about-icons .icon.sm {
     height: 170px;
-    max-width: 170px;
-  }
-  .about-icons .icon.lg {
-    height: 200px;
-    max-width: 360px;
   }
 }
 

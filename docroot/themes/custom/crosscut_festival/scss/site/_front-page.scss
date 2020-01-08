@@ -19,8 +19,7 @@
     .section-header {
       color: $white;
     }
-  }
-  @else {
+  } @else {
     .section-header {
       color: $blue-dark;
     }
@@ -54,9 +53,10 @@
 /** Position diamond arrow decorative bg image **/
 #hero + div {
   @include media-breakpoint-up(lg) {
-    background-image: url('../images/DiamondArrowRt.png');
+    background-image: url('../images/VerticalLinesBkg.jpg');
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: left top;
+    background-size: contain;
   }
 }
 
@@ -153,6 +153,7 @@
         font-weight: 700;
         padding-right: .3em;
       }
+
       &.and {
         background-color: $teal-medium;
         width: 1.25em;
@@ -163,6 +164,7 @@
         color: $blue;
         font-weight: 600;
       }
+
       &.bold-ideas {
         color: $white;
         font-weight: bold;
@@ -171,7 +173,7 @@
     }
   }
 
-  @include media-breakpoint-up(sm){
+  @include media-breakpoint-up(sm) {
     .hero-contents {
       position: absolute;
       left: auto;
@@ -181,7 +183,7 @@
     }
   }
 
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     .hero-contents {
       .logo {
         max-width: 320px;
@@ -199,8 +201,8 @@
     }
   }
 
-  @include media-breakpoint-up(lg){
-    background: linear-gradient(90deg, #000 5%, rgba(23,44,59,0) 30%), url('../images/saturday_206.jpg');
+  @include media-breakpoint-up(lg) {
+    background: linear-gradient(90deg, #000 5%, rgba(23, 44, 59, 0) 30%), url('../images/saturday_206.jpg');
     background-size: cover;
     background-position: center;
 
@@ -247,77 +249,32 @@
 
 /** About Section **/
 .about-icons {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-
   .icon {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
-
-    &.sm {
-      height: 250px;
-      max-width: 100%;
-    }
-
-    &.lg {
-      height: 180px;
-      max-width: 300px;
-    }
+    margin: 1em 0;
+    height: 130px;
 
     &.speakers {
-      background-image: url('../images/100_speakers.png');
+      background-image: url('../images/100Speakers.png');
     }
 
     &.sessions {
-      background-image: url('../images/40_events.png');
+      background-image: url('../images/50Sessions.png');
     }
 
     &.attendees {
-      background-image: url('../images/2000_attendees.png');
+      background-image: url('../images/2000Attendees.png');
     }
 
     &.ideas {
-      background-image: url('../images/endless_ideas.png');
+      background-image: url('../images/EndlessIdeas.png');
     }
-  }
 
-  @include media-breakpoint-up(sm) {
-    flex-flow: row wrap;
-
-    .icon {
-      margin: 1em 0;
-
-      &.sm {
-        max-width: 180px;
-        height: 180px;
-      }
-
-      &.lg {
-        max-width: 370px;
-        height: 200px;
-      }
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    justify-content: space-between;
-
-    .icon {
-      margin: 0;
-
-      &.sm {
-        height: 170px;
-        max-width: 170px;
-      }
-
-      &.lg {
-        height: 200px;
-        max-width: 360px;
-      }
+    @include media-breakpoint-up(sm) {
+      height: 170px;
     }
   }
 }
