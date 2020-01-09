@@ -29,6 +29,10 @@
  * @ingroup themeable
  */
 #}
+
+{% set has_bg_image = content.field_background_image.0['#item'].entity is not empty %}
+{% set bg_image_url = file_url(content.field_background_image.0['#item'].entity.uri.value) %}
+
 {% set classes = [
   'block',
   'block-' ~ configuration.provider|clean_class,
@@ -37,7 +41,8 @@
   'block-front-page-section',
   'container-fluid',
   'full-bleed',
-  content.field_vertical_padding['#items'][0].value == '1' ? 'vertical-padding' : ''
+  content.field_vertical_padding['#items'][0].value == '1' ? 'vertical-padding' : '',
+  has_bg_image ? 'bg-image'
 ] %}
 
 {% set padding = content.field_vertical_padding['#items'][0].value == '1' %}
@@ -46,7 +51,11 @@
   'section',
 ] %}
 
-<div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
+<div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}
+{% if has_bg_image %}
+  style="background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url({{ bg_image_url }});"
+    {% endif %}
+>
   <div{{ content_attributes.addClass(contentClasses) }}>
     {% if content.field_section_label is not empty %}
       <h2 class="section-header">{{ content.field_section_label[0]['#context'].value }}</h2>

@@ -374,23 +374,27 @@
   padding-bottom: 150px;
 }
 
+.block-front-page-section {
+  &.bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    p,
+    span,
+    h5,
+    h4,
+    h3,
+    h2,
+    li {
+      color: $white;
+    }
+  }
+}
+
 /** Headliners Gala Section **/
 .block-label-headliners-gala {
-  background-image: url('../images/SectionBkg_HeadlinersGala.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  p,
-  span,
-  h5,
-  h4,
-  h3,
-  h2,
-  li {
-    color: $white;
-  }
-
   .headliners-gala {
     &__header {
       max-width: 630px;
@@ -501,160 +505,6 @@
     width: 100%;
   }
 }
-
-
-/** Pricing Table **/
-table {
-  border-collapse: collapse;
-  font-size: 1rem;
-}
-
-.ticket-table {
-
-  &__mobile {
-    margin: 40px 1em;
-
-    .ticket-option {
-      padding: 1em;
-
-      &:nth-child(odd) {
-        background-color: $table-bg;
-      }
-    }
-  }
-
-  &__tablet {
-    display: none;
-
-    .ticket-option {
-      height: 130px;
-      padding: 10px;
-    }
-  }
-
-  .check {
-    height: 29px;
-    width: 13px;
-    color: $gray-dark;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 29px;
-  }
-
-  .price-label {
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  .ticket-option {
-    position: relative;
-
-    .rotate-text {
-      transform: translate(0, -14px) rotate(90deg);
-      position: relative;
-      height: 100%;
-      width: 100%;
-      text-align: left;
-      display: flex;
-
-      span {
-        font-size: 22px;
-        line-height: 26px;
-        font-weight: bold;
-        display: block;
-        padding: 0;
-        margin: auto auto;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-
-  }
-
-  .price {
-    text-align: left;
-
-    span {
-      font-size: 14px;
-      line-height: 15px;
-      font-weight: bold;
-    }
-  }
-
-  tr {
-    &:nth-child(even) {
-      td, th {
-        background-color: $white;
-      }
-    }
-
-    &:nth-child(odd):not(:first-child) {
-      td, th {
-        background-color: $table-bg;
-      }
-    }
-
-    th:first-of-type {
-      max-width: 127px;
-      padding: 10px 16px;
-      border-left: none;
-      font-size: 18px;
-      vertical-align: bottom;
-    }
-
-    th, td {
-      max-width: 70px;
-      border-left: 1px solid $border-color;
-    }
-
-    td {
-      padding: 10px 16px;
-      text-align: center;
-    }
-  }
-
-  @include media-breakpoint-up(md) {
-    &__tablet {
-      display: table;
-    }
-
-    &__mobile {
-      display: none;
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    .price-label {
-      display: none;
-    }
-
-    .ticket-option {
-      height: 70px;
-      padding-bottom: 0;
-
-      .rotate-text {
-        transform: translate(0, 0) rotate(0deg);
-
-        span {
-          font-size: 20px;
-          position: relative;
-          transform: translateY(0);
-          top: 0;
-        }
-      }
-    }
-
-    .price {
-      padding-top: 0;
-
-      span {
-        font-weight: normal;
-      }
-    }
-  }
-}
-
 
 /** Location Section **/
 .block-label-location-map {
