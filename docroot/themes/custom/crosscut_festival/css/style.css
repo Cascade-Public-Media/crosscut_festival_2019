@@ -13829,7 +13829,7 @@ footer .footer-content-main {
   }
   .hero .hero-overlay,
   .hero .hero-video {
-    height: 100vh;
+    min-height: 100vh;
   }
   .hero .hero-contents .logo {
     max-width: 220px;
