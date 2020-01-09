@@ -13977,10 +13977,6 @@ footer .footer-content-main {
   padding-top: 150px;
 }
 
-.block-label-news-container {
-  padding-bottom: 150px;
-}
-
 .block-front-page-section.bg-image {
   background-size: cover;
   background-position: center;
@@ -14026,28 +14022,17 @@ footer .footer-content-main {
 }
 
 /** Festival News Section **/
-.news {
-  border: 1px solid #61C2D7;
-  background-color: #F9FEFF;
-  padding: 1em 2em;
-}
-
-.news .section-header {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.news .view-all .inline-arrow-right {
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid #2D68AE;
-}
-
-.news .byline {
+.news-container .byline {
   font-size: .9em;
 }
 
-.news .article-teaser {
+.news-container .view-all {
+  display: block;
+  text-align: center;
+  margin: -1rem auto 2rem;
+}
+
+.news-container .article-teaser {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14058,21 +14043,21 @@ footer .footer-content-main {
   color: #4A4A4A;
 }
 
-.news .article-teaser a {
+.news-container .article-teaser a {
   color: inherit;
 }
 
-.news .img-container {
+.news-container .img-container {
   max-height: 250px;
   overflow: hidden;
   margin-bottom: .5em;
 }
 
 @media (min-width: 576px) {
-  .news .article-teaser {
+  .news-container .article-teaser {
     padding-left: 1em;
   }
-  .news .img-container {
+  .news-container .img-container {
     margin-bottom: 0;
   }
 }
@@ -14329,11 +14314,6 @@ footer .footer-content-main {
 
 .extras .app-info .app-badge img {
   margin: 0 auto;
-}
-
-/** In the News Section **/
-.news-container .news {
-  padding-bottom: 32px;
 }
 
 .owl-nav {
