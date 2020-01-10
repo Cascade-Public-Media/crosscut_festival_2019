@@ -638,6 +638,73 @@
   }
 }
 
+/** App **/
+.app {
+  &__icon {
+    padding: .25rem;
+    display: flex;
+    align-items: center;
+
+    &--arrow {
+      padding-right: 1rem;
+
+    }
+
+    .arrow-right {
+      width: 16px;
+      height: 16px;
+      border: solid $border-color;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 0;
+      transform: rotate(-45deg);
+    }
+
+    &--apple {
+      @include media-breakpoint-up(md) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__step {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__step-text {
+    display: flex;
+    flex-flow: column wrap;
+
+    span {
+      color: $white;
+
+      &.top {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__step-number {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: $yellow;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+
+    span {
+      font-weight: bold;
+      font-size: 2rem;
+      color: $blue-dark;
+    }
+  }
+}
+
 /** Extras Section **/
 .block-views-blockextras-block-1 {
   .col-auto {
@@ -657,39 +724,6 @@
 
     &__img {
       margin-bottom: 16px;
-    }
-  }
-
-  .app-info {
-    .highlight {
-      display: block;
-      margin: .3em auto;
-    }
-
-    .app-badge {
-      background-position: center center;
-      min-width: 120px;
-      min-height: 40px;
-      width: 33%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      margin: .3em auto;
-
-      &.apple {
-        background-image: url('../images/apple-store-badge.svg');
-      }
-
-      &.google {
-        background-image: url('../images/google-play-badge.svg');
-      }
-
-      &.disabled {
-        opacity: .3;
-      }
-
-      img {
-        margin: 0 auto;
-      }
     }
   }
 }

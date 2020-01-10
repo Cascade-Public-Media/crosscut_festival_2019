@@ -13059,7 +13059,6 @@ fieldset legend span {
 }
 
 .block-crosscut-email-subscribe p,
-.block-crosscut-email-subscribe span,
 .block-crosscut-email-subscribe h5,
 .block-crosscut-email-subscribe h4,
 .block-crosscut-email-subscribe h3,
@@ -13992,7 +13991,6 @@ footer .footer-content-main {
 }
 
 .block-front-page-section.bg-image p,
-.block-front-page-section.bg-image span,
 .block-front-page-section.bg-image h5,
 .block-front-page-section.bg-image h4,
 .block-front-page-section.bg-image h3,
@@ -14273,6 +14271,91 @@ footer .footer-content-main {
   }
 }
 
+/** App **/
+.app__icon {
+  padding: .25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app__icon--arrow {
+  padding-right: 1rem;
+}
+
+.app__icon .arrow-right {
+  width: 16px;
+  height: 16px;
+  border: solid #979797;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .app__icon--apple {
+    margin-right: 1rem;
+  }
+}
+
+.app__step {
+  margin: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.app__step-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.app__step-text span {
+  color: #fff;
+}
+
+.app__step-text span.top {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.app__step-number {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: #F2BF42;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+}
+
+.app__step-number span {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #172C3B;
+}
+
 /** Extras Section **/
 .block-views-blockextras-block-1 .col-auto {
   padding-left: 0;
@@ -14290,37 +14373,6 @@ footer .footer-content-main {
 
 .extras .extra__img {
   margin-bottom: 16px;
-}
-
-.extras .app-info .highlight {
-  display: block;
-  margin: .3em auto;
-}
-
-.extras .app-info .app-badge {
-  background-position: center center;
-  min-width: 120px;
-  min-height: 40px;
-  width: 33%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: .3em auto;
-}
-
-.extras .app-info .app-badge.apple {
-  background-image: url("../images/apple-store-badge.svg");
-}
-
-.extras .app-info .app-badge.google {
-  background-image: url("../images/google-play-badge.svg");
-}
-
-.extras .app-info .app-badge.disabled {
-  opacity: .3;
-}
-
-.extras .app-info .app-badge img {
-  margin: 0 auto;
 }
 
 .owl-nav {
