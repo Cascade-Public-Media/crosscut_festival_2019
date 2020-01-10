@@ -13611,9 +13611,16 @@ footer .footer-content-main {
   padding: 75px 0;
 }
 
+.block-front-page-section.vertical-padding.block-label-news {
+  padding: 30px 0;
+}
+
 @media (min-width: 768px) {
   .block-front-page-section.vertical-padding {
     padding: 150px 0;
+  }
+  .block-front-page-section.vertical-padding.block-label-news {
+    padding: 50px 0;
   }
 }
 

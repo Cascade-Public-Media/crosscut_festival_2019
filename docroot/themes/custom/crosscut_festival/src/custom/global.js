@@ -175,7 +175,7 @@
   Drupal.behaviors.crosscutNews = {
     attach: function (context, settings) {
 
-      $('#news-container').once('crosscutNews').each(function () {
+      $('#news').once('crosscutNews').each(function () {
 
         var $article = $('.crosscut-articles');
 
