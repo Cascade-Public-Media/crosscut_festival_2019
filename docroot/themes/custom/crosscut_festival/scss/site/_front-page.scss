@@ -370,20 +370,7 @@
 
 .block-front-page-section {
   &.bg-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    p,
-    span,
-    h5,
-    h4,
-    h3,
-    h2,
-    li {
-      color: $white;
-    }
+    @include background-image;
   }
 }
 

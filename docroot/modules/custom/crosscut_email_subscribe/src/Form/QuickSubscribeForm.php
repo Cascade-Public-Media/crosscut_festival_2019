@@ -177,9 +177,9 @@ class QuickSubscribeForm extends FormBase {
     $element['actions']['#type'] = 'actions';
     $element['actions']['submit'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Subscribe'),
-      '#button_type' => 'secondary',
-      '#attributes' => ['class' => ['btn', 'btn-info']],
+      '#value' => $this->t('Sign Up'),
+      '#button_type' => 'primary',
+      '#attributes' => ['class' => ['btn']],
     ];
 
     if ($use_ajax) {

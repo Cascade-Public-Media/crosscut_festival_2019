@@ -16,3 +16,23 @@ $value in $theme-colors {
         @include button-outline-variant($value);
     }
 }
+
+@mixin background-image($text-color: $white, $parallax: true) {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @if $parallax {
+        background-attachment: fixed;
+    }
+
+    p,
+    span,
+    h5,
+    h4,
+    h3,
+    h2,
+    li {
+        color: $text-color;
+    }
+}

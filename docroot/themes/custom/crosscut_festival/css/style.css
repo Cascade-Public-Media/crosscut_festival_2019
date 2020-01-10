@@ -13049,22 +13049,29 @@ fieldset legend span {
 
 /** Subscribe Form **/
 .block-crosscut-email-subscribe {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/SectionBkg_StayConnected.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/SectionBkg_StayConnected.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 75px 0;
-  background-color: #D8D8D8;
+}
+
+.block-crosscut-email-subscribe p,
+.block-crosscut-email-subscribe span,
+.block-crosscut-email-subscribe h5,
+.block-crosscut-email-subscribe h4,
+.block-crosscut-email-subscribe h3,
+.block-crosscut-email-subscribe h2,
+.block-crosscut-email-subscribe li {
+  color: #fff;
 }
 
 @media (min-width: 768px) {
   .block-crosscut-email-subscribe {
     padding: 150px 0;
   }
-}
-
-.block-crosscut-email-subscribe .section-header {
-  color: #172C3B;
-}
-
-.block-crosscut-email-subscribe p {
-  color: #000;
 }
 
 .block-crosscut-email-subscribe .content {
