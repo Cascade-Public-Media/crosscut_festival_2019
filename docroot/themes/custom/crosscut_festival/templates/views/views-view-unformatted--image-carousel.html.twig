@@ -21,12 +21,11 @@
     set row_classes = [
       default_row_class ? 'views-row',
       'carousel-image-item',
-      'row',
       'align-items-center',
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>
-    <div class="carousel-image-item--inner col">
+    <div class="carousel-image-item--inner">
       {{ row.content }}
     </div>
   </div>

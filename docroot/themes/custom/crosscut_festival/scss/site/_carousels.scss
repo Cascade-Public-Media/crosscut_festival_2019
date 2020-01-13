@@ -1,16 +1,23 @@
 // Owl Carousel
 /** Featured Panelist Organizations Carousel **/
+.panelists-carousel {
+  @include make-container-max-widths();
+
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .owl-nav {
+    @include owl-arrows($gray-medium);
+  }
+}
+
 .featured-org-carousel {
   position: relative;
   background-color: $gray-light;
-  height: 120px;
   text-align: center;
 
   .owl-carousel {
-    height: 80px;
-    padding-left: 0;
-    padding-right: 0;
-
     .owl-stage {
       display: flex;
       align-items: center;
@@ -23,22 +30,29 @@
     font-weight: $font-weight-bold;
     text-transform: uppercase;
     display: inline-block;
-    margin: 14px auto 10px;
+    margin: 2rem auto 10px;
   }
 
   .featured-panelist-organization {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 260px;
+    min-height: 150px;
   }
 
   .org {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+
     img {
       max-height: 60px;
+      max-width: 120px;
       height: auto;
       width: auto;
       object-fit: contain;
       margin: 0 auto;
+
+      @include media-breakpoint-up(sm) {
+        max-width: 200px;
+      }
     }
   }
 }
@@ -171,52 +185,10 @@
   .owl-item.active & {
     opacity: 1;
   }
-
-  @include media-breakpoint-up(sm) {
-    max-width: 490px;
-
-    &__info {
-      padding-left: 0;
-    }
-
-    &__info__top {
-      margin-top: 0;
-    }
-  }
-
-  @include media-breakpoint-only(sm) {
-    &__info__top .top-details {
-      font-size: .8em;
-    }
-  }
-
-  @include media-breakpoint-up(md) {
-    min-height: 330px;
-    max-width: 540px;
-    padding: 1em;
-
-    &__image {
-      margin-bottom: 0;
-    }
-
-    &__info__top {
-      .vertical-line {
-        margin-left: 5px;
-      }
-
-      h4 {
-        font-size: 1.6em;
-      }
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    max-width: 600px;
-  }
 }
 
 /** Festival Archive Image Carousel **/
-#carousel-image-carousel,
+.carousel-image-carousel,
 .carousel-control--container {
   max-width: 860px;
   margin: 0 auto;
@@ -247,6 +219,8 @@
   .owl-nav {
     position: static;
 
+    @include owl-arrows;
+
     .owl-prev,
     .owl-next {
       top: 50%;
@@ -263,31 +237,31 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
-}
 
-.carousel-control--button {
-  border: 0;
-  background: transparent;
-  width: 0;
-  height: 20px;
-  display: inline-block;
-  cursor: pointer;
-  margin-left: 1rem;
-  transition: 100ms all ease;
+  &--button {
+    border: 0;
+    background: transparent;
+    width: 0;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: 100ms all ease;
 
-  &.paused {
-    border-width: 10px 0 10px 20px;
-    border-color: transparent transparent transparent $blue;
-    border-style: solid;
-  }
+    &.paused {
+      border-width: 10px 0 10px 20px;
+      border-color: transparent transparent transparent $blue;
+      border-style: solid;
+    }
 
-  &.playing {
-    border-style: double;
-    border-width: 0 0 0 20px;
-  }
+    &.playing {
+      border-style: double;
+      border-width: 0 0 0 20px;
+    }
 
-  &:hover,
-  &:focus {
-    border-color: transparent transparent transparent $blue-dark;
+    &:hover,
+    &:focus {
+      border-color: transparent transparent transparent $blue-dark;
+    }
   }
 }

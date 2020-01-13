@@ -13,19 +13,23 @@
       $('.view-id-featured_panelist_organizations').once('panelistsCarousel').each(function() {
         $('#panelists-carousel').owlCarousel({
           loop: true,
-          autoplay: true,
+          autoplay: false,
           dots: false,
           nav: true,
+          autoWidth: true,
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
           responsive: {
             0: {
-              items: 2
+              items: 2,
+              margin: 20,
             },
             576: {
-              items: 3
+              items: 3,
+              margin: 40,
             },
             768: {
-              items: 4
+              items: 4,
+              margin: 50,
             }
           }
         });
@@ -51,7 +55,21 @@
           nav: true,
           center: true,
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
-          items: 1
+          items: 1,
+          responsive: {
+            0: {
+              margin: 30,
+              stagePadding: 30,
+            },
+            576: {
+              margin: 50,
+              stagePadding: 50,
+            },
+            768: {
+              margin: 100,
+              stagePadding: 50
+            }
+          }
         });
 
         function a11yClick(e) {

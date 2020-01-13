@@ -13,19 +13,23 @@
       $('.view-id-featured_panelist_organizations').once('panelistsCarousel').each(function() {
         $('#panelists-carousel').owlCarousel({
           loop: true,
-          autoplay: true,
+          autoplay: false,
           dots: false,
           nav: true,
+          autoWidth: true,
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
           responsive: {
             0: {
-              items: 2
+              items: 2,
+              margin: 20,
             },
             576: {
-              items: 3
+              items: 3,
+              margin: 40,
             },
             768: {
-              items: 4
+              items: 4,
+              margin: 50,
             }
           }
         });
@@ -51,7 +55,21 @@
           nav: true,
           center: true,
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
-          items: 1
+          items: 1,
+          responsive: {
+            0: {
+              margin: 30,
+              stagePadding: 30,
+            },
+            576: {
+              margin: 50,
+              stagePadding: 50,
+            },
+            768: {
+              margin: 100,
+              stagePadding: 50
+            }
+          }
         });
 
         function a11yClick(e) {
@@ -91,49 +109,36 @@
       $('.view-id-sessions').once('sessionsCarousel').each(function() {
 
           $('#session-carousel').owlCarousel({
-            stagePadding:500,
             loop: true,
-            center: true,
-            items: 1,
-            nav:true,
+            nav: true,
+            dots: false,
             navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
-            margin: 10,
             responsiveClass: true,
             responsive: {
               0: {
-                stagePadding: 60
-              },
-              450: {
-                stagePadding: 110
+                items: 1,
+                stagePadding: 30,
+                margin: 30,
+                center: true,
               },
               576: {
-                stagePadding: 100
+                items: 1,
+                stagePadding: 150,
+                margin: 50,
+                center: true,
               },
-              768: {
-                stagePadding: 110
-              },
-              900: {
-                stagePadding: 170
-              },
-              1024: {
-                stagePadding: 280,
-                margin: 40
-              },
-              1250: {
-                items: 2,
-                stagePadding: 50,
-                margin: 40
-              },
-              1500: {
+              992: {
                 items: 2,
                 stagePadding: 100,
-                margin: 40
+                margin: 50,
+                center: false,
               },
-              // 1700: {
-              //   items:3,
-              //   stagePadding: 20,
-              //   margin:40
-              // }
+              1250: {
+                items: 3,
+                stagePadding: 100,
+                margin: 50,
+                center: true,
+              },
             }
           });
       });

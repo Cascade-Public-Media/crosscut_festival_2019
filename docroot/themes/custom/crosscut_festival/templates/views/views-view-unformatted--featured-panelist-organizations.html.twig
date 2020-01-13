@@ -21,12 +21,11 @@
     set row_classes = [
       default_row_class ? 'views-row',
       'featured-panelist-organization',
-      'row',
       'align-items-center',
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>
-    <div class="org col">
+    <div class="org">
       {{ row.content }}
     </div>
   </div>
