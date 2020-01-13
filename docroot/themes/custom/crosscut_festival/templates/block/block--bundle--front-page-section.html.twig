@@ -33,6 +33,13 @@
 {% set has_bg_image = content.field_background_image.0['#item'].entity is not empty %}
 {% set bg_image_url = file_url(content.field_background_image.0['#item'].entity.uri.value) %}
 
+{% set padding_classes = [
+  content.field_top_padding['#items'][0].value == '1' ? 'section__pt--lg' : 'section__pt--sm',
+  content.field_bottom_padding['#items'][0].value == '1' ? 'section__pb--lg' : 'section__pb--sm'
+] %}
+
+{% set heading_level = content.field_is_subsection['#items'][0].value == '1' ? 'h3' : 'h2' %}
+
 {% set classes = [
   'block',
   'block-' ~ configuration.provider|clean_class,
@@ -41,9 +48,8 @@
   'block-front-page-section',
   'container-fluid',
   'full-bleed',
-  content.field_vertical_padding['#items'][0].value == '1' ? 'vertical-padding' : '',
   has_bg_image ? 'bg-image'
-] %}
+]|merge(padding_classes) %}
 
 {% set padding = content.field_vertical_padding['#items'][0].value == '1' %}
 {% set contentClasses = [
@@ -57,8 +63,10 @@
     {% endif %}
 >
   <div{{ content_attributes.addClass(contentClasses) }}>
-    {% if content.field_section_label is not empty %}
-      <h2 class="section-header">{{ content.field_section_label[0]['#context'].value }}</h2>
+    {% if content.field_section_label['#items'][0].value is not empty %}
+      <{{ heading_level }}
+      class="section-header">{{ content.field_section_label[0]['#context'].value }}
+      </{{ heading_level }}>
     {% endif %}
     {% block content %}
       {{ content.body }}

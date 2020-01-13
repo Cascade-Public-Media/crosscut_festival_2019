@@ -27,11 +27,56 @@ $value in $theme-colors {
     }
 
     p,
-    h5,
-    h4,
-    h3,
+    .section-header,
     h2,
+    h3,
+    h4,
+    h5,
     li {
         color: $text-color;
     }
+
+    h2 > a,
+    h3 > a,
+    h4 > a,
+    h5 > a {
+        color: inherit;
+    }
+
+    p > a:not(.btn) {
+        color: $link-color-lighter;
+    }
 }
+
+@mixin front-page-section-variant($bg-color, $bg-color-dark: false) {
+    background-color: $bg-color;
+
+    @if $bg-color-dark {
+        color: $white;
+
+        p,
+        h2,
+        h3,
+        h4,
+        li,
+        .section-header {
+            color: $white;
+        }
+
+        p > a:not(.btn) {
+            color: $link-color-lighter;
+        }
+
+        h2 > a,
+        h4 > a,
+        h5 > a {
+            color: inherit;
+        }
+
+    } @else {
+        .section-header {
+            color: $blue-dark;
+        }
+    }
+}
+

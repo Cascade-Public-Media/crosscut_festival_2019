@@ -9,34 +9,55 @@
   }
 }
 
-@mixin front-page-section-variant($bg-color, $bg-color-dark: false) {
-  background-color: $bg-color;
-
-  @if $bg-color-dark {
-    color: $white;
-
-    p,
-    .section-header {
-      color: $white;
-    }
-  } @else {
-    .section-header {
-      color: $blue-dark;
-    }
-  }
-}
-
 .block-front-page-section {
-  &.vertical-padding {
-    padding: 75px 0;
+  &.section {
+    &__pt {
+      &--lg {
+        padding-top: 75px;
+      }
+
+      &--sm {
+        padding-top: 60px;
+      }
+    }
+
+    &__pb {
+      &--lg {
+        padding-bottom: 75px;
+      }
+
+      &--sm {
+        padding-bottom: 60px;
+      }
+    }
 
     @include media-breakpoint-up(md) {
-      padding: 150px 0;
+      &__pt {
+        &--lg {
+          padding-top: 150px;
+        }
+        &--sm {
+          padding-top: 100px;
+        }
+      }
+      &__pb {
+        &--lg {
+          padding-bottom: 150px;
+        }
+        &--sm {
+          padding-bottom: 100px;
+        }
+      }
     }
+  }
+
+  &.section--pt-sm {
+    padding: 30px 0;
   }
 
   &.block-label-speakers--sessions,
-  &.block-label-what-to-expect {
+  &.block-label-what-to-expect,
+  &.block-label-media-crosscut-now {
     @include front-page-section-variant($blue-dark, true);
   }
 
@@ -407,6 +428,185 @@
   }
 }
 
+/** Media **/
+/** Podcasts **/
+.platform-subscribe-links {
+  display: flex;
+  margin: 0 auto 1rem;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  .subscribe-text {
+    font-weight: bold;
+    color: $gray-dark;
+    padding: .5rem .5rem 0 0;
+  }
+
+  ul {
+    display: inline;
+    padding: 0.5rem 0;
+    margin: 0;
+
+    li {
+      display: inline;
+      padding: 0;
+      margin-top: 0;
+      margin-left: 10px;
+    }
+  }
+
+  .subscribe-icon {
+    display: inline-block;
+    vertical-align: middle;
+    transition: .4s ease-in-out;
+
+    img {
+      max-width: 24px;
+      max-height: 24px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.15);
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: 0 auto 3rem;
+  }
+}
+
+.podcasts {
+  .podcast {
+    margin: 1rem 0;
+  }
+
+  .img-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+    &:hover, &:focus {
+      .icon-podcast {
+        opacity: .6;
+      }
+    }
+
+    .icon-podcast {
+      background-image: url('../images/icons/icon_podcast.svg');
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 5px;
+      bottom: 5px;
+      z-index: 2;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+      text-indent: 100px;
+    }
+  }
+
+  h4 {
+    color: $text-gray-dark;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .metadata {
+    font-size: 1rem;
+    color: $gray-medium-text;
+  }
+}
+
+/** Crosscut Now Section */
+.tv {
+  &__image {
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    a {
+      display: block;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        &::after {
+          opacity: .7;
+        }
+      }
+
+      &::after {
+        content: '';
+        background-image: url('../images/icons/play-white.svg');
+        background-size: cover;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__row {
+    &:first-of-type {
+      margin-bottom: 4rem;
+
+      .tv__image a {
+        &::after {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+
+    &:last-of-type {
+      .tv__col {
+        margin-bottom: 2rem;
+      }
+
+      .tv__image a {
+        &::after {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &__row {
+      &:first-of-type {
+        margin-bottom: 8rem;
+
+        .tv__image a {
+          &::after {
+            height: 70px;
+            width: 70px;
+          }
+        }
+      }
+
+      &:last-of-type {
+        .tv__image a {
+          &::after {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
 /** Festival News Section **/
 .news-container {
   .byline {
@@ -417,6 +617,12 @@
     display: block;
     text-align: center;
     margin: -1rem auto 2rem;
+  }
+
+  .article-row {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
   }
 
   .article-teaser {

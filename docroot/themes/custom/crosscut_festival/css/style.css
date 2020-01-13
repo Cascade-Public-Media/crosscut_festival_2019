@@ -12893,9 +12893,13 @@ h2.section-header {
 
 h3.section-header {
   font-size: 1.5em;
-  margin: 30px 0;
+  margin: 0 0 1em;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+.font-small {
+  font-size: 1rem;
 }
 
 .info-text {
@@ -12959,11 +12963,11 @@ h3.section-header {
   }
   h3.section-header {
     font-size: 30px;
-    margin: 22px 0;
+    margin: 0 0 22px;
   }
   .section-header--small {
     font-size: 30px;
-    margin: 22px 0;
+    margin: 0 0 22px;
   }
   .info-text {
     font-size: 1.15em;
@@ -13059,12 +13063,24 @@ fieldset legend span {
 }
 
 .block-crosscut-email-subscribe p,
-.block-crosscut-email-subscribe h5,
-.block-crosscut-email-subscribe h4,
-.block-crosscut-email-subscribe h3,
+.block-crosscut-email-subscribe .section-header,
 .block-crosscut-email-subscribe h2,
+.block-crosscut-email-subscribe h3,
+.block-crosscut-email-subscribe h4,
+.block-crosscut-email-subscribe h5,
 .block-crosscut-email-subscribe li {
   color: #fff;
+}
+
+.block-crosscut-email-subscribe h2 > a,
+.block-crosscut-email-subscribe h3 > a,
+.block-crosscut-email-subscribe h4 > a,
+.block-crosscut-email-subscribe h5 > a {
+  color: inherit;
+}
+
+.block-crosscut-email-subscribe p > a:not(.btn) {
+  color: #66AEEA;
 }
 
 @media (min-width: 768px) {
@@ -13573,7 +13589,7 @@ footer .footer-content-main {
 }
 
 .site-info__sub {
-  color: #c4c4c4;
+  color: #d8d8d8;
   font-size: .8em;
   line-height: 1.3;
   width: 100%;
@@ -13613,25 +13629,77 @@ footer .footer-content-main {
   margin-top: 0;
 }
 
-.block-front-page-section.vertical-padding {
-  padding: 75px 0;
+.block-front-page-section.section__pt--lg {
+  padding-top: 75px;
+}
+
+.block-front-page-section.section__pt--sm {
+  padding-top: 60px;
+}
+
+.block-front-page-section.section__pb--lg {
+  padding-bottom: 75px;
+}
+
+.block-front-page-section.section__pb--sm {
+  padding-bottom: 60px;
 }
 
 @media (min-width: 768px) {
-  .block-front-page-section.vertical-padding {
-    padding: 150px 0;
+  .block-front-page-section.section__pt--lg {
+    padding-top: 150px;
+  }
+  .block-front-page-section.section__pt--sm {
+    padding-top: 100px;
+  }
+  .block-front-page-section.section__pb--lg {
+    padding-bottom: 150px;
+  }
+  .block-front-page-section.section__pb--sm {
+    padding-bottom: 100px;
   }
 }
 
-.block-front-page-section.block-label-speakers--sessions, .block-front-page-section.block-label-what-to-expect {
+.block-front-page-section.section--pt-sm {
+  padding: 30px 0;
+}
+
+.block-front-page-section.block-label-speakers--sessions, .block-front-page-section.block-label-what-to-expect, .block-front-page-section.block-label-media-crosscut-now {
   background-color: #172C3B;
   color: #fff;
 }
 
 .block-front-page-section.block-label-speakers--sessions p,
+.block-front-page-section.block-label-speakers--sessions h2,
+.block-front-page-section.block-label-speakers--sessions h3,
+.block-front-page-section.block-label-speakers--sessions h4,
+.block-front-page-section.block-label-speakers--sessions li,
 .block-front-page-section.block-label-speakers--sessions .section-header, .block-front-page-section.block-label-what-to-expect p,
-.block-front-page-section.block-label-what-to-expect .section-header {
+.block-front-page-section.block-label-what-to-expect h2,
+.block-front-page-section.block-label-what-to-expect h3,
+.block-front-page-section.block-label-what-to-expect h4,
+.block-front-page-section.block-label-what-to-expect li,
+.block-front-page-section.block-label-what-to-expect .section-header, .block-front-page-section.block-label-media-crosscut-now p,
+.block-front-page-section.block-label-media-crosscut-now h2,
+.block-front-page-section.block-label-media-crosscut-now h3,
+.block-front-page-section.block-label-media-crosscut-now h4,
+.block-front-page-section.block-label-media-crosscut-now li,
+.block-front-page-section.block-label-media-crosscut-now .section-header {
   color: #fff;
+}
+
+.block-front-page-section.block-label-speakers--sessions p > a:not(.btn), .block-front-page-section.block-label-what-to-expect p > a:not(.btn), .block-front-page-section.block-label-media-crosscut-now p > a:not(.btn) {
+  color: #66AEEA;
+}
+
+.block-front-page-section.block-label-speakers--sessions h2 > a,
+.block-front-page-section.block-label-speakers--sessions h4 > a,
+.block-front-page-section.block-label-speakers--sessions h5 > a, .block-front-page-section.block-label-what-to-expect h2 > a,
+.block-front-page-section.block-label-what-to-expect h4 > a,
+.block-front-page-section.block-label-what-to-expect h5 > a, .block-front-page-section.block-label-media-crosscut-now h2 > a,
+.block-front-page-section.block-label-media-crosscut-now h4 > a,
+.block-front-page-section.block-label-media-crosscut-now h5 > a {
+  color: inherit;
 }
 
 .block-front-page-section.block-label-call-for-entries, .block-front-page-section.block-label-tickets, .block-front-page-section.block-label-about-the-crosscut-festival {
@@ -13991,12 +14059,24 @@ footer .footer-content-main {
 }
 
 .block-front-page-section.bg-image p,
-.block-front-page-section.bg-image h5,
-.block-front-page-section.bg-image h4,
-.block-front-page-section.bg-image h3,
+.block-front-page-section.bg-image .section-header,
 .block-front-page-section.bg-image h2,
+.block-front-page-section.bg-image h3,
+.block-front-page-section.bg-image h4,
+.block-front-page-section.bg-image h5,
 .block-front-page-section.bg-image li {
   color: #fff;
+}
+
+.block-front-page-section.bg-image h2 > a,
+.block-front-page-section.bg-image h3 > a,
+.block-front-page-section.bg-image h4 > a,
+.block-front-page-section.bg-image h5 > a {
+  color: inherit;
+}
+
+.block-front-page-section.bg-image p > a:not(.btn) {
+  color: #66AEEA;
 }
 
 /** Headliners Gala Section **/
@@ -14026,6 +14106,171 @@ footer .footer-content-main {
   }
 }
 
+/** Media **/
+/** Podcasts **/
+.platform-subscribe-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.platform-subscribe-links .subscribe-text {
+  font-weight: bold;
+  color: #4A4A4A;
+  padding: .5rem .5rem 0 0;
+}
+
+.platform-subscribe-links ul {
+  display: inline;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.platform-subscribe-links ul li {
+  display: inline;
+  padding: 0;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.platform-subscribe-links .subscribe-icon {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.platform-subscribe-links .subscribe-icon img {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.platform-subscribe-links .subscribe-icon:hover, .platform-subscribe-links .subscribe-icon:focus {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+@media (min-width: 768px) {
+  .platform-subscribe-links {
+    margin: 0 auto 3rem;
+  }
+}
+
+.podcasts .podcast {
+  margin: 1rem 0;
+}
+
+.podcasts .img-container {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.podcasts .img-container:hover .icon-podcast, .podcasts .img-container:focus .icon-podcast {
+  opacity: .6;
+}
+
+.podcasts .img-container .icon-podcast {
+  background-image: url("../images/icons/icon_podcast.svg");
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 5px;
+  bottom: 5px;
+  z-index: 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  text-indent: 100px;
+}
+
+.podcasts h4 {
+  color: #212121;
+}
+
+.podcasts h4 a {
+  color: inherit;
+}
+
+.podcasts .metadata {
+  font-size: 1rem;
+  color: #636363;
+}
+
+/** Crosscut Now Section */
+.tv__image {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.tv__image a {
+  display: block;
+  position: relative;
+}
+
+.tv__image a:hover::after, .tv__image a:focus::after {
+  opacity: .7;
+}
+
+.tv__image a::after {
+  content: '';
+  background-image: url("../images/icons/play-white.svg");
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.tv__row:first-of-type {
+  margin-bottom: 4rem;
+}
+
+.tv__row:first-of-type .tv__image a::after {
+  height: 50px;
+  width: 50px;
+}
+
+.tv__row:last-of-type .tv__col {
+  margin-bottom: 2rem;
+}
+
+.tv__row:last-of-type .tv__image a::after {
+  height: 50px;
+  width: 50px;
+}
+
+@media (min-width: 768px) {
+  .tv__row:first-of-type {
+    margin-bottom: 8rem;
+  }
+  .tv__row:first-of-type .tv__image a::after {
+    height: 70px;
+    width: 70px;
+  }
+  .tv__row:last-of-type .tv__image a::after {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 /** Festival News Section **/
 .news-container .byline {
   font-size: .9em;
@@ -14035,6 +14280,10 @@ footer .footer-content-main {
   display: block;
   text-align: center;
   margin: -1rem auto 2rem;
+}
+
+.news-container .article-row:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .news-container .article-teaser {
