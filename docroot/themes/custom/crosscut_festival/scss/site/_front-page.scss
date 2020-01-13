@@ -652,34 +652,6 @@
   }
 }
 
-/** Sessions Carousel **/
-#sessions-view {
-  padding-top: 3em;
-  margin-bottom: 8em;
-
-  @include media-breakpoint-up(md) {
-    margin-bottom: 2em;
-  }
-}
-
-#featured-sessions {
-  h3 {
-    text-align: center;
-  }
-}
-
-#sessions-coming-soon .container {
-  padding-top: 0;
-  margin-bottom: 5em;
-}
-
-// complete lineup
-.lineup {
-  img {
-    width: 100%;
-  }
-}
-
 /** Location Section **/
 .block-label-location {
   .location {

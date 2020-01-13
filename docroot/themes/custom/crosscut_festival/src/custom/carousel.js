@@ -91,49 +91,36 @@
       $('.view-id-sessions').once('sessionsCarousel').each(function() {
 
           $('#session-carousel').owlCarousel({
-            stagePadding:500,
             loop: true,
-            center: true,
-            items: 1,
-            nav:true,
+            nav: true,
+            dots: false,
             navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
-            margin: 10,
             responsiveClass: true,
             responsive: {
               0: {
-                stagePadding: 60
-              },
-              450: {
-                stagePadding: 110
+                items: 1,
+                stagePadding: 30,
+                margin: 30,
+                center: true,
               },
               576: {
-                stagePadding: 100
+                items: 1,
+                stagePadding: 150,
+                margin: 50,
+                center: true,
               },
-              768: {
-                stagePadding: 110
-              },
-              900: {
-                stagePadding: 170
-              },
-              1024: {
-                stagePadding: 280,
-                margin: 40
-              },
-              1250: {
-                items: 2,
-                stagePadding: 50,
-                margin: 40
-              },
-              1500: {
+              992: {
                 items: 2,
                 stagePadding: 100,
-                margin: 40
+                margin: 50,
+                center: false,
               },
-              // 1700: {
-              //   items:3,
-              //   stagePadding: 20,
-              //   margin:40
-              // }
+              1250: {
+                items: 3,
+                stagePadding: 100,
+                margin: 50,
+                center: true,
+              },
             }
           });
       });

@@ -80,3 +80,62 @@ $value in $theme-colors {
     }
 }
 
+@mixin owl-arrows($color: $black, $height: 10px) {
+    $width: $height * 0.8;
+
+    .nav-arrow {
+        background: transparent !important;
+        border-top: $width solid transparent;
+        border-bottom: $width solid transparent;
+        display: block;
+        width: 0;
+        height: 0;
+        color: transparent;
+    }
+
+    .owl-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+
+        .nav-arrow {
+            background: transparent;
+            border-right: $height solid $color;
+        }
+
+        &.active,
+        &:hover,
+        &:focus {
+            background: transparent !important;
+
+            .nav-arrow {
+                background: transparent !important;
+                border-right: $height solid $color;
+            }
+        }
+    }
+
+    .owl-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+
+        .nav-arrow {
+            background: transparent;
+            border-left: $height solid $color;
+        }
+
+        &.active,
+        &:hover,
+        &:focus {
+            background: transparent !important;
+
+            .nav-arrow {
+                background: transparent !important;
+                border-left: $height solid $color;
+            }
+        }
+    }
+}

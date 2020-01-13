@@ -50,7 +50,7 @@
 <div id="{{ configuration.label|clean_class }}" {{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-    <h3{{ title_attributes }}>{{ label }}</h3>
+    <h3{{ title_attributes.addClass('section-header') }}>{{ label }}</h3>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
