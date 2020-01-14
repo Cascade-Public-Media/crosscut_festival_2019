@@ -48,14 +48,14 @@
 
         owl.owlCarousel({
           loop: true,
-          autoplay: true,
+          autoplay: false,
           autoplayHoverPause: true,
           autoplayTimeout: transitionSpeed,
           dots: false,
           nav: true,
           center: true,
-          navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
           items: 1,
+          navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
           responsive: {
             0: {
               margin: 30,
@@ -63,12 +63,17 @@
             },
             576: {
               margin: 50,
-              stagePadding: 50,
+              stagePadding: 150,
             },
-            768: {
-              margin: 100,
-              stagePadding: 50
-            }
+            992: {
+              margin: 64,
+              stagePadding: 250,
+            },
+            1385: {
+              margin: 64,
+              stagePadding: 350,
+              autoWidth: true,
+            },
           }
         });
 

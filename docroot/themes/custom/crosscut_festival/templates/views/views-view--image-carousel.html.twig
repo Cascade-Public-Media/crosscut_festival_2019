@@ -40,6 +40,7 @@
   'view-display-id-' ~ display_id,
   dom_id ? 'js-view-dom-id-' ~ dom_id,
   'container-fluid',
+  'full-bleed',
   'image-carousel',
 ] %}
 <div {{ attributes.addClass(classes) }}>
@@ -68,11 +69,11 @@
     <div id="carousel-image-carousel" class="carousel-image-carousel owl-carousel owl-theme">
       {{ rows }}
     </div>
-    <div class="carousel-control--container">
-      <div class="carousel-control">
-        <div tabindex="0" role="button" title="Pause slideshow" class="carousel-control--button playing"><span class="visually-hidden">Pause slideshow</span></div>
-      </div>
-    </div>
+    {#<div class="carousel-control--container">#}
+      {#<div class="carousel-control">#}
+        {#<div tabindex="0" role="button" title="Pause slideshow" class="carousel-control--button playing"><span class="visually-hidden">Pause slideshow</span></div>#}
+      {#</div>#}
+    {#</div>#}
   {% elseif empty %}
     <div class="view-empty">
       {{ empty }}

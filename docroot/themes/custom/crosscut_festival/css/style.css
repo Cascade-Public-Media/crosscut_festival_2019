@@ -14920,39 +14920,14 @@ footer .footer-content-main {
   opacity: .25;
 }
 
-.owl-item.active .session {
+.owl-item.center .session {
   opacity: 1;
 }
 
 /** Festival Archive Image Carousel **/
-.carousel-image-carousel,
-.carousel-control--container {
-  max-width: 860px;
-  margin: 0 auto;
-}
-
 .image-carousel {
   position: relative;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.image-carousel .carousel-image-item {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image-carousel .carousel-image-item--inner {
-  width: 100%;
-}
-
-.image-carousel .carousel-image-item--inner img {
-  max-height: 100%;
-  height: auto;
-  max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin: 0 auto;
+  margin-top: 2.5rem;
 }
 
 .image-carousel .owl-nav {
@@ -14979,7 +14954,7 @@ footer .footer-content-main {
 
 .image-carousel .owl-nav .owl-prev .nav-arrow {
   background: transparent;
-  border-right: 10px solid #000;
+  border-right: 10px solid #979797;
 }
 
 .image-carousel .owl-nav .owl-prev.active, .image-carousel .owl-nav .owl-prev:hover, .image-carousel .owl-nav .owl-prev:focus {
@@ -14988,7 +14963,7 @@ footer .footer-content-main {
 
 .image-carousel .owl-nav .owl-prev.active .nav-arrow, .image-carousel .owl-nav .owl-prev:hover .nav-arrow, .image-carousel .owl-nav .owl-prev:focus .nav-arrow {
   background: transparent !important;
-  border-right: 10px solid #000;
+  border-right: 10px solid #979797;
 }
 
 .image-carousel .owl-nav .owl-next {
@@ -15001,7 +14976,7 @@ footer .footer-content-main {
 
 .image-carousel .owl-nav .owl-next .nav-arrow {
   background: transparent;
-  border-left: 10px solid #000;
+  border-left: 10px solid #979797;
 }
 
 .image-carousel .owl-nav .owl-next.active, .image-carousel .owl-nav .owl-next:hover, .image-carousel .owl-nav .owl-next:focus {
@@ -15010,16 +14985,77 @@ footer .footer-content-main {
 
 .image-carousel .owl-nav .owl-next.active .nav-arrow, .image-carousel .owl-nav .owl-next:hover .nav-arrow, .image-carousel .owl-nav .owl-next:focus .nav-arrow {
   background: transparent !important;
-  border-left: 10px solid #000;
+  border-left: 10px solid #979797;
 }
 
-.image-carousel .owl-nav .owl-prev,
-.image-carousel .owl-nav .owl-next {
-  top: 50%;
+@media (min-width: 576px) {
+  .image-carousel .owl-nav button.owl-next {
+    right: 110px;
+  }
+  .image-carousel .owl-nav button.owl-prev {
+    left: 110px;
+  }
 }
 
-.image-carousel .owl-dots {
-  margin-top: 1rem;
+@media (min-width: 768px) {
+  .image-carousel .owl-nav button.owl-next {
+    right: 120px;
+  }
+  .image-carousel .owl-nav button.owl-prev {
+    left: 120px;
+  }
+}
+
+@media (min-width: 992px) {
+  .image-carousel .owl-nav button.owl-next {
+    right: 210px;
+  }
+  .image-carousel .owl-nav button.owl-prev {
+    left: 210px;
+  }
+}
+
+@media (min-width: 1385px) {
+  .image-carousel .owl-nav button.owl-next {
+    right: calc((50% - 870px / 2) - 42px);
+  }
+  .image-carousel .owl-nav button.owl-prev {
+    left: calc((50% - 870px / 2) - 42px);
+  }
+}
+
+.carousel-image-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  .carousel-image-item {
+    max-width: 870px;
+  }
+}
+
+.carousel-image-item--inner img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0 auto;
+}
+
+.carousel-image-item__caption {
+  font-size: .9rem;
+  display: inline-block;
+  padding-top: 0.5rem;
+}
+
+.owl-item .carousel-image-item {
+  opacity: .25;
+}
+
+.owl-item.center .carousel-image-item {
+  opacity: 1;
 }
 
 .carousel-control {
