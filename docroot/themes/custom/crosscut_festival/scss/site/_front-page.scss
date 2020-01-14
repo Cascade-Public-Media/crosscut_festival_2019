@@ -883,25 +883,53 @@
   }
 }
 
-/** Extras Section **/
-.block-views-blockextras-block-1 {
-  .col-auto {
-    padding-left: 0;
-    padding-right: 0;
+/** Extras Section (Beyond the Sessions) **/
+.extras {
+  margin-top: 2.5rem;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .extra {
+    .field--name-field-image {
+      margin: 0 auto;
+      float: none;
+    }
   }
 }
 
-.view-id-extras {
-  padding-left: 0;
-  padding-right: 0;
-}
+/** More Features Section **/
+.feature-icons {
+  margin-top: 2.5rem;
 
-.extras {
-  .extra {
-    margin-bottom: 20px;
+  .feature-icon {
+    &__row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+    }
 
-    &__img {
-      margin-bottom: 16px;
+    &__image {
+      flex: 0 0 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    &__text {
+      display: inline-block;
+      flex: 1;
+      padding-left: 1.5rem;
     }
   }
 }

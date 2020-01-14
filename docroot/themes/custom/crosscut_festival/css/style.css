@@ -14580,23 +14580,67 @@ footer .footer-content-main {
   color: #172C3B;
 }
 
-/** Extras Section **/
-.block-views-blockextras-block-1 .col-auto {
-  padding-left: 0;
-  padding-right: 0;
+/** Extras Section (Beyond the Sessions) **/
+.extras {
+  margin-top: 2.5rem;
 }
 
-.view-id-extras {
-  padding-left: 0;
-  padding-right: 0;
+.extras__item:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
-.extras .extra {
-  margin-bottom: 20px;
+.extras .extra .field--name-field-image {
+  margin: 0 auto;
+  float: none;
 }
 
-.extras .extra__img {
-  margin-bottom: 16px;
+/** More Features Section **/
+.feature-icons {
+  margin-top: 2.5rem;
+}
+
+.feature-icons .feature-icon__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.feature-icons .feature-icon__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.feature-icons .feature-icon__image img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.feature-icons .feature-icon__text {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 1.5rem;
 }
 
 /** Featured Panelist Organizations Carousel **/
