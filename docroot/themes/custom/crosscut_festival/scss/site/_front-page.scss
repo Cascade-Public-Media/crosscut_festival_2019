@@ -80,7 +80,7 @@
 }
 
 .hero {
-  background: linear-gradient(90deg, rgba(23, 44, 59, .1) 0, #000000 90%), url('../images/saturday_206.jpg');
+  background: linear-gradient(90deg, rgba(#000, .4) 0, rgba(#000, .92) 90%), url('../images/saturday_206.jpg');
   background-size: cover;
   background-position: center;
   height: $hero-height;
@@ -121,7 +121,7 @@
     }
 
     &.darken {
-      background: linear-gradient(90deg, rgba(23, 44, 59, .1) 0, #000000 90%)
+      background: linear-gradient(90deg, rgba(#000, .4) 0, rgba(#000, .92) 90%);
     }
   }
 

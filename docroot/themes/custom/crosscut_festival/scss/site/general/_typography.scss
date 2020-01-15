@@ -64,6 +64,13 @@ h3.section-header {
   font-size: 1rem;
 }
 
+.subtext {
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+  margin: -0.75rem auto 2rem;
+}
+
 .info-text {
   text-align: center;
   font-size: 1em;
@@ -79,9 +86,12 @@ h3.section-header {
 }
 
 .highlight {
-  background-color: $highlight-bg;
-  width: 100%;
+  width: auto;
+  position: relative;
+  display: inline-block;
   padding: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 
   &--info {
     div {
@@ -101,6 +111,14 @@ h3.section-header {
         top: 3px;
       }
     }
+  }
+
+  &--blue {
+    background-color: $highlight-bg-blue;
+  }
+
+  &--yellow {
+    background-color: $highlight-bg-yellow;
   }
 
   div {
