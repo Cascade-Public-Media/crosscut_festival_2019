@@ -28,7 +28,8 @@
 }
 
 @include media-breakpoint-up(lg) {
-  .container.section {
+  .container.section,
+  .container.container--tight {
     max-width: 870px;
   }
 }

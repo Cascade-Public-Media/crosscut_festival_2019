@@ -12831,7 +12831,8 @@ nav.tabs {
 }
 
 @media (min-width: 992px) {
-  .container.section {
+  .container.section,
+  .container.container--tight {
     max-width: 870px;
   }
 }

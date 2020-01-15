@@ -183,7 +183,6 @@
 
         // News section: get data from festival news REST export view on crosscut.com
         function renderNews(data) {
-          console.log(data);
           var html = '';
           for (var i = 0; i < data.length; i++) {
 
@@ -236,7 +235,6 @@
 
         // News section: get data from festival news REST export view on crosscut.com
         function renderNews(data) {
-          console.log(data);
           var html = '<div class="podcasts-row row">';
           for (var i = 0; i < data.length; i++) {
 
