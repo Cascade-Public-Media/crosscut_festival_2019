@@ -13752,6 +13752,13 @@ footer .footer-content-main {
   overflow: hidden;
 }
 
+.hero,
+.hero .hero-video,
+.hero .hero-overlay {
+  -webkit-transition: height 1s ease;
+  transition: height 1s ease;
+}
+
 .hero .hero-video {
   min-width: 100%;
   min-height: 82vh;
@@ -13775,16 +13782,12 @@ footer .footer-content-main {
   top: 0;
   left: 0;
   right: 0;
-  -webkit-transition: background 2s ease-in;
-  transition: background 2s ease-in;
 }
 
 .hero .hero-overlay-image {
   background-image: url("../images/saturday_206.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: background 2s ease-in;
-  transition: background 2s ease-in;
   opacity: 0;
 }
 
@@ -13802,6 +13805,8 @@ footer .footer-content-main {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .hero .hero-contents .logo {
@@ -13920,10 +13925,16 @@ footer .footer-content-main {
 @media screen and (max-height: 580px) {
   .hero {
     height: 100vh;
+    -webkit-transition: height 1s ease;
+    transition: height 1s ease;
   }
   .hero .hero-overlay,
   .hero .hero-video {
     min-height: 100vh;
+  }
+  .hero .hero-video {
+    -webkit-transition: height 1s ease;
+    transition: height 1s ease;
   }
   .hero .hero-contents .logo {
     max-width: 220px;

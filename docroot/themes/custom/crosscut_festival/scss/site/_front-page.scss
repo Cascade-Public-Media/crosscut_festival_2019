@@ -88,6 +88,12 @@
   position: relative;
   overflow: hidden;
 
+  &,
+  .hero-video,
+  .hero-overlay {
+    transition: height 1s ease;
+  }
+
   .hero-video {
     min-width: 100%;
     min-height: $hero-height;
@@ -110,13 +116,11 @@
     top: 0;
     left: 0;
     right: 0;
-    transition: background 2s ease-in;
 
     &-image {
       background-image: url('../images/saturday_206.jpg');
       background-repeat: no-repeat;
       background-position: center;
-      transition: background 2s ease-in;
       opacity: 0;
     }
 
@@ -133,6 +137,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: all 1s ease;
 
     .logo {
       max-width: 270px;
@@ -248,10 +253,15 @@
 
   @media screen and (max-height: 580px) {
     height: 100vh;
+    transition: height 1s ease;
 
     .hero-overlay,
     .hero-video {
       min-height: 100vh;
+    }
+
+    .hero-video {
+      transition: height 1s ease;
     }
 
     .hero-contents {

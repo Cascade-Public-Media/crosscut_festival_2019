@@ -227,7 +227,7 @@
   Drupal.behaviors.crosscutTalksPodcast = {
     attach: function (context, settings) {
 
-      $('#media-crosscut-talks').once('crosscutTalksPodcast').each(function () {
+      $('#media').once('crosscutTalksPodcast').each(function () {
 
         var $podcasts = $('.podcasts');
 
