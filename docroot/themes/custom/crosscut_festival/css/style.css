@@ -13081,6 +13081,12 @@ fieldset legend span {
   padding: 75px 0;
 }
 
+@media (max-width: 991.98px) {
+  .block-crosscut-email-subscribe {
+    background-attachment: initial;
+  }
+}
+
 .block-crosscut-email-subscribe p,
 .block-crosscut-email-subscribe .section-header,
 .block-crosscut-email-subscribe h2,
@@ -13567,6 +13573,12 @@ caption {
   .nav-dropdown ul.secondary > li a {
     font-size: 1em;
     padding: .3em 0;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .cf-nav {
+    height: 54px;
   }
 }
 
@@ -14088,6 +14100,12 @@ footer .footer-content-main {
   background-attachment: fixed;
 }
 
+@media (max-width: 991.98px) {
+  .block-front-page-section.bg-image {
+    background-attachment: initial;
+  }
+}
+
 .block-front-page-section.bg-image p,
 .block-front-page-section.bg-image .section-header,
 .block-front-page-section.bg-image h2,
@@ -14365,7 +14383,7 @@ footer .footer-content-main {
   position: relative;
   height: 0;
   padding-bottom: 56.25%;
-  max-width: 640px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
 }
@@ -14407,6 +14425,7 @@ footer .footer-content-main {
             flex-flow: row nowrap;
   }
   .block-label-location .location__embed {
+    max-width: 640px;
     width: 70%;
     margin: 1.5rem 0 0 0;
   }

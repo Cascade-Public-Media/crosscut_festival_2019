@@ -24,6 +24,10 @@ $value in $theme-colors {
 
     @if $parallax {
         background-attachment: fixed;
+
+        @include media-breakpoint-down(md) {
+            background-attachment: initial;
+        }
     }
 
     p,

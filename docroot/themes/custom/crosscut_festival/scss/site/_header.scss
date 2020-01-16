@@ -234,3 +234,9 @@
     }
   }
 }
+
+@media screen and (max-width: map-get($grid-breakpoints, md)) and (orientation: landscape) {
+  .cf-nav {
+    height: 54px;
+  }
+}
