@@ -110,10 +110,8 @@
 .nav-dropdown {
   display:none;
   z-index: $zindex-dropdown;
-  background-color: $light-blue;
   position: absolute;
   right: 0;
-  padding: .5em 1em;
 
   &:before {
     content: '';
@@ -126,6 +124,16 @@
     right: 25px;
     border-style: solid;
     border-width: 0 10px 20px;
+  }
+
+  &__inner {
+    background-color: $light-blue;
+    padding: .5em 1em;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    min-width: 160px;
   }
 
   &.active {
@@ -214,12 +222,6 @@
   }
 
   .nav-dropdown {
-    right: -85px;
-
-    &:before {
-      left: 24px;
-    }
-
     .primary {
       display: none;
     }

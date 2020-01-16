@@ -13479,10 +13479,8 @@ caption {
 .nav-dropdown {
   display: none;
   z-index: 1000;
-  background-color: #c7f5ff;
   position: absolute;
   right: 0;
-  padding: .5em 1em;
 }
 
 .nav-dropdown:before {
@@ -13496,6 +13494,16 @@ caption {
   right: 25px;
   border-style: solid;
   border-width: 0 10px 20px;
+}
+
+.nav-dropdown__inner {
+  background-color: #c7f5ff;
+  padding: .5em 1em;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  min-width: 160px;
 }
 
 .nav-dropdown.active {
@@ -13573,12 +13581,6 @@ caption {
   }
   .cf-nav .menu__primary ul {
     display: inline;
-  }
-  .nav-dropdown {
-    right: -85px;
-  }
-  .nav-dropdown:before {
-    left: 24px;
   }
   .nav-dropdown .primary {
     display: none;
