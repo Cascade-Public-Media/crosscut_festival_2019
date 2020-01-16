@@ -53,30 +53,6 @@
 
 
       if (settings.path.isFront) {
-
-        /**
-         * Adjust the window position _after_ the Sched iframe loads if a hash
-         * is present. The Sched JS sets its iframe height using the style
-         * attribute so that is all the observer pays attention to.
-         *
-         * @type {MutationObserver}
-         */
-        var $schedIframe = $("#sched-iframe iframe");
-        if ($schedIframe.length > 0) {
-          var observer = new MutationObserver(function (mutations, observer) {
-            if (window.location.hash) {
-              var $hashTop = $(window.location.hash).offset().top;
-              var $headerHeight = $('#header').outerHeight();
-              $('html, body').scrollTop($hashTop - $headerHeight);
-            }
-            observer.disconnect();
-          });
-          observer.observe($schedIframe[0], {
-            attributes: true,
-            attributeFilter: ['style'],
-          });
-        }
-
         // Add active class to menu link for current hash on page load.
         if (window.location.hash) {
           $('a[href^="/' + window.location.hash + '"]').addClass('active');
@@ -124,32 +100,6 @@
         }
       });
 
-    }
-  };
-
-  /**
-   * Adjust main content margin for (sticky) header on front page.
-   *
-   * @type {{attach: Drupal.behaviors.crosscutFestivalMenu.attach}}
-   */
-  Drupal.behaviors.crosscutFestivalMenu = {
-    attach: function (context, settings) {
-      $('#header').once('crosscutFestivalMenu').each(function () {
-        if (settings.path.isFront) {
-          var observer = new MutationObserver(function () {
-            var $headerHeight = $('#header').outerHeight();
-            $('#content').css('margin-top', $headerHeight);
-          });
-          observer.observe($(this)[0], {
-            attributes: true,
-            attributeFilter: ['data-mutate'],
-            childList: true,
-            subtree: true
-          });
-          // Trigger an initial mutation.
-          $(this).attr('data-mutate', 1);
-        }
-      });
     }
   };
 

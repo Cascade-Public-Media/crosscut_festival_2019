@@ -33,3 +33,17 @@
     max-width: 870px;
   }
 }
+
+.path-frontpage {
+  .layout-main-wrapper {
+    padding-top: $header-height-sm;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: $header-height-lg;
+    }
+
+    @include header-height-landscape {
+      padding-top: $header-height-sm;
+    }
+  }
+}

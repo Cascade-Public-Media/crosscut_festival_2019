@@ -12837,6 +12837,22 @@ nav.tabs {
   }
 }
 
+.path-frontpage .layout-main-wrapper {
+  padding-top: 54px;
+}
+
+@media (min-width: 576px) {
+  .path-frontpage .layout-main-wrapper {
+    padding-top: 78px;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .path-frontpage .layout-main-wrapper {
+    padding-top: 54px;
+  }
+}
+
 /** Typography **/
 * {
   font-family: "Proxima Nova", sans-serif;
@@ -13362,7 +13378,7 @@ caption {
 }
 
 .cf-nav {
-  height: 78px;
+  height: 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13380,7 +13396,7 @@ caption {
 }
 
 .cf-nav .menu__primary {
-  height: 78px;
+  height: 54px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13539,6 +13555,10 @@ caption {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    height: 78px;
+  }
+  .cf-nav .menu__primary {
+    height: 78px;
   }
 }
 
@@ -13578,6 +13598,9 @@ caption {
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .cf-nav {
+    height: 54px;
+  }
+  .cf-nav .menu__primary {
     height: 54px;
   }
 }

@@ -5,141 +5,147 @@
 //
 @each $color,
 $value in $theme-colors {
-    .btn-#{$color} a {
-        @include button-variant($value, $value);
-    }
+  .btn-#{$color} a {
+    @include button-variant($value, $value);
+  }
 }
 
 @each $color,
 $value in $theme-colors {
-    .btn-outline-#{$color} a {
-        @include button-outline-variant($value);
-    }
+  .btn-outline-#{$color} a {
+    @include button-outline-variant($value);
+  }
 }
 
 @mixin background-image($text-color: $white, $parallax: true) {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    @if $parallax {
-        background-attachment: fixed;
+  @if $parallax {
+    background-attachment: fixed;
 
-        @include media-breakpoint-down(md) {
-            background-attachment: initial;
-        }
+    @include media-breakpoint-down(md) {
+      background-attachment: initial;
     }
+  }
 
-    p,
-    .section-header,
-    h2,
-    h3,
-    h4,
-    h5,
-    li {
-        color: $text-color;
-    }
+  p,
+  .section-header,
+  h2,
+  h3,
+  h4,
+  h5,
+  li {
+    color: $text-color;
+  }
 
-    h2 > a,
-    h3 > a,
-    h4 > a,
-    h5 > a {
-        color: inherit;
-    }
+  h2 > a,
+  h3 > a,
+  h4 > a,
+  h5 > a {
+    color: inherit;
+  }
 
-    p > a:not(.btn) {
-        color: $link-color-lighter;
-    }
+  p > a:not(.btn) {
+    color: $link-color-lighter;
+  }
 }
 
 @mixin front-page-section-variant($bg-color, $bg-color-dark: false) {
-    background-color: $bg-color;
+  background-color: $bg-color;
 
-    @if $bg-color-dark {
-        color: $white;
+  @if $bg-color-dark {
+    color: $white;
 
-        p,
-        h2,
-        h3,
-        h4,
-        li,
-        .section-header {
-            color: $white;
-        }
-
-        p > a:not(.btn) {
-            color: $link-color-lighter;
-        }
-
-        h2 > a,
-        h4 > a,
-        h5 > a {
-            color: inherit;
-        }
-
-    } @else {
-        .section-header {
-            color: $blue-dark;
-        }
+    p,
+    h2,
+    h3,
+    h4,
+    li,
+    .section-header {
+      color: $white;
     }
+
+    p > a:not(.btn) {
+      color: $link-color-lighter;
+    }
+
+    h2 > a,
+    h4 > a,
+    h5 > a {
+      color: inherit;
+    }
+
+  } @else {
+    .section-header {
+      color: $blue-dark;
+    }
+  }
 }
 
 @mixin owl-arrows($color: $black, $height: 10px) {
-    $width: $height * 0.8;
+  $width: $height * 0.8;
+
+  .nav-arrow {
+    background: transparent !important;
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    display: block;
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+
+  .owl-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
 
     .nav-arrow {
+      background: transparent;
+      border-right: $height solid $color;
+    }
+
+    &.active,
+    &:hover,
+    &:focus {
+      background: transparent !important;
+
+      .nav-arrow {
         background: transparent !important;
-        border-top: $width solid transparent;
-        border-bottom: $width solid transparent;
-        display: block;
-        width: 0;
-        height: 0;
-        color: transparent;
+        border-right: $height solid $color;
+      }
+    }
+  }
+
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+    .nav-arrow {
+      background: transparent;
+      border-left: $height solid $color;
     }
 
-    .owl-prev {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
+    &.active,
+    &:hover,
+    &:focus {
+      background: transparent !important;
 
-        .nav-arrow {
-            background: transparent;
-            border-right: $height solid $color;
-        }
-
-        &.active,
-        &:hover,
-        &:focus {
-            background: transparent !important;
-
-            .nav-arrow {
-                background: transparent !important;
-                border-right: $height solid $color;
-            }
-        }
+      .nav-arrow {
+        background: transparent !important;
+        border-left: $height solid $color;
+      }
     }
+  }
+}
 
-    .owl-next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-
-        .nav-arrow {
-            background: transparent;
-            border-left: $height solid $color;
-        }
-
-        &.active,
-        &:hover,
-        &:focus {
-            background: transparent !important;
-
-            .nav-arrow {
-                background: transparent !important;
-                border-left: $height solid $color;
-            }
-        }
-    }
+@mixin header-height-landscape {
+  @media screen and (max-width: map-get($grid-breakpoints, md)) and (orientation: landscape) {
+    @content;
+  }
 }

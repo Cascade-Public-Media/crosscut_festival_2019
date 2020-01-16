@@ -26,7 +26,7 @@
 }
 
 .cf-nav {
-  height: $header-height;
+  height: $header-height-sm;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -35,7 +35,7 @@
 
   .menu {
     &__primary{
-      height: $header-height;
+      height: $header-height-sm;
       position: relative;
       display: flex;
       align-items: center;
@@ -187,6 +187,13 @@
   }
   .cf-nav {
     justify-content: space-between;
+    height: $header-height-lg;
+
+    .menu {
+      &__primary {
+        height: $header-height-lg;
+      }
+    }
   }
 }
 
@@ -235,8 +242,14 @@
   }
 }
 
-@media screen and (max-width: map-get($grid-breakpoints, md)) and (orientation: landscape) {
+@include header-height-landscape {
   .cf-nav {
-    height: 54px;
+    height: $header-height-sm;
+
+    .menu {
+      &__primary {
+        height: $header-height-sm;
+      }
+    }
   }
 }
