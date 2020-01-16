@@ -12838,7 +12838,7 @@ nav.tabs {
 }
 
 .path-frontpage .layout-main-wrapper {
-  padding-top: 54px;
+  padding-top: 62px;
 }
 
 @media (min-width: 576px) {
@@ -12849,7 +12849,7 @@ nav.tabs {
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .path-frontpage .layout-main-wrapper {
-    padding-top: 54px;
+    padding-top: 62px;
   }
 }
 
@@ -13378,7 +13378,7 @@ caption {
 }
 
 .cf-nav {
-  height: 54px;
+  height: 62px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13396,7 +13396,7 @@ caption {
 }
 
 .cf-nav .menu__primary {
-  height: 54px;
+  height: 62px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13598,10 +13598,10 @@ caption {
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .cf-nav {
-    height: 54px;
+    height: 62px;
   }
   .cf-nav .menu__primary {
-    height: 54px;
+    height: 62px;
   }
 }
 
