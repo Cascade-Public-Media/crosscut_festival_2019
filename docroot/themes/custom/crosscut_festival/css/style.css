@@ -11175,119 +11175,6 @@ summary {
 
 /**
  * @file
- * Visual styles for Bootstrap Barrio's field components.
- */
-.field--type-entity-reference {
-  margin: 0 0 1.2rem;
-}
-
-.field--type-entity-reference .field__label {
-  font-weight: normal;
-  margin: 0;
-  padding-right: 0.3rem;
-  /* LTR */
-}
-
-[dir="rtl"] .field--type-entity-reference .field__label {
-  padding-left: 0.3rem;
-  padding-right: 0;
-}
-
-.field--type-entity-reference ul.links {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.field--type-entity-reference ul.links li {
-  float: left;
-  /* LTR */
-  padding: 0 1rem 0 0;
-  /* LTR */
-  white-space: nowrap;
-}
-
-[dir="rtl"] .field--type-entity-reference ul.links li {
-  padding: 0 0 0 1rem;
-  float: right;
-}
-
-@media all and (min-width: 560px) {
-  .node .field--type-image {
-    float: left;
-    /* LTR */
-    margin: 0 1rem 0 0;
-    /* LTR */
-  }
-  [dir="rtl"] .node .field--type-image {
-    float: right;
-    margin: 0 0 0 1rem;
-  }
-  .node .field--type-image + .field--type-image {
-    clear: both;
-  }
-}
-
-.field--type-image img,
-.field--name-field-user-picture img {
-  margin: 0 0 1rem;
-}
-
-.field--type-image a {
-  border-bottom: none;
-}
-
-.field--name-field-tags {
-  margin: 0 0 1.2rem;
-}
-
-.field--name-field-tags .field__label {
-  font-weight: normal;
-  margin: 0;
-  padding-right: 5px;
-  /* LTR */
-}
-
-[dir="rtl"] .field--name-field-tags .field__label {
-  padding-left: 5px;
-  padding-right: 0;
-}
-
-.field--name-field-tags .field__label,
-.field--name-field-tags ul.links {
-  font-size: 0.875rem;
-}
-
-.node--view-mode-teaser .field--name-field-tags .field__label,
-.node--view-mode-teaser .field--name-field-tags ul.links {
-  font-size: 0.875rem;
-}
-
-.field--name-field-tags ul.links {
-  padding: 0;
-  margin: 0;
-}
-
-.field--name-field-tags ul.links li {
-  float: left;
-  /* LTR */
-  padding: 0 1rem 0 0;
-  /* LTR */
-  white-space: nowrap;
-}
-
-[dir="rtl"] .field--name-field-tags ul.links li {
-  padding: 0 0 0 1rem;
-  float: right;
-}
-
-.field--label-inline .field__label,
-.field--label-inline .field__item {
-  display: inline-block;
-}
-
-/**
- * @file
  * Default style for file module.
  */
 /* File icons.*/
@@ -14716,6 +14603,67 @@ footer .footer-content-main {
       -ms-flex: 1;
           flex: 1;
   padding-left: 1.5rem;
+}
+
+.node--type-speaker.node--view-mode-full {
+  margin-bottom: 75px;
+}
+
+@media (min-width: 768px) {
+  .node--type-speaker.node--view-mode-full {
+    margin-bottom: 130px;
+  }
+}
+
+.speaker__page-title {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.speaker__page-title span {
+  font-weight: bold;
+}
+
+.speaker__header {
+  text-align: center;
+}
+
+.speaker__header .field--name-field-speaker-title {
+  font-style: italic;
+}
+
+.speaker__content {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #979797;
+}
+
+@media (min-width: 768px) {
+  .speaker__content {
+    padding-bottom: 5rem;
+  }
+}
+
+.speaker__content .field--name-field-photo {
+  max-width: 280px;
+  max-height: 280px;
+  margin: 0 auto;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.speaker__content .field--name-body {
+  max-width: 430px;
+  margin: 2.5rem auto;
+}
+
+.speaker__footer {
+  padding: 75px 0 0;
+}
+
+@media (min-width: 768px) {
+  .speaker__footer {
+    padding: 130px 0 0;
+  }
 }
 
 /** Featured Panelist Organizations Carousel **/
