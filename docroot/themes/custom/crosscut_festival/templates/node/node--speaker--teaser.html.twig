@@ -61,52 +61,25 @@
 #}
 
 {% set classes = [
-  'node',
+  'row',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'clearfix',
-  'session'
 ] %}
 
-{% set track = node.field_track.0.entity.name.value %}
-
 <article{{ attributes.addClass(classes) }}>
-  <header>
-    {% if track %}
-      <div><span class="session__track-label session__track-label--{{ track|clean_class }}">{{ track }}</span></div>
-    {% endif %}
-    <div>
-      <span class="session__details">
-        {{ content.field_date_time['#items'].0.value }}
-        /
-        {{ node.field_venue.0.entity.name.value }}
-      </span>
-    </div>
+  <div class="col-xs-12 col-sm-4 col-md-2 mb-3 mb-sm-0">
+    {{ content.field_photo }}
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-10">
     {{ title_prefix }}
-    <h4{{ title_attributes.addClass('session__title') }}>
+    <h4{{ title_attributes.addClass(['speaker__name']) }}>
       {{ node.label }}
     </h4>
     {{ title_suffix }}
-  </header>
-  <div{{ content_attributes.addClass('session__content', 'clearfix') }}>
-    <div class="session__section">
-      <span class="label">Moderators:</span>
-      {% for moderator in content.field_moderators['#items'] %}
-        {{ moderator.value }}{{ not loop.last ? ',' }}
-      {% endfor %}
-    </div>
-    <div class="session__section">
-      <span class="label">Speakers:</span>
-      {% for speaker in content.field_speaker['#items'] %}
-        {{ speaker.value }}{{ not loop.last ? ',' }}
-      {% endfor %}
-    </div>
-    <div class="session__section">
-      {{ content.field_description }}
-    </div>
-    {% set catch_cache = content|render %}
+    {{ content.field_speaker_title }}
+    {{ content.body }}
   </div>
 </article>

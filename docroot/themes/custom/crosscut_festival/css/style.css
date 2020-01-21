@@ -11435,80 +11435,6 @@ form .form-type-textarea {
   margin: 0 0 0.75rem;
 }
 
-/**
- * @file
- * Visual styles for Bootstrap Barrio's node component.
- */
-.node__content {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-/* View mode teaser styles. */
-.node--view-mode-teaser {
-  border-bottom: 1px solid #979797;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-}
-
-.node--view-mode-teaser h2 {
-  margin-top: 0;
-  padding-top: 0.5em;
-}
-
-.node--view-mode-teaser.node--sticky {
-  background: #f9f9f9;
-  background: rgba(0, 0, 0, 0.024);
-  border: 1px solid #979797;
-  padding: 0 1rem 1rem;
-}
-
-.node--view-mode-teaser .node__content {
-  clear: none;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Node metadata styles. */
-.node__meta {
-  font-size: 0.875rem;
-  margin-bottom: -5px;
-}
-
-.node__meta .field--name-field-user-picture img {
-  float: left;
-  /* LTR */
-  margin: 1px 1rem 0 0;
-  /* LTR */
-}
-
-[dir="rtl"] .node__meta .field--name-field-user-picture img {
-  float: right;
-  margin-left: 1rem;
-  margin-right: 0;
-}
-
-/* Node links styles. */
-.node__links {
-  text-align: right;
-  /* LTR */
-  font-size: 1rem;
-}
-
-[dir="rtl"] .node__links {
-  text-align: left;
-}
-
-/* Unpublished node styles. */
-.node--unpublished {
-  padding: 1rem 1rem 0;
-}
-
-.node--unpublished .comment-text .comment-arrow {
-  border-left: 1px solid #fff4f4;
-  border-right: 1px solid #fff4f4;
-}
-
 .node-preview-container {
   background: #d1e8f5;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d1e8f5), to(#d3e8f4));
@@ -13578,7 +13504,7 @@ footer .footer-content-main {
 }
 
 .block-front-page-section.section__pt--sm {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .block-front-page-section.section__pb--lg {
@@ -13586,7 +13512,7 @@ footer .footer-content-main {
 }
 
 .block-front-page-section.section__pb--sm {
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {
@@ -13594,13 +13520,13 @@ footer .footer-content-main {
     padding-top: 150px;
   }
   .block-front-page-section.section__pt--sm {
-    padding-top: 100px;
+    padding-top: 75px;
   }
   .block-front-page-section.section__pb--lg {
     padding-bottom: 150px;
   }
   .block-front-page-section.section__pb--sm {
-    padding-bottom: 100px;
+    padding-bottom: 75px;
   }
 }
 
@@ -14615,8 +14541,28 @@ footer .footer-content-main {
   }
 }
 
+.node--type-speaker .field--name-field-speaker-title {
+  font-style: italic;
+}
+
+.node--type-speaker .field--name-field-photo {
+  max-width: 180px;
+  max-height: 180px;
+  margin: 0 auto;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.node--type-speaker .field--name-body p {
+  margin-bottom: 0;
+}
+
+.speaker__featured-view-container:not(:last-child) .node--type-speaker {
+  margin-bottom: 2rem;
+}
+
 .speaker__page-title {
-  margin-top: 50px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -14625,11 +14571,8 @@ footer .footer-content-main {
 }
 
 .speaker__header {
+  margin-top: 50px;
   text-align: center;
-}
-
-.speaker__header .field--name-field-speaker-title {
-  font-style: italic;
 }
 
 .speaker__content {
@@ -14646,9 +14589,6 @@ footer .footer-content-main {
 .speaker__content .field--name-field-photo {
   max-width: 280px;
   max-height: 280px;
-  margin: 0 auto;
-  border-radius: 100%;
-  overflow: hidden;
 }
 
 .speaker__content .field--name-body {

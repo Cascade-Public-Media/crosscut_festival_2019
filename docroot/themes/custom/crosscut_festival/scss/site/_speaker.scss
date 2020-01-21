@@ -6,11 +6,35 @@
       margin-bottom: 130px;
     }
   }
+
+  .field--name-field-speaker-title {
+    font-style: italic;
+  }
+
+  .field--name-field-photo {
+    max-width: 180px;
+    max-height: 180px;
+    margin: 0 auto;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  .field--name-body {
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .speaker {
+  &__featured-view-container:not(:last-child) {
+    .node--type-speaker {
+      margin-bottom: 2rem;
+    }
+  }
+
   &__page-title {
-    margin-top: 50px;
+    margin-top: 0;
     margin-bottom: 0;
 
     span {
@@ -19,11 +43,8 @@
   }
 
   &__header {
+    margin-top: 50px;
     text-align: center;
-
-    .field--name-field-speaker-title {
-      font-style: italic;
-    }
   }
 
   &__content {
@@ -37,9 +58,6 @@
     .field--name-field-photo {
       max-width: 280px;
       max-height: 280px;
-      margin: 0 auto;
-      border-radius: 100%;
-      overflow: hidden;
     }
 
     .field--name-body {
