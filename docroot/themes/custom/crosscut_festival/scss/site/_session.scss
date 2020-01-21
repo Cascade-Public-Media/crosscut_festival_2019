@@ -1,0 +1,137 @@
+.session {
+  height: 100%;
+  padding: 1.5rem;
+  border: 2px solid $blue-light;
+  margin: 0 auto;
+
+  &__section,
+  &__title {
+    margin-top: .5rem;
+  }
+
+  &__track-label,
+  &__details {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  &__details {
+    .sep {
+      padding-left: .3rem;
+      padding-right: .3rem;
+    }
+  }
+
+  &__track-label {
+    padding-left: 1.5rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      background-color: red;
+      border-radius: 100%;
+      top: 0;
+    }
+
+    &--technology--economy::before {
+      background-color: $color-technology-economy;
+    }
+
+    &--keynote::before {
+      background-color: $color-keynote;
+    }
+
+    &--business::before {
+      background-color: $color-business;
+    }
+
+    &--politics::before {
+      background-color: $color-politics;
+    }
+
+    &--race--social-justice::before {
+      background-color: $color-race-justice;
+    }
+
+    &--science--environment::before {
+      background-color: $color-science;
+    }
+
+    &--interactive--social::before {
+      background-color: $color-interactive;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+
+    a {
+      display: inline-block;
+      margin-bottom: 1em;
+      font-weight: $font-weight-bold;
+      @extend .btn;
+      @extend .btn-primary;
+    }
+  }
+
+  .owl-item & {
+    opacity: .25;
+  }
+
+  .owl-item.center & {
+    opacity: 1;
+  }
+
+  &__header {
+    margin-top: 50px;
+  }
+
+  &__content {
+    padding: 0 0 6rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__footer {
+    padding: 75px 0 0;
+
+    @include media-breakpoint-up(md) {
+      padding: 130px 0 0;
+    }
+  }
+}
+
+.node--type-session {
+  &.node--view-mode-full {
+    margin-bottom: 75px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 130px;
+    }
+
+    .session {
+      &__details {
+        font-size: 1.3rem;
+      }
+
+      &__section {
+        margin: 0;
+        font-style: italic;
+
+        .label {
+          font-size: inherit;
+        }
+      }
+
+      &__description {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}

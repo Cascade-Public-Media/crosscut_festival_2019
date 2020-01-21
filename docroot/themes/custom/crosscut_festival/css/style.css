@@ -14606,6 +14606,145 @@ footer .footer-content-main {
   }
 }
 
+.session {
+  height: 100%;
+  padding: 1.5rem;
+  border: 2px solid #456C87;
+  margin: 0 auto;
+}
+
+.session__section, .session__title {
+  margin-top: .5rem;
+}
+
+.session__track-label, .session__details {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.session__details .sep {
+  padding-left: .3rem;
+  padding-right: .3rem;
+}
+
+.session__track-label {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.session__track-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+  border-radius: 100%;
+  top: 0;
+}
+
+.session__track-label--technology--economy::before {
+  background-color: #F2BF42;
+}
+
+.session__track-label--keynote::before {
+  background-color: #F27A4A;
+}
+
+.session__track-label--business::before {
+  background-color: #F2BF42;
+}
+
+.session__track-label--politics::before {
+  background-color: #2989C9;
+}
+
+.session__track-label--race--social-justice::before {
+  background-color: #61C2D7;
+}
+
+.session__track-label--science--environment::before {
+  background-color: #C3D93A;
+}
+
+.session__track-label--interactive--social::before {
+  background-color: #A95CEC;
+}
+
+.session__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.session__link a {
+  display: inline-block;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.owl-item .session {
+  opacity: .25;
+}
+
+.owl-item.center .session {
+  opacity: 1;
+}
+
+.session__header {
+  margin-top: 50px;
+}
+
+.session__content {
+  padding: 0 0 6rem;
+  border-bottom: 1px solid #979797;
+}
+
+.session__footer {
+  padding: 75px 0 0;
+}
+
+@media (min-width: 768px) {
+  .session__footer {
+    padding: 130px 0 0;
+  }
+}
+
+.node--type-session.node--view-mode-full {
+  margin-bottom: 75px;
+}
+
+@media (min-width: 768px) {
+  .node--type-session.node--view-mode-full {
+    margin-bottom: 130px;
+  }
+}
+
+.node--type-session.node--view-mode-full .session__details {
+  font-size: 1.3rem;
+}
+
+.node--type-session.node--view-mode-full .session__section {
+  margin: 0;
+  font-style: italic;
+}
+
+.node--type-session.node--view-mode-full .session__section .label {
+  font-size: inherit;
+}
+
+.node--type-session.node--view-mode-full .session__description {
+  margin-top: 1.5rem;
+}
+
 /** Featured Panelist Organizations Carousel **/
 .panelists-carousel {
   margin: 0 auto;
@@ -14841,94 +14980,6 @@ footer .footer-content-main {
   .session-carousel .owl-nav button.owl-prev {
     left: 60px;
   }
-}
-
-.session {
-  height: 100%;
-  padding: 1.5rem;
-  border: 2px solid #456C87;
-  margin: 0 auto;
-}
-
-.session__section, .session__title {
-  margin-top: .5rem;
-}
-
-.session__track-label, .session__details {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  display: inline-block;
-}
-
-.session__track-label {
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.session__track-label::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 1rem;
-  height: 1rem;
-  background-color: red;
-  border-radius: 100%;
-  top: 0;
-}
-
-.session__track-label--technology--economy::before {
-  background-color: #F2BF42;
-}
-
-.session__track-label--keynote::before {
-  background-color: #F27A4A;
-}
-
-.session__track-label--business::before {
-  background-color: #F2BF42;
-}
-
-.session__track-label--politics::before {
-  background-color: #2989C9;
-}
-
-.session__track-label--race--social-justice::before {
-  background-color: #61C2D7;
-}
-
-.session__track-label--science--environment::before {
-  background-color: #C3D93A;
-}
-
-.session__track-label--interactive--social::before {
-  background-color: #A95CEC;
-}
-
-.session__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.session__link a {
-  display: inline-block;
-  margin-bottom: 1em;
-  font-weight: bold;
-}
-
-.owl-item .session {
-  opacity: .25;
-}
-
-.owl-item.center .session {
-  opacity: 1;
 }
 
 /** Festival Archive Image Carousel **/

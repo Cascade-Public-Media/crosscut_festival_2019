@@ -72,33 +72,53 @@
 ] %}
 
 {% set content_classes = [
-  'speaker__content',
+  'session__content',
   'clearfix',
-  'row',
-  'justify-content-center',
 ] %}
 
+{% set track = node.field_track.0.entity.name.value %}
+
 <article{{ attributes.addClass(classes) }}>
-  <header class="speaker__header">
+  <header class="session__header">
+    {% if track %}
+      <div><span class="session__track-label session__track-label--{{ track|clean_class }}">{{ track }}</span></div>
+    {% endif %}
+    <div>
+      <span class="session__details">
+        {{ content.field_date_time['#items'].0.value }}
+        <span class="sep">/</span>
+        {{ node.field_venue.0.entity.name.value }}
+      </span>
+    </div>
     {{ title_prefix }}
-    <h1{{ title_attributes.addClass(['speaker__page-title']) }}>
-      {{ label }}
+    <h1{{ title_attributes.addClass('session__title') }}>
+      {{ node.label }}
     </h1>
     {{ title_suffix }}
-    {{ content.field_speaker_title }}
   </header>
   <div{{ content_attributes.addClass(content_classes) }}>
-    <div class="col-auto">
-      {{ content.field_photo }}
-      {{ content.body }}
+    <p class="session__section">
+      <span class="label">Moderators:</span>
+      {% for moderator in content.field_moderators['#items'] %}
+        {{ moderator.value }}{{ not loop.last ? ',' }}
+      {% endfor %}
+    </p>
+    <p class="session__section">
+      <span class="label">Speakers:</span>
+      {% for speaker in content.field_speaker['#items'] %}
+        {{ speaker.value }}{{ not loop.last ? ',' }}
+      {% endfor %}
+    </p>
+    <div class="session__description">
+      {{ content.field_description }}
     </div>
+    {% set catch_cache = content|render %}
   </div>
 
-  {% if content.field_speakers_list_embed|render|trim is not empty %}
-    <div class="speaker__footer">
-      <h3 class="section-header">All Speakers</h3>
-      {{ content.field_speakers_list_embed }}
+  {% if content.field_sessions_list_embed|render|trim is not empty %}
+    <div class="session__footer">
+      <h3 class="section-header">All Sessions</h3>
+      {{ content.field_sessions_list_embed }}
     </div>
   {% endif %}
-  {% set catch_cache = content|render %}
 </article>
