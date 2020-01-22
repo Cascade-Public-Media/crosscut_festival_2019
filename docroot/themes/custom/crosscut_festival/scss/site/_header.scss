@@ -1,4 +1,6 @@
 .page {
+  position: relative;
+
   &--front-page {
     padding-bottom: $footer-height;
   }
@@ -13,6 +15,7 @@
   width: 100%;
   max-width: 100%;
   z-index: $zindex-fixed;
+  display: block;
 
   @include media-breakpoint-up(lg) {
     display: flex;

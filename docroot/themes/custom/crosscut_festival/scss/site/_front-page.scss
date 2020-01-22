@@ -902,8 +902,11 @@
 
   .extra {
     .field--name-field-image {
-      margin: 0 auto;
-      float: none;
+      margin: 0 auto 1rem;
+
+      @include media-breakpoint-up(md) {
+        margin: 0 auto;
+      }
     }
   }
 }

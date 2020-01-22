@@ -13172,6 +13172,10 @@ caption {
   padding: 1rem;
 }
 
+.page {
+  position: relative;
+}
+
 .page--front-page {
   padding-bottom: 178px;
 }
@@ -13185,6 +13189,7 @@ caption {
   width: 100%;
   max-width: 100%;
   z-index: 1030;
+  display: block;
 }
 
 @media (min-width: 992px) {
@@ -14490,8 +14495,13 @@ footer .footer-content-main {
 }
 
 .extras .extra .field--name-field-image {
-  margin: 0 auto;
-  float: none;
+  margin: 0 auto 1rem;
+}
+
+@media (min-width: 768px) {
+  .extras .extra .field--name-field-image {
+    margin: 0 auto;
+  }
 }
 
 /** More Features Section **/
