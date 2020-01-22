@@ -1,4 +1,17 @@
 /** Layout **/
+.page {
+  position: relative;
+
+  &--front-page {
+    padding-bottom: $footer-height;
+    overflow-x: hidden;
+  }
+
+  &:not(.page--front-page) {
+    padding-bottom: calc(#{$footer-height} + 150px);
+  }
+}
+
 #main-wrapper {
   max-width: 100%;
   margin-left: 0;

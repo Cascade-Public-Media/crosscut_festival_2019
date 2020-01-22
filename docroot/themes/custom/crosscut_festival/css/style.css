@@ -12615,6 +12615,19 @@ nav.tabs {
 }
 
 /** Layout **/
+.page {
+  position: relative;
+}
+
+.page--front-page {
+  padding-bottom: 178px;
+  overflow-x: hidden;
+}
+
+.page:not(.page--front-page) {
+  padding-bottom: calc(178px + 150px);
+}
+
 #main-wrapper {
   max-width: 100%;
   margin-left: 0;
@@ -13170,18 +13183,6 @@ caption {
 
 .view-faq .question .card-body {
   padding: 1rem;
-}
-
-.page {
-  position: relative;
-}
-
-.page--front-page {
-  padding-bottom: 178px;
-}
-
-.page:not(.page--front-page) {
-  padding-bottom: calc(178px + 150px);
 }
 
 .header {

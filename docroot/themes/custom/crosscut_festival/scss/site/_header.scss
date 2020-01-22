@@ -1,15 +1,3 @@
-.page {
-  position: relative;
-
-  &--front-page {
-    padding-bottom: $footer-height;
-  }
-
-  &:not(.page--front-page) {
-    padding-bottom: calc(#{$footer-height} + 150px);
-  }
-}
-
 .header {
   background-color: $blue;
   width: 100%;
