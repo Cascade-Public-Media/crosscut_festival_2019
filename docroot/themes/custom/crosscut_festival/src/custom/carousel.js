@@ -133,12 +133,12 @@
                 center: true,
               },
               992: {
-                items: 2,
-                stagePadding: 100,
+                items: 1,
+                stagePadding: 250,
                 margin: 50,
-                center: false,
+                center: true,
               },
-              1250: {
+              1200: {
                 items: 3,
                 stagePadding: 100,
                 margin: 50,

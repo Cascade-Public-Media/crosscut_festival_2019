@@ -92,6 +92,16 @@
 
     @include media-breakpoint-up(lg) {
       button.owl-next {
+        right: 210px;
+      }
+
+      button.owl-prev {
+        left: 210px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      button.owl-next {
         right: 60px;
       }
 

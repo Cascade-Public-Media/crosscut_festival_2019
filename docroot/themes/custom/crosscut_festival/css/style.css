@@ -14704,11 +14704,6 @@ footer .footer-content-main {
   margin-top: 50px;
 }
 
-.session__content {
-  padding: 0 0 6rem;
-  border-bottom: 1px solid #979797;
-}
-
 .session__footer {
   padding: 75px 0 0;
 }
@@ -14731,6 +14726,11 @@ footer .footer-content-main {
 
 .node--type-session.node--view-mode-full .session__details {
   font-size: 1.3rem;
+}
+
+.node--type-session.node--view-mode-full .session__content {
+  padding: 0 0 6rem;
+  border-bottom: 1px solid #979797;
 }
 
 .node--type-session.node--view-mode-full .session__section {
@@ -14975,6 +14975,15 @@ footer .footer-content-main {
 }
 
 @media (min-width: 992px) {
+  .session-carousel .owl-nav button.owl-next {
+    right: 210px;
+  }
+  .session-carousel .owl-nav button.owl-prev {
+    left: 210px;
+  }
+}
+
+@media (min-width: 1200px) {
   .session-carousel .owl-nav button.owl-next {
     right: 60px;
   }

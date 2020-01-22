@@ -93,11 +93,6 @@
     margin-top: 50px;
   }
 
-  &__content {
-    padding: 0 0 6rem;
-    border-bottom: 1px solid $border-color;
-  }
-
   &__footer {
     padding: 75px 0 0;
 
@@ -118,6 +113,11 @@
     .session {
       &__details {
         font-size: 1.3rem;
+      }
+
+      &__content {
+        padding: 0 0 6rem;
+        border-bottom: 1px solid $border-color;
       }
 
       &__section {
