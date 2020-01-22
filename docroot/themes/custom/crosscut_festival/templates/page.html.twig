@@ -67,8 +67,13 @@
  * @see html.html.twig
  */
 #}
+{% set page_classes = [
+  'page',
+  is_front ? 'page--front-page' : ''
+] %}
+
 <div id="page-wrapper">
-    <div id="page">
+    <div id="page" {{ attributes.addClass(page_classes) }}>
         <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
             {% block head %}
                 {% if page.top_header %}

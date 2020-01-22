@@ -13017,6 +13017,15 @@ fieldset legend span {
   margin-top: 0;
 }
 
+.block-crosscut-email-subscribe #crosscut-email-subscribe-quick-subscribe-form .form-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (min-width: 576px) {
   .block-crosscut-email-subscribe #crosscut-email-subscribe-quick-subscribe-form {
     -webkit-box-orient: horizontal;
@@ -13073,6 +13082,8 @@ caption {
 #page-title {
   margin-top: 50px;
   margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 #page-title span {
@@ -13161,8 +13172,12 @@ caption {
   padding: 1rem;
 }
 
-#page {
+.page--front-page {
   padding-bottom: 178px;
+}
+
+.page:not(.page--front-page) {
+  padding-bottom: calc(178px + 150px);
 }
 
 .header {
@@ -13583,13 +13598,9 @@ footer .footer-content-main {
 
 /** Hero **/
 /** Position diamond arrow decorative bg image **/
-@media (min-width: 992px) {
-  #hero + div {
-    background-image: url("../images/VerticalLinesBkg.jpg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: contain;
-  }
+#hero + div {
+  background-image: url("../images/VerticalLinesBkg.jpg");
+  background-repeat: no-repeat;
 }
 
 .hero {
@@ -14574,6 +14585,10 @@ footer .footer-content-main {
 .speaker__header {
   margin-top: 50px;
   text-align: center;
+}
+
+.speaker__name {
+  margin-bottom: 0;
 }
 
 .speaker__content {

@@ -1,5 +1,11 @@
-#page {
-  padding-bottom: $footer-height;
+.page {
+  &--front-page {
+    padding-bottom: $footer-height;
+  }
+
+  &:not(.page--front-page) {
+    padding-bottom: calc(#{$footer-height} + 150px);
+  }
 }
 
 .header {

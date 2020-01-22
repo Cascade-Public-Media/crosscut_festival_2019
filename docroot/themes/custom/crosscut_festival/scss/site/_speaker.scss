@@ -47,6 +47,10 @@
     text-align: center;
   }
 
+  &__name {
+    margin-bottom: 0;
+  }
+
   &__content {
     padding: 2.5rem 0;
     border-bottom: 1px solid $border-color;

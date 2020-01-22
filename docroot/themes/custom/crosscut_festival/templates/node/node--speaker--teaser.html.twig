@@ -75,9 +75,9 @@
   </div>
   <div class="col-xs-12 col-sm-8 col-md-10">
     {{ title_prefix }}
-    <h4{{ title_attributes.addClass(['speaker__name']) }}>
-      {{ node.label }}
-    </h4>
+    <a href="{{ url }}"><h4{{ title_attributes.addClass(['speaker__name']) }}>
+        {{ node.label }}
+      </h4></a>
     {{ title_suffix }}
     {{ content.field_speaker_title }}
     {{ content.body }}
