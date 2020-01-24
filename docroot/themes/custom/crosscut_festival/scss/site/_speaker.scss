@@ -1,12 +1,4 @@
 .node--type-speaker {
-  &.node--view-mode-full {
-    margin-bottom: 75px;
-
-    @include media-breakpoint-up(md) {
-      margin-bottom: 130px;
-    }
-  }
-
   .field--name-field-speaker-title {
     font-style: italic;
   }

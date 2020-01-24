@@ -104,12 +104,6 @@
 
 .node--type-session {
   &.node--view-mode-full {
-    margin-bottom: 75px;
-
-    @include media-breakpoint-up(md) {
-      margin-bottom: 130px;
-    }
-
     .session {
       &__details {
         font-size: 1.3rem;

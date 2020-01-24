@@ -14567,16 +14567,6 @@ footer .footer-content-main {
   padding-left: 1.5rem;
 }
 
-.node--type-speaker.node--view-mode-full {
-  margin-bottom: 75px;
-}
-
-@media (min-width: 768px) {
-  .node--type-speaker.node--view-mode-full {
-    margin-bottom: 130px;
-  }
-}
-
 .node--type-speaker .field--name-field-speaker-title {
   font-style: italic;
 }
@@ -14750,16 +14740,6 @@ footer .footer-content-main {
 @media (min-width: 768px) {
   .session__footer {
     padding: 130px 0 0;
-  }
-}
-
-.node--type-session.node--view-mode-full {
-  margin-bottom: 75px;
-}
-
-@media (min-width: 768px) {
-  .node--type-session.node--view-mode-full {
-    margin-bottom: 130px;
   }
 }
 
