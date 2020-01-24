@@ -13786,9 +13786,6 @@ footer .footer-content-main {
     position: absolute;
     right: 10%;
     left: auto;
-    top: 40%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
   }
   .hero .hero-contents .logo {
     max-width: 320px;
