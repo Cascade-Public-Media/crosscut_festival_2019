@@ -86,9 +86,9 @@
       </span>
     </div>
     {{ title_prefix }}
-    <h4{{ title_attributes.addClass('session__title') }}>
-      {{ node.label }}
-    </h4>
+    <a href="{{ url }}">
+      <h4{{ title_attributes.addClass('session__title') }}>{{ node.label }}</h4>
+    </a>
     {{ title_suffix }}
   </header>
   <div{{ content_attributes.addClass('session__content', 'clearfix') }}>

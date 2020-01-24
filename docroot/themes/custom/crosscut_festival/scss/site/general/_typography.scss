@@ -18,9 +18,18 @@ h3,
 h4,
 h5 {
   font-weight: $font-weight-bold;
+  color: $gray-dark;
+
+  a & {
+    &:hover {
+      color: $gray-dark;
+      text-decoration: underline;
+    }
+  }
 }
 
-a {
+a,
+a:hover {
   color: $link-color;
 }
 

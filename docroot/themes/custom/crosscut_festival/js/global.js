@@ -39,6 +39,10 @@
         }
       });
 
+      // Open external links in a new window.
+      $('a').filter(function () {
+        return this.hostname && this.hostname !== location.hostname;
+      }).attr('target', '_blank');
 
       // Close menu if anywhere else in document is clicked
       $(document).on('click', function (e) {
@@ -208,8 +212,7 @@
         }
 
         function renderError() {
-          var html = '<p>Head over to <a href="https://crosscut.com/podcasts/crosscut-talks">crosscut.com</a> to see the latest episodes of Crosscut Talks.</p>';
-
+          var html = '<p>Head over to <a href="https://crosscut.com/podcast/crosscut-talks">crosscut.com</a> to listen to the latest episodes of Crosscut Talks.</p>';
           $podcasts.append(html);
         }
 
