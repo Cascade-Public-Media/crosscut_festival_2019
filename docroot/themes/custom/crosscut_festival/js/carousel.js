@@ -16,7 +16,6 @@
           autoplay: false,
           dots: false,
           nav: true,
-          autoWidth: true,
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
           responsive: {
             0: {

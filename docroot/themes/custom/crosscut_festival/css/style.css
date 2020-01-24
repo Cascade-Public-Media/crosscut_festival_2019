@@ -13615,7 +13615,7 @@ footer .footer-content-main {
 
 /** Hero **/
 /** Position diamond arrow decorative bg image **/
-#hero + div {
+.block-label-about-the-crosscut-festival {
   background-image: url("../images/VerticalLinesBkg.jpg");
   background-repeat: no-repeat;
 }
@@ -14794,6 +14794,10 @@ footer .footer-content-main {
   .panelists-carousel {
     max-width: 1140px;
   }
+}
+
+.panelists-carousel .owl-nav {
+  margin: 0;
 }
 
 .panelists-carousel .owl-nav .nav-arrow {

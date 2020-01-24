@@ -8,6 +8,8 @@
   padding-right: 30px;
 
   .owl-nav {
+    margin: 0;
+
     @include owl-arrows($gray-medium);
   }
 }
