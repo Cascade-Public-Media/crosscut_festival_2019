@@ -144,13 +144,13 @@
             var image_path = domain + data[i]['image'];
             var date = data[i]['created'].slice(0, -8); // remove time from long format date
 
-            html += '<div class="row no-gutters article-row"><div class="col-sm-6 col-md-3"><div class="img-container"><a href="' + link + '"><img class="newsImage" alt="Crosscut Festival News Article" src="' + image_path + '"/></a></div></div><div class="col-sm-6 col-md-9 article-teaser"><h4><a href="' + link + '">' + data[i]['title'] + '</a></h4>' + data[i]['excerpt'] + '<span class="byline">by ' + data[i]['author'] + ' / ' + date + '</span></div></div>';
+            html += '<div class="row no-gutters article-row"><div class="col-sm-6 col-md-3"><div class="img-container"><a href="' + link + '" target="_blank"><img class="newsImage" alt="Crosscut Festival News Article" src="' + image_path + '"/></a></div></div><div class="col-sm-6 col-md-9 article-teaser"><h4><a href="' + link + '" target="_blank">' + data[i]['title'] + '</a></h4>' + data[i]['excerpt'] + '<span class="byline">by ' + data[i]['author'] + ' / ' + date + '</span></div></div>';
           }
           $article.append(html);
         }
 
         function renderError() {
-          var html = '<p>Head over to <a href="https://crosscut.com/crosscut-festival">crosscut.com</a> to see the latest Crosscut Festival updates.</p>';
+          var html = '<p>Head over to <a href="https://crosscut.com/crosscut-festival" target="_blank">crosscut.com</a> to see the latest Crosscut Festival updates.</p>';
 
           $article.append(html);
         }
@@ -198,13 +198,13 @@
 
             html += '<div class="podcast col-sm-6">' +
               '<div class="img-container">' +
-              '<a href="' + link + '">' +
+              '<a href="' + link + '" target="_blank">' +
               '<img class="crosscut-image" alt="Crosscut Talks Podcast" src="' + image_path + '"/>' +
               '<div class="icon-podcast"></div>' +
               '</a>' +
               '</div>' +
               '<div class="teaser-text">' +
-              '<h4><a href="' + link + '">' + data[i]['title'] + '</a></h4><div>' + data[i]['field_teaser_text'] + '</div><span class="metadata">Season' + data[i]['field_season'] + ', Episode ' + data[i]['field_episode'] + ' / ' + date + '</span>' +
+              '<h4><a href="' + link + '" target="_blank">' + data[i]['title'] + '</a></h4><div>' + data[i]['field_teaser_text'] + '</div><span class="metadata">Season' + data[i]['field_season'] + ', Episode ' + data[i]['field_episode'] + ' / ' + date + '</span>' +
               '</div></div>';
           }
           html += '</div>';
@@ -212,7 +212,7 @@
         }
 
         function renderError() {
-          var html = '<p>Head over to <a href="https://crosscut.com/podcast/crosscut-talks">crosscut.com</a> to listen to the latest episodes of Crosscut Talks.</p>';
+          var html = '<p>Head over to <a href="https://crosscut.com/podcast/crosscut-talks" target="_blank">crosscut.com</a> to listen to the latest episodes of Crosscut Talks.</p>';
           $podcasts.append(html);
         }
 
