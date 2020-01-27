@@ -111,7 +111,13 @@
 
       &__content {
         padding: 0 0 6rem;
+        margin-bottom: 50px;
         border-bottom: 1px solid $border-color;
+
+        @include media-breakpoint-up(md) {
+          padding-bottom: 5rem;
+          margin-bottom: 100px;
+        }
       }
 
       &__section {

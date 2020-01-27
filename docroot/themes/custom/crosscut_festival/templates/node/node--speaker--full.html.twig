@@ -93,12 +93,5 @@
       {{ content.body }}
     </div>
   </div>
-
-  {% if content.field_speakers_list_embed|render|trim is not empty %}
-    <div class="speaker__footer">
-      <h3 class="section-header">All Speakers</h3>
-      {{ content.field_speakers_list_embed }}
-    </div>
-  {% endif %}
   {% set catch_cache = content|render %}
 </article>

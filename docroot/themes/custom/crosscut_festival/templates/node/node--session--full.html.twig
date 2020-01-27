@@ -114,11 +114,4 @@
     </div>
     {% set catch_cache = content|render %}
   </div>
-
-  {% if content.field_sessions_list_embed|render|trim is not empty %}
-    <div class="session__footer">
-      <h3 class="section-header">All Sessions</h3>
-      {{ content.field_sessions_list_embed }}
-    </div>
-  {% endif %}
 </article>

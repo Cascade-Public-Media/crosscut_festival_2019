@@ -45,10 +45,12 @@
 
   &__content {
     padding: 2.5rem 0;
+    margin-bottom: 50px;
     border-bottom: 1px solid $border-color;
 
     @include media-breakpoint-up(md) {
       padding-bottom: 5rem;
+      margin-bottom: 100px;
     }
 
     .field--name-field-photo {

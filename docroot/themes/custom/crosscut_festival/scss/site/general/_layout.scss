@@ -8,7 +8,7 @@
   }
 
   &:not(.page--front-page) {
-    padding-bottom: calc(#{$footer-height} + 150px);
+    padding-bottom: calc(#{$footer-height} + 100px);
   }
 }
 

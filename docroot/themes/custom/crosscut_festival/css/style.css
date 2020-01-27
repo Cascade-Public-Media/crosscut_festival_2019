@@ -12625,7 +12625,7 @@ nav.tabs {
 }
 
 .page:not(.page--front-page) {
-  padding-bottom: calc(178px + 150px);
+  padding-bottom: calc(178px + 100px);
 }
 
 #main-wrapper {
@@ -13532,84 +13532,84 @@ footer .footer-content-main {
   margin-top: 0;
 }
 
-.block-front-page-section.section__pt--lg {
+.path-frontpage .block-front-page-section.section__pt--lg {
   padding-top: 75px;
 }
 
-.block-front-page-section.section__pt--sm {
+.path-frontpage .block-front-page-section.section__pt--sm {
   padding-top: 50px;
 }
 
-.block-front-page-section.section__pb--lg {
+.path-frontpage .block-front-page-section.section__pb--lg {
   padding-bottom: 75px;
 }
 
-.block-front-page-section.section__pb--sm {
+.path-frontpage .block-front-page-section.section__pb--sm {
   padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {
-  .block-front-page-section.section__pt--lg {
+  .path-frontpage .block-front-page-section.section__pt--lg {
     padding-top: 150px;
   }
-  .block-front-page-section.section__pt--sm {
+  .path-frontpage .block-front-page-section.section__pt--sm {
     padding-top: 75px;
   }
-  .block-front-page-section.section__pb--lg {
+  .path-frontpage .block-front-page-section.section__pb--lg {
     padding-bottom: 150px;
   }
-  .block-front-page-section.section__pb--sm {
+  .path-frontpage .block-front-page-section.section__pb--sm {
     padding-bottom: 75px;
   }
 }
 
-.block-front-page-section.section--pt-sm {
+.path-frontpage .block-front-page-section.section--pt-sm {
   padding: 30px 0;
 }
 
-.block-front-page-section.block-label-speakers--sessions, .block-front-page-section.block-label-what-to-expect, .block-front-page-section.block-label-media-crosscut-now {
+.path-frontpage .block-front-page-section.block-label-speakers--sessions, .path-frontpage .block-front-page-section.block-label-what-to-expect, .path-frontpage .block-front-page-section.block-label-media-crosscut-now {
   background-color: #172C3B;
   color: #fff;
 }
 
-.block-front-page-section.block-label-speakers--sessions p,
-.block-front-page-section.block-label-speakers--sessions h2,
-.block-front-page-section.block-label-speakers--sessions h3,
-.block-front-page-section.block-label-speakers--sessions h4,
-.block-front-page-section.block-label-speakers--sessions li,
-.block-front-page-section.block-label-speakers--sessions .section-header, .block-front-page-section.block-label-what-to-expect p,
-.block-front-page-section.block-label-what-to-expect h2,
-.block-front-page-section.block-label-what-to-expect h3,
-.block-front-page-section.block-label-what-to-expect h4,
-.block-front-page-section.block-label-what-to-expect li,
-.block-front-page-section.block-label-what-to-expect .section-header, .block-front-page-section.block-label-media-crosscut-now p,
-.block-front-page-section.block-label-media-crosscut-now h2,
-.block-front-page-section.block-label-media-crosscut-now h3,
-.block-front-page-section.block-label-media-crosscut-now h4,
-.block-front-page-section.block-label-media-crosscut-now li,
-.block-front-page-section.block-label-media-crosscut-now .section-header {
+.path-frontpage .block-front-page-section.block-label-speakers--sessions p,
+.path-frontpage .block-front-page-section.block-label-speakers--sessions h2,
+.path-frontpage .block-front-page-section.block-label-speakers--sessions h3,
+.path-frontpage .block-front-page-section.block-label-speakers--sessions h4,
+.path-frontpage .block-front-page-section.block-label-speakers--sessions li,
+.path-frontpage .block-front-page-section.block-label-speakers--sessions .section-header, .path-frontpage .block-front-page-section.block-label-what-to-expect p,
+.path-frontpage .block-front-page-section.block-label-what-to-expect h2,
+.path-frontpage .block-front-page-section.block-label-what-to-expect h3,
+.path-frontpage .block-front-page-section.block-label-what-to-expect h4,
+.path-frontpage .block-front-page-section.block-label-what-to-expect li,
+.path-frontpage .block-front-page-section.block-label-what-to-expect .section-header, .path-frontpage .block-front-page-section.block-label-media-crosscut-now p,
+.path-frontpage .block-front-page-section.block-label-media-crosscut-now h2,
+.path-frontpage .block-front-page-section.block-label-media-crosscut-now h3,
+.path-frontpage .block-front-page-section.block-label-media-crosscut-now h4,
+.path-frontpage .block-front-page-section.block-label-media-crosscut-now li,
+.path-frontpage .block-front-page-section.block-label-media-crosscut-now .section-header {
   color: #fff;
 }
 
-.block-front-page-section.block-label-speakers--sessions p > a:not(.btn), .block-front-page-section.block-label-what-to-expect p > a:not(.btn), .block-front-page-section.block-label-media-crosscut-now p > a:not(.btn) {
+.path-frontpage .block-front-page-section.block-label-speakers--sessions p > a:not(.btn), .path-frontpage .block-front-page-section.block-label-what-to-expect p > a:not(.btn), .path-frontpage .block-front-page-section.block-label-media-crosscut-now p > a:not(.btn) {
   color: #66AEEA;
 }
 
-.block-front-page-section.block-label-speakers--sessions h2 > a,
-.block-front-page-section.block-label-speakers--sessions h4 > a,
-.block-front-page-section.block-label-speakers--sessions h5 > a, .block-front-page-section.block-label-what-to-expect h2 > a,
-.block-front-page-section.block-label-what-to-expect h4 > a,
-.block-front-page-section.block-label-what-to-expect h5 > a, .block-front-page-section.block-label-media-crosscut-now h2 > a,
-.block-front-page-section.block-label-media-crosscut-now h4 > a,
-.block-front-page-section.block-label-media-crosscut-now h5 > a {
+.path-frontpage .block-front-page-section.block-label-speakers--sessions h2 > a,
+.path-frontpage .block-front-page-section.block-label-speakers--sessions h4 > a,
+.path-frontpage .block-front-page-section.block-label-speakers--sessions h5 > a, .path-frontpage .block-front-page-section.block-label-what-to-expect h2 > a,
+.path-frontpage .block-front-page-section.block-label-what-to-expect h4 > a,
+.path-frontpage .block-front-page-section.block-label-what-to-expect h5 > a, .path-frontpage .block-front-page-section.block-label-media-crosscut-now h2 > a,
+.path-frontpage .block-front-page-section.block-label-media-crosscut-now h4 > a,
+.path-frontpage .block-front-page-section.block-label-media-crosscut-now h5 > a {
   color: inherit;
 }
 
-.block-front-page-section.block-label-call-for-entries, .block-front-page-section.block-label-tickets, .block-front-page-section.block-label-about-the-crosscut-festival {
+.path-frontpage .block-front-page-section.block-label-call-for-entries, .path-frontpage .block-front-page-section.block-label-tickets, .path-frontpage .block-front-page-section.block-label-about-the-crosscut-festival {
   background-color: #fff;
 }
 
-.block-front-page-section.block-label-call-for-entries .section-header, .block-front-page-section.block-label-tickets .section-header, .block-front-page-section.block-label-about-the-crosscut-festival .section-header {
+.path-frontpage .block-front-page-section.block-label-call-for-entries .section-header, .path-frontpage .block-front-page-section.block-label-tickets .section-header, .path-frontpage .block-front-page-section.block-label-about-the-crosscut-festival .section-header {
   color: #172C3B;
 }
 
@@ -14604,12 +14604,14 @@ footer .footer-content-main {
 
 .speaker__content {
   padding: 2.5rem 0;
+  margin-bottom: 50px;
   border-bottom: 1px solid #979797;
 }
 
 @media (min-width: 768px) {
   .speaker__content {
     padding-bottom: 5rem;
+    margin-bottom: 100px;
   }
 }
 
@@ -14746,7 +14748,15 @@ footer .footer-content-main {
 
 .node--type-session.node--view-mode-full .session__content {
   padding: 0 0 6rem;
+  margin-bottom: 50px;
   border-bottom: 1px solid #979797;
+}
+
+@media (min-width: 768px) {
+  .node--type-session.node--view-mode-full .session__content {
+    padding-bottom: 5rem;
+    margin-bottom: 100px;
+  }
 }
 
 .node--type-session.node--view-mode-full .session__section {
