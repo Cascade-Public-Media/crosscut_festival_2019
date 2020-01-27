@@ -19,6 +19,10 @@
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
           responsive: {
             0: {
+              items: 1,
+              margin: 20,
+            },
+            400: {
               items: 2,
               margin: 20,
             },
@@ -29,7 +33,12 @@
             768: {
               items: 4,
               margin: 50,
-            }
+            },
+            1200: {
+              items: 5,
+              margin: 50,
+            },
+
           }
         });
       });
