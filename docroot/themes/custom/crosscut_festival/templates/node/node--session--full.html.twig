@@ -86,7 +86,9 @@
     <div>
       <span class="session__details">
         {{ content.field_date_time['#items'].0.value }}
-        <span class="sep">/</span>
+        {% if content.field_venue|render|trim is not empty %}
+          <span class="sep">/</span>
+        {% endif %}
         {{ node.field_venue.0.entity.name.value }}
       </span>
     </div>
