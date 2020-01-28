@@ -81,8 +81,10 @@
     <div>
       <span class="session__details">
         {{ content.field_date_time['#items'].0.value }}
-        /
-        {{ node.field_venue.0.entity.name.value }}
+        {% if content.field_venue|render|trim is not empty %}
+          <span class="sep">/</span>
+        {% endif %}
+        {{ content.field_venue['#items'].0.value }}
       </span>
     </div>
     {{ title_prefix }}
@@ -93,17 +95,21 @@
   </header>
   <div{{ content_attributes.addClass('session__content', 'clearfix') }}>
     <div class="session__section">
-      <span class="label">Moderators:</span>
-      {% for moderator in content.field_moderators['#items'] %}
-        {{ moderator.value }}{{ not loop.last ? ',' }}
-      {% endfor %}
+      {% if content.field_moderators|render|trim is not empty %}
+        <span class="label">Moderators:</span>
+        {% for moderator in content.field_moderators['#items'] %}
+          {{ moderator.value }}{{ not loop.last ? ',' }}
+        {% endfor %}
+      {% endif %}
     </div>
-    <div class="session__section">
-      <span class="label">Speakers:</span>
-      {% for speaker in content.field_speaker['#items'] %}
-        {{ speaker.value }}{{ not loop.last ? ',' }}
-      {% endfor %}
-    </div>
+    {% if content.field_speaker|render|trim is not empty %}
+      <div class="session__section">
+        <span class="label">Speakers:</span>
+        {% for speaker in content.field_speaker['#items'] %}
+          {{ speaker.value }}{{ not loop.last ? ',' }}
+        {% endfor %}
+      </div>
+    {% endif %}
     <div class="session__section">
       {{ content.field_description }}
 

@@ -89,7 +89,9 @@
   </header>
   <div{{ content_attributes.addClass(content_classes) }}>
     <div class="col-auto">
-      {{ content.field_photo }}
+      <div class="speaker__photo">
+        {{ content.field_photo }}
+      </div>
       {{ content.body }}
     </div>
   </div>

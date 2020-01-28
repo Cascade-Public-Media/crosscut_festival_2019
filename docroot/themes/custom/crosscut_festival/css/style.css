@@ -14569,15 +14569,34 @@ footer .footer-content-main {
 }
 
 .node--type-speaker .field--name-field-photo {
-  max-width: 180px;
-  max-height: 180px;
-  margin: 0 auto;
   border-radius: 100%;
   overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.node--type-speaker .field--name-field-photo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .node--type-speaker .field--name-body p {
   margin-bottom: 0;
+}
+
+.speaker__photo {
+  max-width: 180px;
+  max-height: 180px;
+  margin: 0 auto;
+}
+
+.node--view-mode-full .speaker__photo {
+  max-width: 280px;
+  max-height: 280px;
 }
 
 .speaker__featured-view-container:not(:last-child) .node--type-speaker {
@@ -14613,11 +14632,6 @@ footer .footer-content-main {
     padding-bottom: 5rem;
     margin-bottom: 100px;
   }
-}
-
-.speaker__content .field--name-field-photo {
-  max-width: 280px;
-  max-height: 280px;
 }
 
 .speaker__content .field--name-body {
