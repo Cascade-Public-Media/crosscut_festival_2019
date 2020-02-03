@@ -14594,9 +14594,18 @@ footer .footer-content-main {
   margin: 0 auto;
 }
 
-.node--view-mode-full .speaker__photo {
-  max-width: 280px;
-  max-height: 280px;
+.node--view-mode-full.node--type-speaker .speaker__photo {
+  width: 200px;
+  height: 200px;
+  max-width: none;
+  max-height: none;
+}
+
+@media (min-width: 576px) {
+  .node--view-mode-full.node--type-speaker .speaker__photo {
+    width: 280px;
+    height: 280px;
+  }
 }
 
 .speaker__featured-view-container:not(:last-child) .node--type-speaker {

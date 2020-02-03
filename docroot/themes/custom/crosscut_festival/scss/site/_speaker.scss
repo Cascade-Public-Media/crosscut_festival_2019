@@ -32,9 +32,16 @@
     max-height: 180px;
     margin: 0 auto;
 
-    .node--view-mode-full & {
-      max-width: 280px;
-      max-height: 280px;
+    .node--view-mode-full.node--type-speaker & {
+      width: 200px;
+      height: 200px;
+      max-width: none;
+      max-height: none;
+
+      @include media-breakpoint-up(sm) {
+        width: 280px;
+        height: 280px;
+      }
     }
   }
 
