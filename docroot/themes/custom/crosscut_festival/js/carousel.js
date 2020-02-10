@@ -13,7 +13,7 @@
       $('.view-id-featured_panelist_organizations').once('panelistsCarousel').each(function() {
         $('#panelists-carousel').owlCarousel({
           loop: true,
-          autoplay: false,
+          autoplay: true,
           dots: false,
           nav: true,
           navText: ['<span class="nav-arrow" aria-label="Previous"></span>','<span class="nav-arrow" aria-label="Next"></span>'],
