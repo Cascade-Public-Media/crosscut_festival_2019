@@ -6,8 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "drush/drush": "^9.0",
-        "drupal/media_entity_generic": "^1.0"
+        "drush/drush": "^9.0"
     },
     "require": {
         "drupal-composer/drupal-scaffold": "^2.0.0",
