@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fe6eec35373472269118c3717dcfeda",
+    "content-hash": "14315b6d65a01503a88eef8923f193e7",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -133,10 +133,10 @@
         },
         {
             "name": "algolia/places",
-            "version": "1.18.2",
+            "version": "1.19.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/places.js/-/places.js-1.18.2.tgz"
+                "url": "https://registry.npmjs.org/places.js/-/places.js-1.19.0.tgz"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -343,10 +343,10 @@
         },
         {
             "name": "ckeditor/autogrow",
-            "version": "4.14.0",
+            "version": "4.14.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.14.0.zip"
+                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.14.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -373,10 +373,10 @@
         },
         {
             "name": "ckeditor/fakeobjects",
-            "version": "4.14.0",
+            "version": "4.14.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip"
+                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -388,10 +388,10 @@
         },
         {
             "name": "ckeditor/image",
-            "version": "4.14.0",
+            "version": "4.14.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/image/releases/image_4.14.0.zip"
+                "url": "https://download.ckeditor.com/image/releases/image_4.14.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -403,10 +403,10 @@
         },
         {
             "name": "ckeditor/link",
-            "version": "4.14.0",
+            "version": "4.14.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip"
+                "url": "https://download.ckeditor.com/link/releases/link_4.14.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -418,10 +418,10 @@
         },
         {
             "name": "codemirror/codemirror",
-            "version": "5.53.2",
+            "version": "5.57.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/components/codemirror/archive/5.53.2.zip"
+                "url": "https://github.com/components/codemirror/archive/5.57.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2672,10 +2672,10 @@
                     }
                 },
                 "patches_applied": {
-                    "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
-                    "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2019-11-27/2815221-125.patch",
+                    "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                     "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
-                    "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                    "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
+                    "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2019-11-27/2815221-125.patch"
                 }
             },
             "autoload": {
@@ -3719,6 +3719,68 @@
             }
         },
         {
+            "name": "drupal/honeypot",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/honeypot.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/honeypot-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "c29d248c0fdcdf733a31b9214355acfa73716632"
+            },
+            "require": {
+                "drupal/core": "^8.0 || ^9.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1597855128",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Geerling",
+                    "homepage": "https://www.drupal.org/user/213194",
+                    "email": "geerlingguy@mac.com"
+                },
+                {
+                    "name": "geerlingguy",
+                    "homepage": "https://www.drupal.org/user/389011"
+                },
+                {
+                    "name": "vijaycs85",
+                    "homepage": "https://www.drupal.org/user/93488"
+                }
+            ],
+            "description": "Mitigates spam form submissions using the honeypot method.",
+            "homepage": "https://www.drupal.org/project/honeypot",
+            "keywords": [
+                "deterrent",
+                "form",
+                "honeypot",
+                "honeytrap",
+                "php",
+                "spam"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/honeypot",
+                "issues": "https://www.drupal.org/project/issues/honeypot"
+            }
+        },
+        {
             "name": "drupal/image_widget_crop",
             "version": "2.3.0",
             "source": {
@@ -4212,9 +4274,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-3.0-alpha1",
                     "datestamp": "1517046484",
@@ -4222,9 +4281,6 @@
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "2882709 - Misnamed interface causes \"Fatal error: Cannot declare interface Drupal\\libraries\\ExternalLibrary\\Utility\\LibraryAccessorIdInterface\"": "https://www.drupal.org/files/issues/2882709-2-interface-libraryidaccessorinterface-misnamed.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7294,16 +7350,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.20",
+            "version": "2.1.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "f46887bc48db66c7f38f668eb7d6ae54583617ff"
+                "reference": "563d0cdde5d862235ffe24a158497f4d490191b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/f46887bc48db66c7f38f668eb7d6ae54583617ff",
-                "reference": "f46887bc48db66c7f38f668eb7d6ae54583617ff",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/563d0cdde5d862235ffe24a158497f4d490191b5",
+                "reference": "563d0cdde5d862235ffe24a158497f4d490191b5",
                 "shasum": ""
             },
             "require": {
@@ -7348,7 +7404,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-09-06T13:44:32+00:00"
+            "time": "2020-09-19T14:37:56+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -7716,10 +7772,10 @@
         },
         {
             "name": "jquery/inputmask",
-            "version": "5.0.3",
+            "version": "5.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/5.0.3.zip"
+                "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/5.0.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -7791,10 +7847,10 @@
         },
         {
             "name": "jquery/timepicker",
-            "version": "1.13.10",
+            "version": "1.13.14",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.13.10.zip"
+                "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.13.14.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -9340,16 +9396,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v3.33.0",
+            "version": "v3.34.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "829d87530030bb5bfa24a5093d098c672adfbb9b"
+                "url": "git@github.com:swagger-api/swagger-ui.git",
+                "reference": "c20a8c479eaa7897a2ddabcaf5f75e6d41f4525c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/829d87530030bb5bfa24a5093d098c672adfbb9b",
-                "reference": "829d87530030bb5bfa24a5093d098c672adfbb9b",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/c20a8c479eaa7897a2ddabcaf5f75e6d41f4525c",
+                "reference": "c20a8c479eaa7897a2ddabcaf5f75e6d41f4525c",
                 "shasum": ""
             },
             "type": "library",
@@ -9393,7 +9449,7 @@
                 "swagger",
                 "ui"
             ],
-            "time": "2020-09-10T23:20:14+00:00"
+            "time": "2020-09-18T18:46:18+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -12869,16 +12925,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.9.1",
+            "version": "v4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28"
+                "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/88e519766fc58bd46b8265561fb79b54e2e00b28",
-                "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1c13d05035deff45f1230ca68bd7d74d621762d9",
+                "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9",
                 "shasum": ""
             },
             "require": {
@@ -12917,7 +12973,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-08-30T16:15:20+00:00"
+            "time": "2020-09-19T14:52:48+00:00"
         },
         {
             "name": "psy/psysh",
