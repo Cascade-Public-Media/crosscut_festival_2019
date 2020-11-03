@@ -46,7 +46,7 @@
         "acquia/lightning": "~4.1.7",
         "cweagans/composer-patches": "^1.6.0",
         "drupal/admin_toolbar": "^2.0",
-        "drupal/bootstrap_barrio": "^4.17",
+        "drupal/bootstrap_barrio": "^5.1",
         "drupal/bootstrap_layouts": "^5.1",
         "drupal/ckeditor_codemirror": "^2.1",
         "drupal/core-composer-scaffold": "^8.8",
@@ -82,7 +82,11 @@
     },
     "scripts": {
         "post-install-cmd": ["find docroot vendor -name '.git' | xargs rm -rf"],
-        "post-update-cmd": ["find docroot vendor -name '.git' | xargs rm -rf"]
+        "post-update-cmd": [
+            "find docroot vendor -name '.git' | xargs rm -rf",
+            "mkdir -p docroot/libraries/bootstrap",
+            "cp -R vendor/twbs/bootstrap/dist docroot/libraries/bootstrap"
+        ]
     },
     "extra": {
         "installer-types": ["bower-asset", "npm-asset"],
@@ -98,11 +102,7 @@
             "drush/Commands/{$name}": ["type:drupal-drush"]
         },
         "enable-patching": true,
-        "patches": {
-            "drupal/bootstrap_barrio": {
-                "Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
-            }
-        },
+        "patches": {},
         "patchLevel": {
             "drupal/core": "-p2"
         },
