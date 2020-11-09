@@ -135,16 +135,23 @@
 
         var domain = 'https://crosscut.com';
 
-        // Podcasts section: get data from Crosscut Talks REST export view on crosscut.com
+        // News section: get data from festival news REST export view on crosscut.com
         function renderNews(data) {
           var html = '';
           for (var i = 0; i < data.length; i++) {
+            var article = data[i];
 
-            var link = data[i]['view_node'];
-            var image_path = domain + data[i]['image'];
-            var date = data[i]['created'].slice(0, -8); // remove time from long format date
+            var image = article['image'];
+            if (article['image_teaser']) {
+              image = article['image_teaser'];
+            }
 
-            html += '<div class="row no-gutters article-row"><div class="col-sm-6 col-md-3"><div class="img-container"><a href="' + link + '" target="_blank"><img class="newsImage" alt="Crosscut Festival News Article" src="' + image_path + '"/></a></div></div><div class="col-sm-6 col-md-9 article-teaser"><h4><a href="' + link + '" target="_blank">' + data[i]['title'] + '</a></h4>' + data[i]['excerpt'] + '<span class="byline">by ' + data[i]['author'] + ' / ' + date + '</span></div></div>';
+            var link = article['view_node'];
+
+            var image_path = domain + article['image'];
+            var date = article['created'].slice(0, -8); // remove time from long format date
+
+            html += '<div class="row no-gutters article-row"><div class="col-sm-6 col-md-3"><div class="img-container"><a href="' + link + '" target="_blank"><img class="newsImage" alt="Crosscut Festival News Article" src="' + image_path + '"/></a></div></div><div class="col-sm-6 col-md-9 article-teaser"><h4><a href="' + link + '" target="_blank">' + article['title'] + '</a></h4>' + article['excerpt'] + '<span class="byline">by ' + article['author'] + ' / ' + date + '</span></div></div>';
           }
           $article.append(html);
         }
@@ -187,7 +194,7 @@
 
         var domain = 'https://crosscut.com';
 
-        // News section: get data from festival news REST export view on crosscut.com
+        // Podcasts section: get data from Crosscut Talks REST export view on crosscut.com
         function renderPodcasts(data) {
           var html = '<div class="podcasts-row row">';
           for (var i = 0; i < data.length; i++) {
