@@ -135,7 +135,7 @@
 
         var domain = 'https://crosscut.com';
 
-        // News section: get data from festival news REST export view on crosscut.com
+        // Podcasts section: get data from Crosscut Talks REST export view on crosscut.com
         function renderNews(data) {
           var html = '';
           for (var i = 0; i < data.length; i++) {
