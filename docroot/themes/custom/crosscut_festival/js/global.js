@@ -188,13 +188,17 @@
         var domain = 'https://crosscut.com';
 
         // News section: get data from festival news REST export view on crosscut.com
-        function renderNews(data) {
+        function renderPodcasts(data) {
           var html = '<div class="podcasts-row row">';
           for (var i = 0; i < data.length; i++) {
-
-            var link = data[i]['view_node'];
-            var image_path = domain + data[i]['image'];
-            var date = data[i]['created'].slice(0, -8); // remove time from long format date
+            var podcast = data[i];
+            var link = podcast['view_node'];
+            var image = podcast['image'];
+            if (podcast['image_teaser']) {
+              image = podcast['image_teaser'];
+            }
+            var image_path = domain + image;
+            var date = podcast['created'].slice(0, -8); // remove time from long format date
 
             html += '<div class="podcast col-sm-6">' +
               '<div class="img-container">' +
@@ -204,7 +208,7 @@
               '</a>' +
               '</div>' +
               '<div class="teaser-text">' +
-              '<h4><a href="' + link + '" target="_blank">' + data[i]['title'] + '</a></h4><div>' + data[i]['field_teaser_text'] + '</div><span class="metadata">Season' + data[i]['field_season'] + ', Episode ' + data[i]['field_episode'] + ' / ' + date + '</span>' +
+              '<h4><a href="' + link + '" target="_blank">' + podcast['title'] + '</a></h4><div>' + podcast['field_teaser_text'] + '</div><span class="metadata">Season' + podcast['field_season'] + ', Episode ' + podcast['field_episode'] + ' / ' + date + '</span>' +
               '</div></div>';
           }
           html += '</div>';
@@ -223,7 +227,7 @@
           method: 'GET',
           crossDomain: true,
           success: function (response) {
-            renderNews(response);
+            renderPodcasts(response);
           },
           error: function (xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText;
